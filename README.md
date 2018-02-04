@@ -3,4 +3,4 @@ Data comes from [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/d
 
 Use `chmod +x /etc/sbin/chn-iplist.sh` to add executable permission.
 
-The chn-iplist.txt will be updated once a month.
+The chnroute.txt will be updated once a month.
