@@ -1,2 +1,2 @@
 # chn-iplist
-A chnroutes made for myself
+Data comes from [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest), I convert it to txt rules file to use.
