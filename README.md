@@ -5,7 +5,7 @@ Subscribe URL:
 
 chnroute.txt: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt
 
-shadowrocket config file: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Rocket-chnroute.conf
+shadowrocket config file: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf
 
 Use `chmod +x /etc/sbin/chn-iplist.sh` to add executable permission.
 
