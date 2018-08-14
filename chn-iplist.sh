@@ -1,3 +1,4 @@
+#荒野无灯固件使用
 set -e -o pipefail
  
 wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
