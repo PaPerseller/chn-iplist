@@ -11,4 +11,4 @@ Quantumult (Filter): https://raw.githubusercontent.com/PaPerseller/chn-iplist/ma
 
 ### 路由器本地脚本使用
 
-使用 `chmod +x /etc/sbin/chn-iplist.sh` 赋予可执行权限。
+使用 `chmod +x /etc/sbin/chn-iplist.sh` 赋予其可执行权限。
