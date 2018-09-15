@@ -1,4 +1,6 @@
 #荒野无灯固件使用
+#开启ss命令：1. nvram set google_fu_mode=0xDEADBEEF 2. nvram commit
+
 set -e -o pipefail
  
 wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | \
