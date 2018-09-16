@@ -1,5 +1,5 @@
 # chn-iplist
-数据来源于 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将它转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi 规则文件，仅包含 chn-ip 列表和部分谷歌广告屏蔽规则。每月更新一次。
+数据来源于 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将它转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi 规则文件，仅包含 chn-ip 列表和部分谷歌和国内友盟广告屏蔽规则。每月更新一次。
 
 ### Subscribe URL: 
 
