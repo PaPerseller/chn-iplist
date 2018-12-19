@@ -9,7 +9,7 @@ Shadowrocket: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Sh
 
 Quantumult (Filter): https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult.conf
 
-Quantumult (only ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult-no-IP.conf
+Quantumult (only ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult_noIP.conf
 
 Kitsunebi: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf
 
@@ -17,7 +17,7 @@ acl（暂无广告屏蔽规则）: https://raw.githubusercontent.com/PaPerseller
 
 BifrostV 规则进入测试，在相关文件夹下按规则类型复制粘贴至应用内。
 
-V2ray 配置文件内嵌规则进入测试，将其添加入配置文件 routing 对应区域。
+V2ray 配置文件内嵌规则进入测试，将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/V2ray-config_rule.txt)添加入配置文件 routing 对应区域。域名解析策略 IPIfNonMatch/IPOnDemand 按选择调整下面各 RuleObject 顺序。
 
 ### 路由器本地脚本使用
 
