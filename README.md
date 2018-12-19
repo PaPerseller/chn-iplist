@@ -15,7 +15,7 @@ Kitsunebi: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsu
 
 acl（暂无广告屏蔽规则）: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl
 
-BifrostV 规则进入测试，在[相关文件夹下](https://github.com/PaPerseller/chn-iplist/tree/master/BifrostV)按规则类型复制粘贴至应用内。
+BifrostV 规则进入测试，在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/BifrostV)下按规则类型复制粘贴至应用内。
 
 V2ray 配置文件内嵌规则进入测试，将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/V2ray-config_rule.txt)添加入配置文件 routing 对应区域。域名解析策略 IPIfNonMatch/IPOnDemand 按选择调整下面各 RuleObject 顺序。
 
