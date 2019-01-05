@@ -1,0 +1,3 @@
+fonts.googleapis.com
+fonts.gstatic.com
+softpedia.com
