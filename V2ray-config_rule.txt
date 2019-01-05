@@ -1,5 +1,5 @@
   "routing" : {
-    "domainStrategy" : "IPIfNonMatch",
+    "domainStrategy" : "IPOnDemand",
     "rules" : [
       {
         "outboundTag" : "block",
