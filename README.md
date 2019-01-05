@@ -9,7 +9,7 @@ Shadowrocket: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Sh
 
 Quantumult (Filter): https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult.conf
 
-Quantumult (only ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult_noIP.conf
+Quantumult (no chn-ip) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult_noIP.conf
 
 Kitsunebi: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf
 
