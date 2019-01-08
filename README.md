@@ -19,6 +19,10 @@ BifrostV 规则进入测试，在[相关文件夹](https://github.com/PaPerselle
 
 V2ray 配置文件内嵌规则进入测试，将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/V2ray-config_rule.txt)添加入配置文件 routing 对应区域。域名解析策略 IPIfNonMatch/IPOnDemand 按选择调整下面各 RuleObject 顺序。
 
+### TODO:
+- [ ] acl 文件加入广告屏蔽规则
+- [ ] Kitsunebi 规则格式调整完善
+
 ### 路由器本地脚本使用
 
 使用 `chmod +x /etc/sbin/chn-iplist.sh` 赋予其可执行权限。
