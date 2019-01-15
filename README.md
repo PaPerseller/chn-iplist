@@ -19,7 +19,7 @@ BifrostV 规则进入测试，在[相关文件夹](https://github.com/PaPerselle
 
 V2ray 配置文件内嵌规则进入测试，将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/V2ray-config_rule.txt)添加入配置文件 routing 对应区域。域名解析策略 IPIfNonMatch/IPOnDemand 按选择调整下面各 RuleObject 顺序。
 
-v2rayNG（version≥0.6.9）规则进入测试，在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/v2rayNG)下按规则类型复制粘贴至应用内。
+v2rayNG（version≥0.6.9）规则进入测试，在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/v2rayNG)下分别将[block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、[proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt) 规则复制粘贴至应用内。
 
 ### TODO:
 
