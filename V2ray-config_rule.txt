@@ -102,6 +102,15 @@
         "type" : "field"
       },
       {
+        "outboundTag" : "direct",
+        "domain" : [
+          "domain:fonts.googleapis.com",
+          "domain:fonts.gstatic.com",
+          "domain:softpedia.com"
+        ],
+        "type" : "field"
+      },
+      {
         "outboundTag" : "proxy",
         "ip" : [
           "91.108.56.116",
@@ -114,15 +123,6 @@
           "149.154.164.0/22",
           "149.154.167.0/24",
           "149.154.175.0/24"
-        ],
-        "type" : "field"
-      },
-      {
-        "outboundTag" : "direct",
-        "domain" : [
-          "domain:fonts.googleapis.com",
-          "domain:fonts.gstatic.com",
-          "domain:softpedia.com"
         ],
         "type" : "field"
       },
