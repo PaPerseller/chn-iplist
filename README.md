@@ -14,13 +14,15 @@ Quantumult (no chn-ip) : https://raw.githubusercontent.com/PaPerseller/chn-iplis
 
 Kitsunebi: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf
 
-acl（暂无广告屏蔽规则）: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl
+acl (no ban ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl
+
+acl (ban ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn_banad.acl
 
 BifrostV：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/BifrostV)下按规则类型复制粘贴至应用内。
 
 V2ray 配置文件内嵌规则进入测试，将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/V2ray-config_rule.txt)加入配置文件 routing 对应区域。域名解析策略 IPIfNonMatch/IPOnDemand 自行选择。
 
-v2rayNG（version≥0.6.9）：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/v2rayNG)下分别将 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、[proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt) 规则复制粘贴至应用内，应用以此顺序使用规则，故推荐 IPIfNonMatch （version≥0.6.10）策略。
+v2rayNG (version≥0.6.9) ：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/v2rayNG)下分别将 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、[proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt) 规则复制粘贴至应用内，应用以此顺序使用规则，故推荐 IPIfNonMatch (version≥0.6.10) 策略。
 
 ### TODO:
 
