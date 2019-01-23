@@ -1,4 +1,5 @@
 # chn-iplist
+
 数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、BifrostV、v2rayNG 规则和 V2ray 配置文件内嵌规则，仅包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
 
 ### Subscribe URL: 
@@ -24,7 +25,7 @@ v2rayNG（version≥0.6.9）：在[相关文件夹](https://github.com/PaPersell
 ### TODO:
 
 - [ ] Kitsunebi 规则格式调整完善
-- [ ] acl 规则可用性测试及广告屏蔽规则加入
+- [x] acl 规则可用性测试及广告屏蔽规则加入
 - [ ] ipv6-list 加入
 
 ### 路由器本地脚本使用
