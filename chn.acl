@@ -1,6 +1,63 @@
 # 默认代理
 [proxy_all]
 
+# 屏蔽列表
+[outbound_block_list]
+
+# 关键词
+(^|\.)\w*googleads\w*\.\w*$
+(^|\.)\w*pagead\w*\.\w*$
+(^|\.)\w*umeng\w*\.\w*$
+(^|\.)\w*adnyg\w*\.\w*$
+(^|\.)\w*admarvel\w*\.\w*$
+(^|\.)\w*admaster\w*\.\w*$
+(^|\.)\w*adsage\w*\.\w*$
+(^|\.)\w*adsmogo\w*\.\w*$
+(^|\.)\w*adsrvmedia\w*\.\w*$
+(^|\.)\w*adwords\w*\.\w*$
+(^|\.)\w*adservice\w*\.\w*$
+(^|\.)\w*adsserving\w*\.\w*$
+(^|\.)\w*analysis\w*\.\w*$
+(^|\.)\w*analytics\w*\.\w*$
+(^|\.)\w*applovin\w*\.\w*$
+(^|\.)\w*domob\w*\.\w*$
+(^|\.)\w*duomeng\w*\.\w*$
+(^|\.)\w*dwtrack\w*\.\w*$
+(^|\.)\w*guanggao\w*\.\w*$
+(^|\.)\w*lianmeng\w*\.\w*$
+(^|\.)\w*monitor\w*\.\w*$
+(^|\.)\w*omgmta\w*\.\w*$
+(^|\.)\w*openx\w*\.\w*$
+(^|\.)\w*partnerad\w*\.\w*$
+(^|\.)\w*pingfore\w*\.\w*$
+(^|\.)\w*socdm\w*\.\w*$
+(^|\.)\w*supersonicads\w*\.\w*$
+(^|\.)\w*tracking\w*\.\w*$
+(^|\.)\w*uedas\w*\.\w*$
+(^|\.)\w*usage\w*\.\w*$
+(^|\.)\w*wlmonitor\w*\.\w*$
+(^|\.)\w*zjtoolbar\w*\.\w*$
+(^|\.)\w*adsrvr\w*\.\w*$
+
+# 域名
+(^|\.)ads.fmdisk\.com$
+(^|\.)ads.feemoo\.com$
+(^|\.)googleads.g.doubleclick\.net$
+(^|\.)ads.google\.com$
+(^|\.)afd.l.google\.com$
+(^|\.)doubleclick\.com$
+(^|\.)doubleclick\.net$
+(^|\.)google-analytics\.com$
+(^|\.)googlesyndication\.com$
+(^|\.)googletagmanager\.com$
+(^|\.)googletakes\.com$
+(^|\.)mobileads.google\.com$
+(^|\.)g1.tagtic\.cn$ 	 	
+(^|\.)log.tagtic\.cn$ 	
+(^|\.)pgdt.ugdtimg\.com$ 	
+(^|\.)sdownload.stargame\.com$
+(^|\.)sdkapp.uve.weibo\.com$
+
 # 直连列表
 [bypass_list]
 
@@ -8388,7 +8445,7 @@
 149.154.172.0/22
 149.154.175.0/24
 
-# 代理关键字
+# 代理关键词
 (^|\.)\w*gmail\w*\.\w*$
 (^|\.)\w*google\w*\.\w*$
 (^|\.)\w*gstatic\w*\.\w*$
