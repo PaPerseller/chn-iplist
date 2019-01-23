@@ -24,6 +24,8 @@ v2rayNG（version≥0.6.9）：在[相关文件夹](https://github.com/PaPersell
 ### TODO:
 
 - [ ] Kitsunebi 规则格式调整完善
+- [ ] acl 规则可用性测试及广告屏蔽规则加入
+- [ ] ipv6-list 加入
 
 ### 路由器本地脚本使用
 
