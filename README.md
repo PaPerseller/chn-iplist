@@ -24,9 +24,9 @@ V2ray 配置文件内嵌规则测试，将[规则文本](https://raw.githubuserc
 
 v2rayNG (version≥0.6.9) ：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/v2rayNG)下分别将 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、[proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt) 规则复制粘贴至应用内，应用以此顺序使用规则，故推荐 IPIfNonMatch (version≥0.6.10) 策略。
 
-clash：https://github.com/PaPerseller/chn-iplist/tree/master/clash/clash.yml 
+clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml 
 
-clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/tree/master/clash/clash_noip.yml ，推荐 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)
+clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml ，推荐 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)
 
 ### Todo & Test:
 
