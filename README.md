@@ -30,7 +30,7 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 ### Todo & Test:
 
-- [ ] Kitsunebi (ios) 规则格式调整完善
+- [x] Kitsunebi (ios) 完善版规则测试
 - [x] acl 规则测试
 - [x] ipv6-list 测试
 - [x] clash 规则测试
