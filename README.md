@@ -18,7 +18,7 @@ acl (no ban ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/mast
 
 acl (ban ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn_banad.acl
 
-pac: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac，默认非 chn-ip 网站走 socks5 localhost:1080 代理。
+pac: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac， 默认非 chn-ip 网站走 socks5 localhost:1080 代理。
 
 BifrostV：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/BifrostV)下按规则类型复制粘贴至应用内。
 
