@@ -34,7 +34,7 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 - [x] pac 规则测试
 - [x] acl 规则测试
-- [x] ipv6-list 测试（除chnroute.txt、chnroute.pac，其他规则暂不加入 v6 规则）
+- [x] ipv6-list 测试（除 chnroute.txt、chnroute.pac、clash、v2rayNG，其他规则暂不加入 v6 规则）
 - [x] clash 规则测试
 
 ### 路由器本地脚本使用
