@@ -90,6 +90,7 @@ Rule:
 # Direct
 - DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
 - DOMAIN-SUFFIX,fonts.gstatic.com,DIRECT
+- DOMAIN-SUFFIX,softpedia.com,DIRECT
 
 - DOMAIN-SUFFIX,apple.com,DIRECT
 - DOMAIN-SUFFIX,crashlytics.com,DIRECT
