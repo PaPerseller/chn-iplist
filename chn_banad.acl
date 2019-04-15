@@ -8458,6 +8458,7 @@
 (^|\.)ggpht\.com$
 (^|\.)apkmirror\.com$
 (^|\.)apkpure\.com$
+(^|\.)googleapis\.cn$
 
 # telegram
 91.108.56.116

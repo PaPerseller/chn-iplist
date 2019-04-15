@@ -76,6 +76,7 @@ Rule:
 - DOMAIN-KEYWORD,google,Proxy
 - DOMAIN-KEYWORD,gstatic,Proxy
 - DOMAIN-KEYWORD,youtube,Proxy
+- DOMAIN-SUFFIX,googleapis.cn,Proxy
 
 - DOMAIN-KEYWORD,appledaily,Proxy
 - DOMAIN-KEYWORD,github,Proxy
