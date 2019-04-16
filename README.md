@@ -32,9 +32,9 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 ### Todo & Test:
 
-chn-iplist.sh+ipv6 版测试中
-pac 规则测试中
-ipv6-list 测试中（除 chnroute.txt、chnroute.pac、clash、v2rayNG，其他规则暂不加入 v6 规则）
+chn-iplist.sh+ipv6 版测试中  
+pac 规则测试中  
+ipv6-list 测试中（除 chnroute.txt、chnroute.pac、clash、v2rayNG，其他规则暂不加入 v6 规则）  
 clash 规则测试中
 
 ### 路由器本地脚本使用
