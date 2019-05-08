@@ -50,6 +50,7 @@ Rule:
 - DOMAIN-KEYWORD,wlmonitor,REJECT
 - DOMAIN-KEYWORD,zjtoolbar,REJECT
 - DOMAIN-KEYWORD,adsrvr,REJECT
+- DOMAIN-KEYWORD,gdt,REJECT
 - DOMAIN-SUFFIX,sdkapp.uve.wibo.com,REJECT
 
 # Proxy

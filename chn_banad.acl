@@ -38,6 +38,7 @@
 (^|\.)\w*wlmonitor\w*\.\w*$
 (^|\.)\w*zjtoolbar\w*\.\w*$
 (^|\.)\w*adsrvr\w*\.\w*$
+(^|\.)\w*gdt\w*\.\w*$
 
 # 域名
 (^|\.)ads.fmdisk\.com$

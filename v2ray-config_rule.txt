@@ -53,6 +53,7 @@
           "wlmonitor",
           "zjtoolbar",
           "adsrvr",
+          "gdt",
           "domain:sdkapp.uve.weibo.com",
           "regexp:^https?:\/\/.+\.googlevideo\.com\/.+&oad",
           "regexp:^https?:\/\/.+\.googlevideo\.com\/ptracking\?pltype=adhost",
