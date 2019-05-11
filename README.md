@@ -34,11 +34,13 @@ clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml
 
 clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 
+RouterOS 规则：https://github.com/PaPerseller/chn-iplist/blob/master/cn-ip.rsc
+
 ### PS.
 
 1. Quantumult (no chn-ip) 与 clash (no chn-ip) 均可额外使用 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)，Quantumult (no chn-ip) 还可使用 [快捷指令](https://www.icloud.com/shortcuts/4e2eef25e68f4db49b6a78f104ba1f7c) 导入。
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
-3. 已加入 ipv6 列表并在测试中：chnroute.txt、chnroute.pac、clash、v2rayNG 内嵌规则
+3. 已加入 ipv6 列表并在测试中的规则：chnroute.txt、chnroute.pac、clash、v2rayNG
 
 
 ### Todo & Test:
