@@ -34,8 +34,6 @@ clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml
 
 clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 
-RouterOS 规则：https://github.com/PaPerseller/chn-iplist/blob/master/cn-ip.rsc
-
 ### PS.
 
 1. Quantumult (no chn-ip) 与 clash (no chn-ip) 均可额外使用 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)，Quantumult (no chn-ip) 还可使用 [快捷指令](https://www.icloud.com/shortcuts/4e2eef25e68f4db49b6a78f104ba1f7c) 导入。
