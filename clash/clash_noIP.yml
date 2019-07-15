@@ -86,6 +86,7 @@ Rule:
 - DOMAIN-KEYWORD,telegram,Proxy
 - DOMAIN-SUFFIX,humblebundle.com,PROXY
 - DOMAIN-KEYWORD,steam,Proxy
+- DOMAIN-SUFFIX,analytics.twitter.com,PROXY
 
 # Direct
 - DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT

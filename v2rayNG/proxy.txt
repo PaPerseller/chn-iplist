@@ -6,6 +6,7 @@ domain:ytimg.com,
 domain:ggpht.com,
 domain:humblebundle.com,
 domain:googleapis.cn,
+domain:analytics.twitter.com
 gmail,
 google,
 gstatic,
