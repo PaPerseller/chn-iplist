@@ -40,7 +40,8 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 1. Quantumult (no chn-ip) 与 clash (no chn-ip) 均可额外使用 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)，Quantumult (no chn-ip) 还可使用 [快捷指令](https://www.icloud.com/shortcuts/4e2eef25e68f4db49b6a78f104ba1f7c) 导入。
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
-3. 已加入 ipv6 列表并在测试中的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android(version≥1.6.5)
+3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android(version≥1.6.5)、shadowrocket
+4. Kitsunebi (ios base64) 暂停更新和测试
 
 
 ### Todo & Test:
@@ -48,10 +49,8 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 测试中：  
 kitsunebi ios base64 编码版
 chn-iplist.sh+ipv6 版  
-pac 规则  
 ipv6-list  
 clash 规则  
-- [ ] tg 规则可用性精简
 
 ### 路由器本地脚本使用
 
