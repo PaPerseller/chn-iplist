@@ -109,7 +109,8 @@
         "domain" : [
           "domain:fonts.googleapis.com",
           "domain:fonts.gstatic.com",
-          "domain:softpedia.com"
+          "domain:softpedia.com",
+          "domain:mtalk.google.com"
         ],
         "type" : "field"
       },
@@ -8526,7 +8527,7 @@
           "223.255.0.0/17",
           "223.255.236.0/22",
           "223.255.252.0/23",
-          "61.132.98.242/6060",
+          "61.132.98.242",
           "geoip:private"
         ],
         "type" : "field"

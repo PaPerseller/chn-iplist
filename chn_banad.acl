@@ -66,6 +66,7 @@
 (^|\.)fonts.googleapis\.com$
 (^|\.)fonts.gstatic\.com$
 (^|\.)softpedia\.com$
+(^|\.)mtalk.google\.com$
 
 # 局域网
 ^(.*\.)?local$
@@ -90,7 +91,7 @@
 224.0.0.0/3
 
 # 国内ip地址
-61.132.98.242/6060
+61.132.98.242
 
 1.0.1.0/24
 1.0.2.0/23

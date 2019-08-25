@@ -92,7 +92,8 @@ Rule:
 - DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
 - DOMAIN-SUFFIX,fonts.gstatic.com,DIRECT
 - DOMAIN-SUFFIX,softpedia.com,DIRECT
-- IP-CIDR,61.132.98.242/6060,DIRECT
+- IP-CIDR,61.132.98.242,DIRECT
+- DOMAIN-SUFFIX,mtalk.google.com,DIRECT
 
 - DOMAIN-SUFFIX,apple.com,DIRECT
 - DOMAIN-SUFFIX,crashlytics.com,DIRECT
