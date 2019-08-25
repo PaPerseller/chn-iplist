@@ -1,3 +1,4 @@
 fonts.googleapis.com
 fonts.gstatic.com
 softpedia.com
+mtalk.google.com
