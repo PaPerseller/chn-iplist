@@ -42,6 +42,7 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
 3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android(version≥1.6.5)、shadowrocket
 4. Kitsunebi (ios base64) 暂停更新和测试
+5. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为 仅IPV4。
 
 
 ### Todo & Test:
