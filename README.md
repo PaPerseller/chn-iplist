@@ -48,7 +48,7 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 ### Todo & Test:
 
 测试中：  
-kitsunebi ios base64 编码版
+
 chn-iplist.sh+ipv6 版  
 clash 规则  
 
