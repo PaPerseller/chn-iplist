@@ -30,7 +30,7 @@ BifrostV：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/m
 
 v2ray 配置内嵌规则，将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2ray-config_rule.txt)加入配置文件 routing 对应区域。域名解析策略自行选择。
 
-v2rayNG ：分别将 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、[proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt) 规则复制粘贴至应用内。应用以此顺序使用规则，故推荐 IPIfNonMatch 策略。
+v2rayNG ：分别将[proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt) 规则复制粘贴至应用内。
 
 clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml 
 
