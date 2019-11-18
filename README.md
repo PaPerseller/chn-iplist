@@ -43,6 +43,8 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android(version≥1.6.5)、shadowrocket
 4. Kitsunebi (ios base64) 暂停更新和测试
 5. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为 仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
+6. 欢迎知情人通过 issue 告知 clash 内 ipv6 规则语法为 IP-CIDR 还是 IP-CIDR6。
+7. 12月更新将重命名 Kitsunebi-android 规则文件，去除“test”字样，届时需手动更改订阅地址。
 
 
 ### Todo & Test:
