@@ -14,9 +14,7 @@ Quantumult (no chn-ip) : https://raw.githubusercontent.com/PaPerseller/chn-iplis
 
 Kitsunebi: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf
 
-Kitsunebi (ios base64): https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-base64.conf
-
-Kitsunebi-android: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-android_test.conf
+Kitsunebi-android: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-android.conf
 
 acl (no ban ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl
 
@@ -40,11 +38,10 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 1. Quantumult (no chn-ip) 与 clash (no chn-ip) 均可额外使用 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)，Quantumult (no chn-ip) 还可使用 [快捷指令](https://www.icloud.com/shortcuts/4e2eef25e68f4db49b6a78f104ba1f7c) 导入。
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
-3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android(version≥1.6.5)、shadowrocket
-4. Kitsunebi (ios base64) 暂停更新和测试
-5. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为 仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
-6. 欢迎知情人通过 issue 告知 clash 内 ipv6 规则语法为 IP-CIDR 还是 IP-CIDR6。
-7. 12月更新将重命名 Kitsunebi-android 规则文件，去除“test”字样，届时需手动更改订阅地址。
+3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket
+4. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
+5. 欢迎知情人通过 issue 告知 clash 内 ipv6 规则语法为 IP-CIDR 还是 IP-CIDR6。
+6. 12月更新重命名 Kitsunebi-android 规则文件，去除“test”字样，需手动更改订阅地址。
 
 
 ### Todo & Test:
@@ -53,6 +50,8 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 chn-iplist.sh+ipv6 版  
 clash 规则  
+
+可能加入 Quantumult X 规则
 
 ### 路由器本地脚本使用
 
