@@ -10342,6 +10342,7 @@
 (^|\.)apkpure\.com$
 (^|\.)googleapis\.cn$
 (^|\.)analytics\.twitter\.com$
+(^|\.)g\.whatsapp\.net$
 
 # telegram
 91.108.56.116

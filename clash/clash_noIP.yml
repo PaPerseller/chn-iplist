@@ -51,7 +51,7 @@ Rule:
 - DOMAIN-KEYWORD,zjtoolbar,REJECT
 - DOMAIN-KEYWORD,adsrvr,REJECT
 - DOMAIN-KEYWORD,gdt,REJECT
-- DOMAIN-SUFFIX,sdkapp.uve.wibo.com,REJECT
+- DOMAIN-SUFFIX,sdkapp.uve.weibo.com,REJECT
 
 # Proxy
 - IP-CIDR,91.108.56.0/22,PROXY
@@ -87,6 +87,7 @@ Rule:
 - DOMAIN-SUFFIX,humblebundle.com,PROXY
 - DOMAIN-KEYWORD,steam,Proxy
 - DOMAIN-SUFFIX,analytics.twitter.com,PROXY
+- DOMAIN-SUFFIX,g.whatsapp.net,PROXY
 
 # Direct
 - DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT

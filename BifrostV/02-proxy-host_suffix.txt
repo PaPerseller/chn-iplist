@@ -1,3 +1,4 @@
 ampproject.org
 googleapis.cn
 analytics.twitter.com
+g.whatsapp.net
