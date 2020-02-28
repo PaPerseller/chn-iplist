@@ -8,7 +8,9 @@ chnroute.txt: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ch
 
 Shadowrocket: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf
 
-Quantumult (no chn-ip) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult_noIP.conf
+Quantumult: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult.conf
+
+Quantumult(X) (no chn-ip) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf
 
 Kitsunebi: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf
 
@@ -34,7 +36,7 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 ### PS.
 
-1. Quantumult (no chn-ip) 与 clash (no chn-ip) 均可额外使用 geoip  数据库：[GeoLite2](http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz)，Quantumult (no chn-ip) 还可使用 [快捷指令](https://www.icloud.com/shortcuts/4e2eef25e68f4db49b6a78f104ba1f7c) 导入。鉴于 QuantumultX 可直接更新 GeoLite2 数据库，自 2020-2 版本起仅保留 no chn-ip 版本规则。
+1. Maxmind 网站需注册后才可下载 Database 和提供 token，原快捷指令已失效。不再提供 Quantumult(no chn-ip) 版本。鉴于 Quantumult(X) 可于软件内更新 GeoLite2，现提供 Quantumult(X) no chn-ip 规则和 自带 chn-ip 的 Quantumult 规则。
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
 3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket
 4. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
