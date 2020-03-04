@@ -50,7 +50,7 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 测试中：  
 
 chn-iplist.sh+ipv6 版  
-clash 规则 
+clash 规则  
 clash 策略规则 
 
 ### 路由器本地脚本使用
