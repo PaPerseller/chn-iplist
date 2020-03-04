@@ -42,7 +42,8 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
 3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket
 4. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
-5. clash 策略规则开始测试，规则文件则已被验证可用，然其配置文件可用性尚待验证。因 clash for windows 可通过 Geolite2 token 更新 ip 库，不建议将当前规则用于 clash for windows。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则的导入。
+5. Kitsunebi 相比于 kitsunebi-android，缺少 apple 和 ipv6 规则，更适用于于 ios ，但也可用于 android。
+6. clash 策略规则开始测试，规则文件则已被验证可用，然其配置文件可用性尚待验证。因 clash for windows 可通过 Geolite2 token 更新 ip 库，不建议将当前规则用于 clash for windows。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则的导入。
 
 
 ### Todo & Test:
