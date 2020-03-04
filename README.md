@@ -22,6 +22,8 @@ acl (ban ads) : https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/
 
 pac: https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac  （默认非 chn-ip 网站走 socks5 localhost:1080 代理）
 
+clash 远程配置(test): https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/clash/pref.ini
+
 ### 需手动更新：
 
 BifrostV：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/BifrostV)下按规则类型复制粘贴至应用内。
@@ -36,11 +38,11 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 ### PS.
 
-1. Maxmind 网站需注册后才可下载 Database 和提供 token，原快捷指令已失效。不再提供 Quantumult(no chn-ip) 版本。鉴于 Quantumult(X) 可于软件内更新 GeoLite2，现提供 Quantumult(X) no chn-ip 规则和 自带 chn-ip 的 Quantumult 规则。
+1. Maxmind 网站需注册后才可获取 token 并下载，原快捷指令已失效。不再提供 Quantumult(no chn-ip) 版本。鉴于 Quantumult(X) 可于软件内更新 GeoLite2，现提供 Quantumult(X) no chn-ip 规则和 自带 chn-ip 的 Quantumult 规则。
 2. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
 3. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket
 4. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
-5. 欢迎知情人通过 issue 告知 clash 内 ipv6 规则语法为 IP-CIDR 还是 IP-CIDR6。
+5. clash 策略规则开始测试，规则文件则已被验证可用，然其配置文件可用性尚待验证。因 clash for windows 可通过 Geolite2 token 更新 ip 库，不建议将当前规则用于 clash for windows。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则的导入。
 
 
 ### Todo & Test:
@@ -48,7 +50,8 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 测试中：  
 
 chn-iplist.sh+ipv6 版  
-clash 规则  
+clash 规则 
+clash 策略规则 
 
 ### 路由器本地脚本使用
 
@@ -57,3 +60,4 @@ clash 规则
 ### 致谢
 
 - [CIDR2PAC](https://github.com/wspl/CIDR2PAC) - A es6 script for coverting CIDRs list to PAC proxy script.
+- [ACL4SSR/Clash](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) - Clash规则碎片
