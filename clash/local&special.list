@@ -26,7 +26,7 @@ DOMAIN-SUFFIX,tendawifi.com
 DOMAIN-SUFFIX,zte.home
 
 # special
-DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
-DOMAIN-SUFFIX,fonts.gstatic.com,DIRECT
-DOMAIN-SUFFIX,softpedia.com,DIRECT
-DOMAIN-SUFFIX,mtalk.google.com,DIRECT
+DOMAIN-SUFFIX,fonts.googleapis.com
+DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN-SUFFIX,softpedia.com
+DOMAIN-SUFFIX,mtalk.google.com
