@@ -92,22 +92,42 @@
           "domain:fonts.gstatic.com",
           "domain:softpedia.com",
           "domain:mtalk.google.com"
+          "domain:ip6-localhost",
+          "domain:ip6-loopback",
+          "domain:local",
+          "domain:localhost",
+          "domain:hiwifi.com",
+          "domain:leike.cc",
+          "domain:miwifi.com",
+          "domain:my.router",
+          "domain:p.to",
+          "domain:peiluyou.com",
+          "domain:phicomm.me",
+          "domain:routerlogin.com",
+          "domain:tendawifi.com",
+          "domain:zte.home"
         ],
         "type" : "field"
       },
       {
         "outboundTag" : "proxy",
         "ip" : [
-          "91.108.56.116",
+          "91.108.4.0/22",
           "91.108.56.0/22",
+          "91.108.56.0/23",
           "91.108.56.0/24",
           "91.108.8.0/22",
-          "91.108.4.0/22",
           "109.239.140.0/24",
           "149.154.160.0/20",
+          "149.154.160.0/22",
           "149.154.164.0/22",
+          "149.154.168.0/22",
+          "149.154.172.0/22",
           "149.154.167.0/24",
-          "149.154.175.0/24"
+          "149.154.175.0/24",
+          "2001:67c:4e8::/48",
+          "2001:b28:f23d::/48",
+          "2001:b28:f23f::/48"
         ],
         "type" : "field"
       },
@@ -10407,6 +10427,15 @@
           "240f:8000::/24",
           "240f:c000::/24",
           "geoip:private"
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "127.0.0.0/8",
+          "172.16.0.0/12",
+          "192.168.0.0/16",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10",
+          "fd00::/8"
         ],
         "type" : "field"
       }

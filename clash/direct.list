@@ -3992,6 +3992,12 @@ IP-CIDR,103.147.124.0/23,no-resolve
 IP-CIDR,103.147.198.0/23,no-resolve
 IP-CIDR,103.147.206.0/23,no-resolve
 IP-CIDR,103.147.211.0/24,no-resolve
+IP-CIDR,103.148.174.0/23,no-resolve
+IP-CIDR,103.149.6.0/23,no-resolve
+IP-CIDR,103.149.17.0/24,no-resolve
+IP-CIDR,103.149.44.0/23,no-resolve
+IP-CIDR,103.149.110.0/23,no-resolve
+IP-CIDR,103.149.132.0/23,no-resolve
 IP-CIDR,103.192.0.0/22,no-resolve
 IP-CIDR,103.192.4.0/22,no-resolve
 IP-CIDR,103.192.8.0/22,no-resolve
@@ -6159,7 +6165,10 @@ IP-CIDR,171.208.0.0/12,no-resolve
 IP-CIDR,172.81.192.0/18,no-resolve
 IP-CIDR,175.0.0.0/12,no-resolve
 IP-CIDR,175.16.0.0/13,no-resolve
-IP-CIDR,175.24.0.0/14,no-resolve
+IP-CIDR,175.24.0.0/16,no-resolve
+IP-CIDR,175.25.0.0/16,no-resolve
+IP-CIDR,175.26.0.0/16,no-resolve
+IP-CIDR,175.27.0.0/16,no-resolve
 IP-CIDR,175.30.0.0/15,no-resolve
 IP-CIDR,175.42.0.0/15,no-resolve
 IP-CIDR,175.44.0.0/16,no-resolve
@@ -8535,6 +8544,7 @@ IP-CIDR6,2001:df2:5780::/48,no-resolve
 IP-CIDR6,2001:df2:5a80::/48,no-resolve
 IP-CIDR6,2001:df2:6680::/48,no-resolve
 IP-CIDR6,2001:df2:a580::/48,no-resolve
+IP-CIDR6,2001:df3:1480::/48,no-resolve
 IP-CIDR6,2001:df3:b100::/48,no-resolve
 IP-CIDR6,2001:df4:1500::/48,no-resolve
 IP-CIDR6,2001:df4:2f00::/48,no-resolve
@@ -8962,7 +8972,6 @@ IP-CIDR6,2401:c6c0::/32,no-resolve
 IP-CIDR6,2401:c840::/32,no-resolve
 IP-CIDR6,2401:c8c0::/32,no-resolve
 IP-CIDR6,2401:ca00::/32,no-resolve
-IP-CIDR6,2401:ca80::/32,no-resolve
 IP-CIDR6,2401:cb80::/32,no-resolve
 IP-CIDR6,2401:cc00::/32,no-resolve
 IP-CIDR6,2401:ce00::/32,no-resolve
@@ -9924,9 +9933,14 @@ IP-CIDR6,2405:cc80::/32,no-resolve
 IP-CIDR6,2405:cd80::/32,no-resolve
 IP-CIDR6,2405:ce80::/32,no-resolve
 IP-CIDR6,2405:d280::/32,no-resolve
+IP-CIDR6,2405:d4c0::/32,no-resolve
 IP-CIDR6,2405:d700::/32,no-resolve
+IP-CIDR6,2405:d740::/32,no-resolve
 IP-CIDR6,2405:d900::/32,no-resolve
+IP-CIDR6,2405:df40::/32,no-resolve
 IP-CIDR6,2405:e000::/32,no-resolve
+IP-CIDR6,2405:e040::/32,no-resolve
+IP-CIDR6,2405:e1c0::/32,no-resolve
 IP-CIDR6,2405:e600::/32,no-resolve
 IP-CIDR6,2405:ee80::/32,no-resolve
 IP-CIDR6,2405:f380::/32,no-resolve
