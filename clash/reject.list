@@ -12,7 +12,7 @@ DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN-SUFFIX,googletakes.com
 DOMAIN-SUFFIX,mobileads.google.com
-DOMAIN-KEYWORD,pagead*
+DOMAIN-KEYWORD,pagead
 
 # others
 DOMAIN-SUFFIX,g1.tagtic.cn 	
