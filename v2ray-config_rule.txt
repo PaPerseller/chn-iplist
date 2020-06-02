@@ -91,7 +91,7 @@
           "domain:fonts.googleapis.com",
           "domain:fonts.gstatic.com",
           "domain:softpedia.com",
-          "domain:mtalk.google.com"
+          "domain:mtalk.google.com",
           "domain:ip6-localhost",
           "domain:ip6-loopback",
           "domain:local",
@@ -10464,7 +10464,7 @@
           "240f:4000::/24",
           "240f:8000::/24",
           "240f:c000::/24",
-          "geoip:private"
+          "geoip:private",
           "10.0.0.0/8",
           "100.64.0.0/10",
           "127.0.0.0/8",
