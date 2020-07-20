@@ -4,6 +4,7 @@
     "domainStrategy": "IPOnDemand",
     "domains": {
         "block": [
+            "geosite:category-ads-all",
             "domain:ads.fmdisk.com",
             "domain:ads.feemoo.com",
             "domain:googleads.g.doubleclick.net",
@@ -56,6 +57,7 @@
             "gdt"
         ],
         "direct": [
+            "geosite:cn",
             "domain:fonts.googleapis.com",
             "domain:fonts.gstatic.com",
             "domain:softpedia.com",
@@ -76,6 +78,10 @@
             "domain:zte.home"
         ],
         "proxy": [
+            "geosite:google",
+            "geosite:github",
+            "geosite:netflix",
+            "geosite:telegram",
             "domain:ampproject.org",
             "domain:goo.gl",
             "domain:gvt1.com",
@@ -100,8 +106,7 @@
             "instagram",
             "twitter",
             "twimg",
-            "telegram",
-            "steam"
+            "telegram"
         ]
     },
     "ips": {
