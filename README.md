@@ -1,6 +1,6 @@
 # chn-iplist
 
-数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、BifrostV、v2rayNG、clash、pac 规则和 v2ray 配置内嵌规则，仅包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
+数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、BifrostV、v2rayNG、clash、pac 规则、Q2ray 规则和 v2ray 配置内嵌规则，仅包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
 
 ### Subscribe URL:
 
@@ -36,10 +36,12 @@ clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml
 
 clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 
+Qv2ray：下载此[方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray.json)后导入
+
 ### PS.
 
 1. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
-2. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket
+2. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket、Qv2ray
 3. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
 4. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则，更适用于 ios ，也可用于 android。
 5. clash 策略规则开始测试，规则文件则已被验证可用，然其配置文件可用性尚待测试。clash for windows 可通过 Geolite2 token 更新 ip 库。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则导入。此策略规则也可用于 surfboard 等其他应用。（需去除 v6 规则才可用于 surfboard ）
@@ -50,9 +52,9 @@ clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/
 
 测试中：  
 
-chn-iplist.sh+ipv6 版  
 clash 规则  
-clash 策略规则 
+clash 策略规则   
+Qv2ray规则
 
 ### 路由器本地脚本使用
 
