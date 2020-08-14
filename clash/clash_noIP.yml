@@ -18,7 +18,8 @@ Rule:
 - DOMAIN-SUFFIX,g1.tagtic.cn,REJECT 	
 - DOMAIN-SUFFIX,log.tagtic.cn,REJECT 	
 - DOMAIN-SUFFIX,pgdt.ugdtimg.com,REJECT 	
-- DOMAIN-SUFFIX,sdownload.stargame.com,REJECT 	
+- DOMAIN-SUFFIX,sdownload.stargame.com,REJECT
+- DOMAIN-SUFFIX,xcz.im,REJECT 	
 - DOMAIN-KEYWORD,umeng,REJECT
 - DOMAIN-KEYWORD,adnyg,REJECT
 - DOMAIN-KEYWORD,admarvel,REJECT
