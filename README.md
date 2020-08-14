@@ -44,8 +44,7 @@ Qv2ray：下载此[方案](https://raw.githubusercontent.com/PaPerseller/chn-ipl
 2. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket、Qv2ray
 3. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
 4. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则，更适用于 ios ，也可用于 android。
-5. clash 策略规则开始测试，规则文件则已被验证可用，然其配置文件可用性尚待测试。clash for windows 可通过 Geolite2 token 更新 ip 库。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则导入。此策略规则也可用于 surfboard 等其他应用。（需去除 v6 规则才可用于 surfboard ）
-6.  v2ray 配置内嵌规则中错误地将直连 ip 规则 outboundTag 设为 proxy，请使用 2020-06-15 版之前的进行更新。
+5. clash 策略规则开始测试，规则文件已被验证可用，然其配置文件可用性尚待测试。clash for windows 可通过 Geolite2 token 更新 ip 库。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则导入。此策略规则也可用于 surfboard 等其他应用。（需去除 v6 规则才可用于 surfboard ）
 
 
 ### Todo & Test:
