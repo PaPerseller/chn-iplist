@@ -63,3 +63,4 @@ Qv2ray规则
 
 - [CIDR2PAC](https://github.com/wspl/CIDR2PAC) - A es6 script for coverting CIDRs list to PAC proxy script.
 - [ACL4SSR/Clash](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) - Clash规则碎片
+- [domain-list-community](https://github.com/v2fly/domain-list-community) - Community managed domain list
