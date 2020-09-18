@@ -53,8 +53,7 @@ Qv2ray：下载此[方案](https://raw.githubusercontent.com/PaPerseller/chn-ipl
 测试中：  
 
 clash 规则  
-clash 策略规则   
-Qv2ray 规则
+clash 策略规则配置文件   
 
 ### 路由器本地脚本使用
 
