@@ -1,7 +1,7 @@
 {
     "author": "PaPerseller",
     "description": "chn-iplist",
-    "domainStrategy": "IPOnDemand",
+    "domainStrategy": "IPIfNonMatch",
     "domains": {
         "block": [
             "geosite:category-ads-all",
