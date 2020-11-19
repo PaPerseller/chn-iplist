@@ -30,22 +30,23 @@ BifrostV：在[相关文件夹](https://github.com/PaPerseller/chn-iplist/tree/m
 
 v2ray 配置内嵌规则：将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2ray-config_rule.json)加入配置文件 routing 对应区域。域名解析策略自行选择。
 
-v2rayNG ：分别将 [proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)、 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt) 规则复制粘贴至应用内。
+v2rayNG ：分别将 [proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/proxy.txt)、[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct.txt)或[direct-noip](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/direct-noip.txt)、 [block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayNG/block.txt) 规则复制粘贴至应用内。
 
 clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml 
 
 clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 
-Qv2ray：下载此[方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray.json)后导入
+Qv2ray：下载[此方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray.json)或[无 chnip 方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray-noip.json)后导入。
 
 ### PS.
 
 1. v2rayNG 规则可与 pc 客户端 v2rayN 通用。 
 2. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket、Qv2ray
 3. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
-4. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则，更适用于 ios ，也可用于 android。
-5. clash 策略规则开始测试，规则文件已被验证可用，然其配置文件可用性尚待测试。clash for windows 可通过 Geolite2 token 更新 ip 库。本人技术有限，目前通过替换 subconverter 内 acl4ssr 配置文件实现自有规则导入。此策略规则也可用于 surfboard 等其他应用。（需去除 v6 规则才可用于 surfboard ）
+4. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则。
+5. clash 配置文件可用性尚待测试。此策略规则也可用于 surfboard 等应用。（需去除 v6 规则才可用于 surfboard ）
 6. 2020-09-15 版起试用 mos-chinadns 项目的 ip 合并优化[脚本](https://github.com/IrineSistiana/mos-chinadns/blob/master/scripts/update_chn_ip_domain.py)生成的列表。
+7. v2rayNG(≥1.4.10) 和 Qv2ray 等支持调用 dat 文件资源的，已提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 加强版规则。Linux 用户可使用 `bash <(curl https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
 
 
 ### Todo & Test:
@@ -65,3 +66,4 @@ clash 策略规则配置文件
 - [ACL4SSR/Clash](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) - Clash规则碎片
 - [domain-list-community](https://github.com/v2fly/domain-list-community) - Community managed domain list
 - [mos-chinadns](https://github.com/IrineSistiana/mos-chinadns)
+- [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强版
