@@ -1,6 +1,6 @@
 # chn-iplist
 
-数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、BifrostV、v2rayNG、clash、pac 规则、Qv2ray 规则和 v2ray 配置内嵌规则，仅包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
+数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、BifrostV、v2rayNG、clash、pac 、Qv2ray 规则和 v2ray 配置内嵌规则，仅包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
 
 ### Subscribe URL:
 
@@ -36,17 +36,17 @@ clash：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash.yml
 
 clash (no chn-ip)：https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 
-Qv2ray：下载[此方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray.json)或[无 chnip 方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray-noip.json)后导入。
+Qv2ray：下载[此方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray.json)或[no-chnip 方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Qv2ray-noip.json)后导入。
 
 ### PS.
 
-1. v2rayNG 规则与 pc 客户端 v2rayN 通用。 
+1. v2rayNG 规则与 v2rayN 可通用。 
 2. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayNG、Kitsunebi-android、shadowrocket、Qv2ray
-3. Kitsunebi android 用户若服务器不支持 ipv6，请于设置中允许地址类型设为仅IPV4。Shadowrocket (ios) 等有ipv6开关的同理。
+3. 若服务器不支持 ipv6，请于 Kitsunebi android 中设置允许地址类型为仅 IPV4。Shadowrocket (ios) 等有 ipv6 开关的同理。
 4. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则。
-5. clash 配置文件可用性尚待测试。此策略规则也可用于 surfboard 等应用。（需去除 v6 规则才可用于 surfboard ）
-6. 2020-09-15 版起试用 mos-chinadns 项目的 [ip 合并优化脚本](https://github.com/IrineSistiana/mos-chinadns/blob/master/scripts/update_chn_ip_domain.py)生成的列表。
-7. v2rayNG(≥1.4.10) 和 Qv2ray 等支持调用 dat 文件资源的，已提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 加强版规则。Linux 用户可使用 `bash <(curl https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
+5. clash 配置文件可用性尚待测试。
+6. 2020-09-15 版起试用 mos-chinadns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mos-chinadns/blob/master/scripts/update_chn_ip_domain.py)生成的列表。
+7. v2rayNG(≥1.4.10) 和 Qv2ray 等支持调用 dat 文件资源的，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
 
 
 ### Todo & Test:
