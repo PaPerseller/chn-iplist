@@ -1,4 +1,3 @@
-geosite:google,
 geosite:telegram,
 geosite:netflix,
 geosite:geolocation-!cn,
