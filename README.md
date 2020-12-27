@@ -4,31 +4,6 @@
 
 ## Subscribe URL:
 
-### ios:
-[Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf)
-
-[Quantumult](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult.conf)
-
-[Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf)
-
-[Kitsunebi](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf)
-
-### android:
-
-[Kitsunebi-android](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-android.conf)
-
-[acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl)
-
-[acl (ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn_banad.acl)
-
-### 其他：
-
-chnroute.txt: [ipv4与ipv6合并版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) | [纯ipv4版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) | [纯ipv6版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt)
-
-[pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认非 chn-ip 网站走 socks5 localhost:1080 代理）
-
-[clash 远程配置(test)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/clash/pref.ini)
-
 |                             ios                              |                           android                            |                             其他                             |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf) | [Kitsunebi-android](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-android.conf) | chnroute.txt [ipv4与ipv6合并版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [纯ipv4版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [纯ipv6版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
