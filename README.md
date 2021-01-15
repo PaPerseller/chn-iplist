@@ -45,7 +45,7 @@ https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 2. 若服务器不支持 ipv6，请于 Kitsunebi android 中设置允许地址类型为仅 IPV4。Shadowrocket (ios) 等有 ipv6 开关的同理。
 3. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则。Kitsunebi 支持将从 2020-12-15 版起季更一年后结束。
 4. 2020-09-15 版起列表由 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py) 生成。
-5. v2rayNG(≥1.4.10) 和 Qv2ray 支持调用 dat 文件资源，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
+5. v2rayNG(≥1.4.10) 、v2rayN 和 Qv2ray 支持调用 dat 文件资源，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
 
 
 ## Todo & Test:
