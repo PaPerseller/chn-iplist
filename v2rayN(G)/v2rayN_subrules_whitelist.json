@@ -1,7 +1,7 @@
 [
-	{
+    {
 		"type": "field",
-    "protocol": ["bittorrent"],
+        "protocol": ["bittorrent"],
 		"outboundTag": "direct"
 	},
     {
@@ -84,19 +84,6 @@
           "domain:zte.home"
 		]
 	},
-	{
-		"type": "field",
-		"port": "",
-		"outboundTag": "direct",
-		"ip": [
-          "geoip:private",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10",
-          "fd00::/8",
-          "geoip:cn" 
-		]
-	},
     {
 		"type": "field",
 		"port": "",
@@ -124,7 +111,20 @@
     },
 	{
 		"type": "field",
+		"port": "",
+		"outboundTag": "direct",
+		"ip": [
+          "geoip:private",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10",
+          "fd00::/8",
+          "geoip:cn" 
+		]
+	},
+    {
+		"type": "field",
 		"port": "0-65535",
 		"outboundTag": "proxy"
 	}
-]
+] 
