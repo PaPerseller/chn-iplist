@@ -53,6 +53,7 @@ Rule:
 - DOMAIN-KEYWORD,adsrvr,REJECT
 - DOMAIN-KEYWORD,gdt,REJECT
 - DOMAIN-SUFFIX,sdkapp.uve.weibo.com,REJECT
+- DOMAIN-SUFFIX,wwads.cn,REJECT
 
 # Proxy
 - IP-CIDR,91.108.56.0/22,PROXY
