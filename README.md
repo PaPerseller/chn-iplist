@@ -8,8 +8,8 @@
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf) | [Kitsunebi-android](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-android.conf) | chnroute [ipv4与ipv6合并版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [纯ipv4版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [纯ipv6版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
 | [Quantumult](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult.conf) \| [Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf) | [acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl) \| [acl (ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn_banad.acl) | [pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认非 chn-ip 网站走 socks5 localhost:1080） |
-| [Kitsunebi](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf) | [v2rayN (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist) | [clash 远程配置(test)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/clash/pref.ini) |
-|                                                              |                                                              | [v2rayN (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist.json) |
+| [Kitsunebi](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf) |                                                              | [clash 远程配置(test)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/clash/pref.ini) |
+|                                                              |                                                              | [v2rayN (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist) |
 
 
 
@@ -47,7 +47,7 @@ https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 3. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则。Kitsunebi 支持将从 2020-12-15 版起季更一年后结束。
 4. 2020-09-15 版起列表由 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py) 生成。
 5. v2rayNG(≥1.4.10) 、v2rayN 和 Qv2ray 支持调用 dat 文件资源，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
-6. v2rayN(≥4.8) 支持订阅规则集，暂仅提供[无 chnip 规则版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist.json)。新建 url 订阅后需再点击从 url 导入规则集，成功导入后方可设为活动路由。
+6. v2rayN(≥4.8) 支持订阅规则集，暂仅提供[无 chnip 规则版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist)。新建 url 订阅后需再点击从 url 导入规则集，成功导入后方可设为活动路由。
 
 
 ## Todo & Test:
