@@ -1,5 +1,4 @@
-#荒野无灯固件使用
-#开启ss命令：1. nvram set google_fu_mode=0xDEADBEEF 2. nvram commit
+#!/bin/sh
 
 set -e -o pipefail
  
