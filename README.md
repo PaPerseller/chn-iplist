@@ -56,9 +56,6 @@ https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 
 clash 规则和 clash 策略规则配置文件   
 
-## 路由器本地脚本使用
-
-使用 `chmod +x /etc/sbin/chn-iplist.sh` 赋予其可执行权限。
 
 ## 致谢
 
