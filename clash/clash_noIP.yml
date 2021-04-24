@@ -54,6 +54,9 @@ Rule:
 - DOMAIN-KEYWORD,gdt,REJECT
 - DOMAIN-SUFFIX,sdkapp.uve.weibo.com,REJECT
 - DOMAIN-SUFFIX,wwads.cn,REJECT
+- DOMAIN-SUFFIX,gzads.com,REJECT
+- DOMAIN-SUFFIX,gozendata.com,REJECT
+- DOMAIN-SUFFIX,gz-data.com,REJECT
 
 # Proxy
 - IP-CIDR,91.108.56.0/22,PROXY

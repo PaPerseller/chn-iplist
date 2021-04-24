@@ -60,6 +60,9 @@
 (^|\.)sdkapp.uve.weibo\.com$
 (^|\.)xcz\.im$
 (^|\.)wwads\.cn$
+(^|\.)gzads\.com$
+(^|\.)gozendata\.com$
+(^|\.)gz-data\.com$
 
 # 直连列表
 [bypass_list]
