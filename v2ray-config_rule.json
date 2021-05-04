@@ -76,7 +76,8 @@
           "tdesktop.com",
           "instagram",
           "twimg",
-          "steam"
+          "steam",
+          "v2ex"
         ],
         "type" : "field"
       },

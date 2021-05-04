@@ -89,10 +89,11 @@ Rule:
 - DOMAIN-KEYWORD,twitter,Proxy
 - DOMAIN-KEYWORD,twimg,Proxy
 - DOMAIN-KEYWORD,telegram,Proxy
-- DOMAIN-SUFFIX,humblebundle.com,PROXY
 - DOMAIN-KEYWORD,steam,Proxy
+- DOMAIN-KEYWORD,v2ex,Proxy
 - DOMAIN-SUFFIX,analytics.twitter.com,PROXY
 - DOMAIN-SUFFIX,g.whatsapp.net,PROXY
+- DOMAIN-SUFFIX,humblebundle.com,PROXY
 
 # Direct
 - DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
