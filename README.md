@@ -45,7 +45,7 @@ https://github.com/PaPerseller/chn-iplist/blob/master/clash/clash_noIP.yml
 1. 已加入 ipv6 列表的规则：chnroute.txt、chnroute.pac、chn.acl、clash、v2rayN(G)、Kitsunebi-android、shadowrocket、Qv2ray
 2. Shadowrocket (ios) 等有 ipv6 设置开关的，若服务器不支持 ipv6，请设为仅 IPV4。
 3. Kitsunebi 相比于 kitsunebi-android，增加 apple 直连并去除 ipv6 规则。Kitsunebi 支持自 2020-12-15 版起季更一年后结束。
-5. v2rayNG(≥1.4.10) 、v2rayN 和 Qv2ray 支持调用 dat 文件，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/install-dat-release.sh)` 更新此资源。
+5. v2rayNG(≥1.4.10) 、v2rayN 和 Qv2ray 支持调用 dat 文件，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/xray-install-dat-release.sh)` 更新至 Xray 资源文件夹。或用`bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/v2ray-install-dat-release.sh)` 更新至 v2ray 资源文件夹。
 6. v2rayN(≥4.8) 支持订阅规则集，暂仅提供[无 chnip 规则版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist)。新建 url 订阅后需再点击从 url 导入规则集，成功导入后方可设为活动路由。
 
 
