@@ -69,6 +69,7 @@
         "geosite:cn",
         "geosite:apple",
         "geosite:umeng",
+        "geosite:google-cn",
         "domain:fonts.googleapis.com",
         "domain:fonts.gstatic.com",
         "domain:softpedia.com",
@@ -113,6 +114,14 @@
         "instagram",
         "twimg",
         "v2ex"
+      ]
+    },
+    {
+      "type": "field",
+      "port": "",
+      "outboundTag": "proxy",
+      "ip": [
+        "geoip:telegram"
       ]
     },
     {
