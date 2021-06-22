@@ -1,0 +1,17 @@
+geosite:google
+geosite:telegram
+geosite:netflix
+geosite:geolocation-!cn
+geosite:appledaily
+geosite:github
+geosite:twitter
+geosite:amp
+domain:ytimg.com
+domain:ggpht.com
+domain:humblebundle.com
+domain:analytics.twitter.com
+domain:g.whatsapp.net
+instagram
+twimg
+steam
+v2ex
