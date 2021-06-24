@@ -24,7 +24,7 @@
 
 #### AnXray & SagerNet
 
-分别将 [domain 屏蔽规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/block-domain.txt)、[domain 代理规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/proxy-domain.txt)、[domain 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/direct-domian.txt)、[ip 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/direct-ip.txt)复制粘贴至应用内路由对应分类。
+分别将 [domain 屏蔽规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/block-domain.txt)、[domain 代理规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/proxy-domain.txt)、[domain 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/direct-domain.txt)、[ip 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/direct-ip.txt)、[ip 代理规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/AnXray%26SagerNet/proxy-ip.txt)复制粘贴至应用内路由对应分类。
 
 #### clash
 
