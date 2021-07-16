@@ -1,5 +1,5 @@
 # chn-iplist
-数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，使用 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、BifrostV、v2rayNG、v2rayN、clash、pac、Qv2ray、AnXray、SagerNet 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
+数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，使用 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、Kitsunebi、acl、v2rayNG、v2rayN、clash、pac、Qv2ray、AnXray、SagerNet 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及部分谷歌和国内常见广告屏蔽规则。每月更新一次。
 
 ## Subscribe URL:
 
@@ -7,8 +7,7 @@
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf) | [Kitsunebi-android](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi-android.conf) | chnroute [ipv4与ipv6合并版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [纯ipv4版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [纯ipv6版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
 | [Quantumult](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult.conf) \| [Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf) | [acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl) \| [acl (ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn_banad.acl) | [pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认非 chn-ip 网站走 socks5 localhost:1080） |
-| [Kitsunebi](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf) |                                                              | [clash 远程配置(test)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/clash/pref.ini) |
-|                                                              |                                                              | [v2rayN (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist) |
+| [Kitsunebi](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Kitsunebi.conf) |                                                              | [v2rayN (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist) |
 
 
 
