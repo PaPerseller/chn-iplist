@@ -1,4 +1,3 @@
-geoip:private
 ::1/128
 fc00::/7
 fe80::/10

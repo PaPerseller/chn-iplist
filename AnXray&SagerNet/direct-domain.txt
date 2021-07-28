@@ -4,10 +4,6 @@ geosite:umeng
 domain:fonts.googleapis.com
 domain:fonts.gstatic.com
 domain:softpedia.com
-domain:ip6-localhost
-domain:ip6-loopback
-domain:local
-domain:localhost
 domain:hiwifi.com
 domain:leike.cc
 domain:miwifi.com
