@@ -77,17 +77,7 @@
         "domain:ip6-localhost",
         "domain:ip6-loopback",
         "domain:local",
-        "domain:localhost",
-        "domain:hiwifi.com",
-        "domain:leike.cc",
-        "domain:miwifi.com",
-        "domain:my.router",
-        "domain:p.to",
-        "domain:peiluyou.com",
-        "domain:phicomm.me",
-        "domain:routerlogin.com",
-        "domain:tendawifi.com",
-        "domain:zte.home"
+        "domain:localhost"
       ]
     },
     {
