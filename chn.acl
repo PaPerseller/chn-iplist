@@ -7404,6 +7404,7 @@ fd00::/8
 (^|\.)googleapis\.cn$
 (^|\.)analytics\.twitter\.com$
 (^|\.)g\.whatsapp\.net$
+(^|\.)us-west-2\.amazonaws\.com$
 
 # telegram
 91.108.4.0/22

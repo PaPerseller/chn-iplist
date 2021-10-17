@@ -11,6 +11,7 @@ domain:ggpht.com
 domain:humblebundle.com
 domain:analytics.twitter.com
 domain:g.whatsapp.net
+domain:us-west-2.amazonaws.com
 instagram
 twimg
 steam
