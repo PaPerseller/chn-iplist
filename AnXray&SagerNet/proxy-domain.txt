@@ -6,6 +6,7 @@ geosite:appledaily
 geosite:github
 geosite:twitter
 geosite:amp
+domain:googleapis.cn
 domain:ytimg.com
 domain:ggpht.com
 domain:humblebundle.com
