@@ -34,7 +34,7 @@
 2. Shadowrocket (ios) 等有 ipv6 设置的，若服务器不支持 ipv6 且连接失败，请设为仅 IPV4。
 3. v2rayN(G)、AnXray、SagerNet  和 Qv2ray 支持调用 dat 文件，提供无 chnip 规则版，可配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则。Linux 用户可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/xray-install-dat-release.sh)` 更新至 Xray 资源文件夹。
 4. AnXray、SagerNet 部分规则由 Loyalsoldier 加强版规则特殊支持，建议将 应用设置-路由资源更新源 设为 Loyalsoldier/v2ray-rules-dat 并在 路由设置-管理路由资源 内更新。
-5. Shadowrocket 自 2.2.1 版起支持 geolite2 数据库更新，建议使用。本 Shadowrocket 规则自 2022-2-15 版起不再内置 cn-ip 列表。
+5. Shadowrocket 自 2.2.1 版起支持 geolite2 数据库更新，建议使用。本 Shadowrocket 规则自 2022-2-15 版起不再内置 cn-ip 列表。（若使用 maxmind 数据库，不要填写 URL 地址）
 
 ## 致谢
 
