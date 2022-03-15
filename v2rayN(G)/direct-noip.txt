@@ -1,6 +1,5 @@
 geosite:cn,
 geosite:apple,
-geosite:umeng,
 geosite:google-cn,
 domain:fonts.googleapis.com,
 domain:fonts.gstatic.com,
