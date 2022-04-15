@@ -4,11 +4,11 @@
 
 ## Subscribe URL:
 
-| ios                                                                                                                  | android                                                                                     | 其他                                                                                                                                                                                                                                                                                               |
-|:--------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf)                    | [acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl) | chnroute [ipv4与ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [纯ipv4版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [纯ipv6版](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
-| [Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf) |                                                                                             | [pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认代理走 socks5 localhost:1080）                                                                                                                                                                                |
-|                                                                                                                      |                                                                                             | [v2rayN ](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist)                                                                                                                                                                                   |
+| ios                                                                                                                  | android                                                                                     | 其他                                                                                                                                                                                                                                                                                             |
+|:--------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf)                    | [acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl) | chnroute [ipv4与ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [纯ipv4](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [纯ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
+| [Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf) |                                                                                             | [pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认代理走 socks5 localhost:1080）                                                                                                                                                                              |
+|                                                                                                                      |                                                                                             | [v2rayN ](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/v2rayN_subrules_whitelist)                                                                                                                                                                                 |
 
 ## 需手动更新：
 
@@ -32,8 +32,8 @@
 
 1. Shadowrocket (ios) 等有 ipv6 设置的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。
 2. SagerNet 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，建议将 应用设置-路由资源更新源 设为 Loyalsoldier/v2ray-rules-dat 并在 路由设置-管理路由资源 内更新。
-3. 已支持在线更新 geoip 数据的软件，本规则不再在其内置 cn-ip 列表。
-4. Linux 用户使用 Xray-core 的，若配合使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 规则，可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/xray-install-dat-release.sh)` 更新至 Xray 资源文件夹。
+3. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
+4. Linux 用户使用 Xray-core 的，若使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 规则，可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/xray-install-dat-release.sh)` 更新至 Xray 资源文件夹。
 
 ## 致谢
 
@@ -41,4 +41,4 @@
 - [ACL4SSR/Clash](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) - Clash规则碎片
 - [domain-list-community](https://github.com/v2fly/domain-list-community) - Community managed domain list
 - [mosdns](https://github.com/IrineSistiana/mosdns) - 插件化的 DNS 转发/分流器。
-- [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强
+- [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强版
