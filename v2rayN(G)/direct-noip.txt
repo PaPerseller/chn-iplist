@@ -1,6 +1,4 @@
 geosite:cn,
-geosite:apple,
-geosite:google-cn,
 domain:fonts.googleapis.com,
 domain:fonts.gstatic.com,
 domain:softpedia.com,
