@@ -14,8 +14,11 @@ domain:wwads.cn
 domain:gzads.com
 domain:gozendata.com
 domain:gz-data.com
+domain:caij.xyz
+caij
 googleads
 pagead
+umeng
 adnyg
 admarvel
 admaster
