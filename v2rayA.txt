@@ -5,7 +5,7 @@ domain(geosite:category-ads-all)->block
 domain(domain:wwads.cn, domain:gzads.com, domain:gozendata.com, domain:gz-data.com)->block
 
 # direct
-domain(domain:softpedia.com, domain:fonts.googleapis.com, domain:fonts.gstatic.com)->direct
+domain(domain:ping.archlinux.org, domain:softpedia.com, domain:fonts.googleapis.com, domain:fonts.gstatic.com, domain:location.services.mozilla.com)->direct
 domain(geosite:cn)->direct
 ip(geoip:private, geoip:cn)->direct 
 domain(geosite:category-scholar-!cn, geosite:category-scholar-cn)->direct
@@ -16,4 +16,4 @@ domain(geosite:geolocation-!cn)->proxy
 domain(geosite:google-scholar)->proxy
 domain(geosite:google, geosite:github, geosite:netflix, geosite:telegram, geosite:appledaily, geosite:twitter, domain:g.whatsapp.net, domain:t.me, domain:v2ex)->proxy
 ip(geoip:telegram)->proxy
-domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com, domain:steamcommunity.com, domain:steamgames.com, domain:steampowered.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcdn-a.akamaihd.net, domain:steamcommunity-a.akamaihd.net, domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net)->proxy
+domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com, domain:steamcommunity.com, domain:steamgames.com, domain:steampowered.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcdn-a.akamaihd.net, domain:steamcommunity-a.akamaihd.net, domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net, domain:steam-chat.com)->proxy
