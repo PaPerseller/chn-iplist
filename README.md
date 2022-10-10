@@ -46,3 +46,4 @@
 - [domain-list-community](https://github.com/v2fly/domain-list-community) - Community managed domain list
 - [mosdns](https://github.com/IrineSistiana/mosdns) - 插件化的 DNS 转发/分流器。
 - [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强版
+- [Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) - 本项目 Apple 相关规则来源
