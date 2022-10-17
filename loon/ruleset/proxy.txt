@@ -1,0 +1,16 @@
+DOMAIN-SUFFIX,ampproject.org
+DOMAIN-SUFFIX,ampproject.net
+DOMAIN-SUFFIX,analytics.twitter.com
+DOMAIN-SUFFIX,g.whatsapp.net
+DOMAIN-SUFFIX,us-west-2.amazonaws.com
+DOMAIN-KEYWORD,appledaily
+DOMAIN-KEYWORD,github
+DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,twitter
+DOMAIN-KEYWORD,twimg
+DOMAIN-SUFFIX,humblebundle.com
+DOMAIN-KEYWORD,steam
+DOMAIN-KEYWORD,googleapis.cn
+DOMAIN-KEYWORD,v2ex
+DOMAIN-SUFFIX,developer.apple.com
+USER-AGENT,telegram
