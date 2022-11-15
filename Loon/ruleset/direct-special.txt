@@ -14,6 +14,9 @@ DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,fonts.googleapis.com
 DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN-SUFFIX,weibo.cn,DIRECT
+DOMAIN-KEYWORD,moutai,DIRECT
+DOMAIN-KEYWORD,sina,DIRECT
 
 USER-AGENT,wechat
 USER-AGENT,micromessenger
