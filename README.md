@@ -35,10 +35,11 @@
 ## PS.
 
 1. Shadowrocket (ios) 等有 ipv6 设置的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。
-2. Loon 配置文件为简洁配置，适用于使用本地节点。订阅规则以特殊规则为主，需搭配其他更完善的订阅规则。
-3. SagerNet 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，建议将 应用设置-路由资源更新源 设为 Loyalsoldier/v2ray-rules-dat 并在 路由设置-管理路由资源 内更新。
+2. Loon 配置文件为简洁配置，适用于使用自建节点。订阅规则以特殊规则为主，需搭配其他更完善的订阅规则。
+3. SagerNet 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，需将路由资源更新源设为 Loyalsoldier/v2ray-rules-dat。
 4. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
 5. Linux 用户使用 Xray-core 的，若使用 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 规则，可用 `bash <(curl -L https://raw.githubusercontent.com/PaPerseller/fhs-install-v2ray/master/xray-install-dat-release.sh)` 更新至 Xray 资源文件夹。
+6. 为解决 Shadowrocket 配置在线更新后覆盖掉自定义规则部分，提供一个高度精简的[自定义配置模块](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/DIY.module)。新建模块后复制本模块内容并自行增删修改后保存，不可通过 URL 添加以导致模块被更新重置。此模块仅当有自定义规则需求时添加。
 
 ## 致谢
 
@@ -48,3 +49,4 @@
 - [mosdns](https://github.com/IrineSistiana/mosdns) - 插件化的 DNS 转发/分流器。
 - [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强版
 - [Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) - 本项目 Apple 相关规则来源
+- 其他部分规则来源的作者
