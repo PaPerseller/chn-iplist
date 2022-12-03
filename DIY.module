@@ -19,7 +19,8 @@ FINAL,PROXY
 
 [Host]
 localhost = 127.0.0.1
-ssid:wifi名称 = server:system
+#下行规则使用需取消注释符并修改wifi名称
+#ssid:wifi名称 = server:system
 
 [URL Rewrite]
 ^https://(www.)?(g|google)\.cn https://www.google.com 302
