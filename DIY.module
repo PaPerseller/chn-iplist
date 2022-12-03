@@ -1,0 +1,28 @@
+#!name=自定义模块
+#!desc=自定义配置
+
+[General]
+dns-server = system, 114.114.114.114, 119.29.29.29, 1.0.0.1, 8.8.8.8, 8.8.4.4
+ipv6 = false
+prefer-ipv6 = false
+always-reject-url-rewrite = false
+
+[Rule]
+# Ads
+
+# DIRECT
+
+# PROXY
+
+GEOIP,CN,DIRECT
+FINAL,PROXY
+
+[Host]
+localhost = 127.0.0.1
+ssid:wifi名称 = server:system
+
+[URL Rewrite]
+^https://(www.)?(g|google)\.cn https://www.google.com 302
+
+[MITM]
+hostname = *.google.cn
