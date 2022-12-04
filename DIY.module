@@ -1,12 +1,12 @@
 #!name=自定义模块
 #!desc=自定义配置
-#新建模块后复制本模块内容并自行增删修改后保存，不可通过 URL 添加以导致模块被更新重置
+#新建模块后复制本模块内容并自行取消注释并增删修改后保存，不可通过 URL 添加以导致模块被更新重置
 
 [General]
-dns-server = system, 114.114.114.114, 119.29.29.29, 1.0.0.1, 8.8.8.8, 8.8.4.4
-ipv6 = false
-prefer-ipv6 = false
-always-reject-url-rewrite = false
+#dns-server = system, 114.114.114.114, 119.29.29.29, 1.0.0.1, 8.8.8.8, 8.8.4.4
+#ipv6 = false
+#prefer-ipv6 = false
+#always-reject-url-rewrite = false
 
 [Rule]
 # Ads
@@ -15,11 +15,10 @@ always-reject-url-rewrite = false
 
 # PROXY
 
-GEOIP,CN,DIRECT
-FINAL,PROXY
+#GEOIP,CN,DIRECT
+#FINAL,PROXY
 
 [Host]
-localhost = 127.0.0.1
 #下行规则使用需取消注释符并修改wifi名称
 #ssid:wifi名称 = server:system
 
