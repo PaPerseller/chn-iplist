@@ -34,7 +34,7 @@
 
 ## PS.
 
-1. Shadowrocket (ios) 等有 ipv6 设置的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。
+1. Shadowrocket 等有 ipv6 开关的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。额外提供前缀为 [IP-CIDR](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ipv6.list) 和 [IP-CIDR6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/ruleset/ipv6.list) 两种远程 ipv6 规则。
 2. Loon 配置文件为简洁配置，适用于使用自建节点。订阅规则以特殊规则为主，需搭配其他更完善的订阅规则。
 3. SagerNet 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，需将路由资源更新源设为 Loyalsoldier/v2ray-rules-dat。
 4. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
