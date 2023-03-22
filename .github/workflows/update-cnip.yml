@@ -36,7 +36,8 @@ jobs:
           python v6ipcidr6.py
           wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/acl.py'
           python acl.py
-
+          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/v2ray-config.py'
+          python v2ray-config.py
 
       - name: Commit file
         run: |
@@ -49,5 +50,6 @@ jobs:
           git add ipv6.list
           git add ./Loon/ruleset/ipv6.list
           git add chn.acl
+          git add v2ray-config_rule.json
           git commit -m "AutoUpdate `date +%Y-%m-%d`" -a
           git push -f origin master
