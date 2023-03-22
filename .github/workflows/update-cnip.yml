@@ -1,0 +1,49 @@
+name: Update ip list
+
+on:
+  workflow_dispatch:
+
+  schedule: 
+    - cron:  '0 2 */15 * *'
+  
+  watch:
+    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip wheel
+          pip install netaddr requests
+
+      - name: generate cn iplist
+        run: |
+          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/update_chnip.py'
+          python update_chnip.py
+          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/roscn.py'
+          python roscn.py
+          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/v6ipcidr.py'
+          python v6ipcidr.py
+          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/v6ipcidr6.py'
+          python v6ipcidr6.py
+
+      - name: Commit file
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add chnroute.txt
+          git add chnroute-ipv4.txt
+          git add chnroute-ipv6.txt
+          git add roscn.rsc
+          git add ipv6.list
+          git add ./Loon/ruleset/ipv6.list
+          git commit -m "AutoUpdate `date +%Y-%m-%d`" -a
+          git push -f origin master
