@@ -1,6 +1,6 @@
 # chn-iplist
 
-数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，使用 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、SagerNet、Loon、v2rayA 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每月更新一次。
+数据来源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，使用 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、SagerNet、Loon、v2rayA 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
 
 ## Subscribe URL:
 
@@ -49,3 +49,4 @@
 - [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强版
 - [Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) - 本项目 Apple 相关规则来源
 - 其他部分规则来源的作者
+- ChatGPT  辅助实现的自动化更新
