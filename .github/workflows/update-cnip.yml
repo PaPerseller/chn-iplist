@@ -36,7 +36,7 @@ jobs:
           python v6ipcidr6.py
           wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/acl.py'
           python acl.py
-          
+
 
       - name: Commit file
         run: |
@@ -48,6 +48,6 @@ jobs:
           git add roscn.rsc
           git add ipv6.list
           git add ./Loon/ruleset/ipv6.list
-          gir add chn.acl
+          git add chn.acl
           git commit -m "AutoUpdate `date +%Y-%m-%d`" -a
           git push -f origin master
