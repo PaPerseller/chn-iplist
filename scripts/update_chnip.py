@@ -9,9 +9,9 @@ logger = logging.getLogger(__name__)
 def update_ip():
     url = 'https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest'
     timeout = 30
-    save_to_file = '/home/jerry/Documents/vps-chn/chnroute.txt'
-    save_to_file4 = '/home/jerry/Documents/vps-chn/chnroute-ipv4.txt'
-    save_to_file6 = '/home/jerry/Documents/vps-chn/chnroute-ipv6.txt'
+    save_to_file = './chnroute.txt'
+    save_to_file4 = './chnroute-ipv4.txt'
+    save_to_file6 = './chnroute-ipv6.txt'
 
 
     logger.info(f'connecting to {url}')
