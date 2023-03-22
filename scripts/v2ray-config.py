@@ -112,10 +112,7 @@ a_content = '''  "routing" : {
           "::1/128",
           "fc00::/7",
           "fe80::/10",
-          "fd00::/8",
-'''
-
-b_filename = '/home/jerry/Documents/vps-chn/chnroute.txt'  # 文本b的文件名
+          "fd00::/8",'''
 
 c_content = '''
         ],
@@ -124,27 +121,25 @@ c_content = '''
     ]
   }，'''
 
-# 打开b文件并读取内容
-with open("/home/jerry/Documents/vps-chn/chnroute.txt", "r") as b_file:
+with open("./chnroute.txt", "r") as b_file:
         lines= b_file.readlines()
 
-# 定义要添加的文本
 before_text = "          \""
 after_text = "\","
 
-# 将特定内容添加到每行文本前后
 new_lines = []
 for line in lines:
     new_line = before_text + line.strip() + after_text + "\n"
     new_lines.append(new_line)
 
-b_content = new_lines
-#b_content = "".join([line for line in new_lines if line.strip()])
+with open("./v2ray.txt", "w") as d_file:
+        d_file.writelines(new_lines)        
+with open("./v2ray.txt", "r") as d_file:
+        b1_content = d_file.read()
+        b1_content = b1_content.rstrip()
+        b_content = b1_content[:-1]
 
-# 在b的开头插入a的内容，在结尾插入c的内容
-merged_content = a_content.strip() + '\n' + b_content + c_content.strip() + '\n'
+new_content = a_content + "\n" + b_content + c_content
 
-# 将合并后的内容写入output文件中
-with open('/home/jerry/Documents/vps-chn/v2ray-rule.json', 'w') as output_file:
-    for line in merged_content:
-        output_file.write(line + '\n')
+with open('./v2ray-config_rule.json', 'w') as output_file:
+    output_file.write(new_content)
