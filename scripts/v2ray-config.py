@@ -132,12 +132,11 @@ for line in lines:
     new_line = before_text + line.strip() + after_text + "\n"
     new_lines.append(new_line)
 
-with open("./v2ray.txt", "w") as d_file:
-        d_file.writelines(new_lines)        
-with open("./v2ray.txt", "r") as d_file:
-        b1_content = d_file.read()
-        b1_content = b1_content.rstrip()
-        b_content = b1_content[:-1]
+b2_content = ''
+for line in new_lines:
+  b2_content += line
+b1_content = b2_content.rstrip()
+b_content = b1_content[:-1]
 
 new_content = a_content + "\n" + b_content + c_content
 

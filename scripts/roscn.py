@@ -9,13 +9,8 @@ for line in lines:
     new_line = before_text + line.strip() + after_text + "\n"
     new_lines.append(new_line)
 
-with open("./roscn.rsc", "w") as output_file:
-    output_file.writelines(new_lines)
-with open("./roscn.rsc", "r") as output_file:
-    outlines = output_file.readlines()
-
 header = ['/ip firewall address-list remove [/ip firewall address-list find list=CN]\n', '/ip firewall address-list\n','add address=192.168.0.0/16 list=CN comment=private-network\n','add address=10.0.0.0/8 list=CN comment=private-network\n']
-header.extend(outlines)
+header.extend(new_lines)
 
 with open("./roscn.rsc", "w") as output_file:
     output_file.writelines(header)

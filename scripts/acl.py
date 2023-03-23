@@ -39,8 +39,6 @@ fd00::/8
 # 国内ip地址
 '''
 
-b_filename = './chnroute.txt'  # 文本b的文件名
-
 c_content = '''
 [proxy_list]
 # 代理关键词
@@ -57,14 +55,10 @@ c_content = '''
 (^|\.)\w*steam\w*\.\w*$
 (^|\.)\w*v2ex\w*\.\w*$'''
 
-# 打开b文件并读取内容
-with open(b_filename, 'r') as b_file:
+with open("./chnroute.txt", 'r') as b_file:
     b_content = b_file.read()
 
-# 在b的开头插入a的内容，在结尾插入c的内容
-merged_content = a_content.strip().split('\n') + b_content.strip().split('\n') + [''] + c_content.strip().split('\n')
+merged_content = a_content + b_content + "\n" + c_content
 
-# 将合并后的内容写入output文件中
 with open('./chn.acl', 'w') as output_file:
-    for line in merged_content:
-        output_file.write(line + '\n')
+        output_file.write(merged_content)
