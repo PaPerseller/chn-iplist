@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.10
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
@@ -28,16 +28,8 @@ jobs:
         run: |
           wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/update_chnip.py'
           python update_chnip.py
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/roscn.py'
-          python roscn.py
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/v6ipcidr.py'
-          python v6ipcidr.py
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/v6ipcidr6.py'
-          python v6ipcidr6.py
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/acl.py'
-          python acl.py
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/v2ray-config.py'
-          python v2ray-config.py
+          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/generate.py'
+          python generate.py
 
       - name: Commit file
         run: |
