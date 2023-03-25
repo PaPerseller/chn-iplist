@@ -39,7 +39,7 @@
 3. SagerNet 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，需将路由资源更新源设为 Loyalsoldier/v2ray-rules-dat。
 4. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
 5. 为解决 Shadowrocket 配置在线更新后覆盖掉自定义规则部分，提供一个高度精简的[自定义配置模块](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/DIY.module)。新建模块后复制本模块内容并自行增删修改后保存，不可通过 URL 添加以防模块被更新重置。此模块仅当有自定义规则需求时添加。
-6. ROS 下载 roscn.rsc 推荐 [CDN 加速地址](https://cdn.jsdelivr.net/gh/PaPerseller/chn-iplist/roscn.rsc)以提高下载成功率。
+6. ROS 下载 cn.rsc 推荐 [CDN 加速地址](https://cdn.jsdelivr.net/gh/PaPerseller/chn-iplist/cn.rsc)以提高下载成功率。
 
 ## 致谢
 
