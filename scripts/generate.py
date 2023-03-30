@@ -13,7 +13,7 @@ for line in lines:
 header = ['/ip firewall address-list remove [/ip firewall address-list find list=CN]\n', '/ip firewall address-list\n','add address=192.168.0.0/16 list=CN comment=private-network\n','add address=10.0.0.0/8 list=CN comment=private-network\n']
 header.extend(new_lines)
 
-with open("./roscn.rsc", "w") as output_file:
+with open("./cn.rsc", "w") as output_file:
     output_file.writelines(header) 
 
 # ipv6cidr
