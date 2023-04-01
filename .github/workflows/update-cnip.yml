@@ -38,7 +38,7 @@ jobs:
           git add chnroute.txt
           git add chnroute-ipv4.txt
           git add chnroute-ipv6.txt
-          git add roscn.rsc
+          git add cn.rsc
           git add ipv6.list
           git add ./Loon/ruleset/ipv6.list
           git add chn.acl
