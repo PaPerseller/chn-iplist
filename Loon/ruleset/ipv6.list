@@ -384,8 +384,10 @@ IP-CIDR6,2400:ef40::/32,no-resolve
 IP-CIDR6,2400:f480::/32,no-resolve
 IP-CIDR6,2400:f5c0::/32,no-resolve
 IP-CIDR6,2400:f6e0::/32,no-resolve
+IP-CIDR6,2400:f720::/32,no-resolve
 IP-CIDR6,2400:f7c0::/32,no-resolve
 IP-CIDR6,2400:f840::/32,no-resolve
+IP-CIDR6,2400:f860::/32,no-resolve
 IP-CIDR6,2400:f980::/32,no-resolve
 IP-CIDR6,2400:fac0::/32,no-resolve
 IP-CIDR6,2400:fb40::/32,no-resolve
