@@ -409,12 +409,15 @@ IP-CIDR,2401:a00::/32,no-resolve
 IP-CIDR,2401:a40::/32,no-resolve
 IP-CIDR,2401:ac0::/32,no-resolve
 IP-CIDR,2401:b40::/32,no-resolve
+IP-CIDR,2401:ba0::/32,no-resolve
 IP-CIDR,2401:bc0::/32,no-resolve
 IP-CIDR,2401:c40::/32,no-resolve
 IP-CIDR,2401:cc0::/32,no-resolve
 IP-CIDR,2401:d40::/32,no-resolve
 IP-CIDR,2401:e00::/32,no-resolve
 IP-CIDR,2401:1000::/32,no-resolve
+IP-CIDR,2401:1160::/32,no-resolve
+IP-CIDR,2401:11a0::/32,no-resolve
 IP-CIDR,2401:11c0::/32,no-resolve
 IP-CIDR,2401:1200::/32,no-resolve
 IP-CIDR,2401:12c0::/32,no-resolve
