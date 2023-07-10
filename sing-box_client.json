@@ -67,7 +67,7 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //以下为 reality 协议为例, 客户端中需删除本注释
+      //以 reality 协议为例, 客户端中需删除本注释
       "type": "vless",
       "server": "server",
       "server_port": 443,
