@@ -1,0 +1,305 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+        {
+            "tag": "dns_proxy",
+            "address": "tls://1.1.1.1",
+            "address_resolver": "dns_direct",
+            "strategy": "ipv4_only",
+            "detour": "proxy"
+        },
+        {
+            "tag": "dns_direct",
+            "address": "114.114.114.114",
+            "strategy": "ipv4_only",
+            "detour": "direct"
+        },
+        {
+            "tag": "dns_block",
+            "address": "rcode://success"
+        }
+    ],
+    "rules": [
+        {
+            "geosite": [
+                "category-ads-all"
+            ],
+            "server": "dns_block",
+            "disable_cache": true
+        },
+        {
+            "geosite": [
+                "geolocation-!cn"
+            ],
+            "server": "dns_proxy"
+        },
+        {
+            "geosite": [
+                "cn",
+                "private"
+            ],
+            "server": "dns_direct"
+        },
+        {
+            "outbound": [
+                "any"
+            ],
+            "server": "dns_direct"
+        }
+    ]
+  },
+  "inbounds": [
+    {
+        "type": "tun",
+        "tag": "tun-in",
+        "inet4_address": "172.19.0.1/30",
+        "auto_route": true,
+        "strict_route": false,
+        "stack": "gvisor",
+        "sniff": true,
+        "sniff_override_destination": false
+      }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      //以下为 reality 协议为例, 客户端中需删除本注释
+      "type": "vless",
+      "server": "server",
+      "server_port": 443,
+      "uuid": "uuid",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "servername",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "publickey",
+          "short_id": "shortid"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": [
+            443
+        ],
+        "outbound": "block"
+      },
+      {
+        "geosite": "cn",
+        "geoip": [
+          "cn",
+          "private"
+        ],
+        "domain_suffix": [
+          ".cn",
+          "softpedia.com",
+          "qq.com",
+          "fonts.googleapis.com",
+          "fonts.gstatic.com",
+          "apple.comscoreresearch.com",
+          "apple-cloudkit.com",
+          "apple.co",
+          "apple.com.cn",
+          "crashlytics.com",
+          "icloud-content.com",
+          "icloud.com.cn",
+          "me.com",
+          "appldnld.apple.com",
+          "apps.apple.com",
+          "mzstatic.com",
+          "cdn-cn2.apple-mapkit.com",
+          "cdn-cn3.apple-mapkit.com",
+          "cdn-apple.com",
+          "cdn-cn4.apple-mapkit.com",
+          "cdn2.apple-mapkit.com",
+          "cdn1.apple-mapkit.com",
+          "cdn4.apple-mapkit.com",
+          "cdn3.apple-mapkit.com",
+          "cds.apple.com",
+          "cl2.apple.com",
+          "cl4-cn.apple.com",
+          "cl1.apple.com",
+          "cl5.apple.com",
+          "cl3.apple.com",
+          "cl4.apple.com",
+          "clientflow.apple.com",
+          "configuration.apple.com",
+          "cstat.apple.com",
+          "download.developer.apple.com",
+          "gsp11-cn.ls.apple.com",
+          "gsp12-cn.ls.apple.com",
+          "gsp13-cn.ls.apple.com",
+          "gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net",
+          "gsp4-cn.ls.apple.com.edgekey.net",
+          "gsp4-cn.ls.apple.com",
+          "gsp5-cn.ls.apple.com",
+          "gspe19-cn-ssl.ls.apple.com",
+          "gspe19-cn.ls.apple.com",
+          "gspe21-ssl.ls.apple.com",
+          "iadsdk.apple.com",
+          "gspe35-ssl.ls.apple.com",
+          "images.apple.com.akadns.net",
+          "images.apple.com.edgekey.net.globalredir.akadns.net",
+          "icloud.cdn-apple.com",
+          "init-p01md.apple.com",
+          "images.apple.com",
+          "init-p01st.push.apple.com",
+          "aaplimg.com",
+          "iphone-ld.apple.com",
+          "is1-ssl.mzstatic.com",
+          "init-s01st.push.apple.com",
+          "is1.mzstatic.com",
+          "is2-ssl.mzstatic.com",
+          "is2.mzstatic.com",
+          "is3-ssl.mzstatic.com",
+          "is3.mzstatic.com",
+          "is4-ssl.mzstatic.com",
+          "is4.mzstatic.com",
+          "is5-ssl.mzstatic.com",
+          "is5.mzstatic.com",
+          "mesu.apple.com",
+          "itunesconnect.apple.com",
+          "itunes.apple.com",
+          "ocsp.apple.com",
+          "pancake.apple.com",
+          "oscdn.apple.com",
+          "s.mzstatic.com",
+          "music.apple.com",
+          "akadns.net",
+          "store.apple.com.edgekey.net",
+          "store.apple.com",
+          "store.storeimages.cdn-apple.com",
+          "support.apple.com",
+          "swcdn.g.aaplimg.com",
+          "swcdn.apple.com",
+          "swcatalog.apple.com",
+          "reserve-prime.apple.com",
+          "updates-http.cdn-apple.com.akadns.net",
+          "swscan.apple.com",
+          "swdist.apple.com",
+          "updates-http.cdn-apple.com",
+          "updates.cdn-apple.com",
+          "www.apple.com.edgekey.net.globalredir.akadns.net",
+          "www.apple.com.edgekey.net",
+          "valid.apple.com",
+          "www.apple.com"
+        ],
+        "domain_keyword": [
+          "moutai",
+          "sina"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "category-ads-all",
+        "domain_suffix": [
+            "log.tagtic.cn", 	
+            "wwads.cn",
+            "gzads.com",
+            "gozendata.com",
+            "gz-data.com",
+            "ads.fmdisk.com",
+            "ads.feemoo.com",
+            "googleads.g.doubleclick.net",
+            "ads.google.com",
+            "afd.l.google.com",
+            "doubleclick.com",
+            "doubleclick.net",
+            "google-analytics.com",
+            "googlesyndication.com",
+            "googletagmanager.com",
+            "googletakes.com",
+            "mobileads.google.com"
+        ],
+        "domain_keyword": [
+            "pagead",
+            "umeng",
+            "googleads"
+          ],                    
+        "outbound": "block"
+      },
+      {
+        "ip_cidr": [
+            "91.108.56.0/22",
+            "91.108.4.0/22",
+            "91.108.8.0/22",
+            "91.108.16.0/22",
+            "91.108.12.0/22",
+            "149.154.160.0/20",
+            "91.105.192.0/23",
+            "91.108.20.0/22",
+            "185.76.151.0/24"
+          ],
+        "domain_suffix":[
+            "ampproject.org",
+            "ampproject.net",
+            "analytics.twitter.com",
+            "g.whatsapp.net",
+            "us-west-2.amazonaws.com",
+            "developer.apple.com",
+            "humblebundle.com",
+            "goo.gl",
+            "gvt1.com",
+            "youtu.be",
+            "ytimg.com",
+            "ggpht.com"
+        ],
+        "domain_keyword":[
+            "appledaily",
+            "github",
+            "instagram",
+            "twitter",
+            "twimg",
+            "telegram",
+            "steam",
+            "googleapis.cn",
+            "v2ex",
+            "gmail",
+            "google",
+            "gstatic",
+            "youtube"
+        ],        
+        "outbound": "proxy"
+      }
+    ],
+    "geoip": {
+    "download_url": "https://github.com/soffchen/sing-geoip@release/geoip-cn.db",
+      "download_detour": "direct"
+    },
+    "geosite": {
+    "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
+      "download_detour": "direct"
+    },
+    "auto_detect_interface": true
+  }
+}
