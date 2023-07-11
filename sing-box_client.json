@@ -67,11 +67,11 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //以 reality 协议为例, 客户端中需删除本注释
+      //以 reality 协议为例, 对应值请勿套用，客户端中需删除本注释
       "type": "vless",
       "server": "server",
       "server_port": 443,
-      "uuid": "uuid",
+      "uuid": "2d5f4b9a-0a96-42ed-aae3-b1f8854cf931",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -82,8 +82,8 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "publickey",
-          "short_id": "shortid"
+          "public_key": "SUDD3lECQszxyDD9FZFcB0QpG3XzaVD8tzEH98kcEko",
+          "short_id": "c24d2408508ee08f"
         }
       },
       "packet_encoding": "xudp"
