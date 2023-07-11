@@ -5,64 +5,64 @@
   },
   "dns": {
     "servers": [
-        {
-            "tag": "dns_proxy",
-            "address": "tls://1.1.1.1",
-            "address_resolver": "dns_direct",
-            "strategy": "ipv4_only",
-            "detour": "proxy"
-        },
-        {
-            "tag": "dns_direct",
-            "address": "114.114.114.114",
-            "strategy": "ipv4_only",
-            "detour": "direct"
-        },
-        {
-            "tag": "dns_block",
-            "address": "rcode://success"
-        }
+      {
+        "tag": "dns_proxy",
+        "address": "tls://1.1.1.1",
+        "address_resolver": "dns_direct",
+        "strategy": "ipv4_only",
+        "detour": "proxy"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "114.114.114.114",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://success"
+      }
     ],
     "rules": [
-        {
-            "geosite": [
-                "category-ads-all"
-            ],
-            "server": "dns_block",
-            "disable_cache": true
-        },
-        {
-            "geosite": [
-                "geolocation-!cn"
-            ],
-            "server": "dns_proxy"
-        },
-        {
-            "geosite": [
-                "cn",
-                "private"
-            ],
-            "server": "dns_direct"
-        },
-        {
-            "outbound": [
-                "any"
-            ],
-            "server": "dns_direct"
-        }
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "dns_block",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "dns_proxy"
+      },
+      {
+        "geosite": [
+          "cn",
+          "private"
+        ],
+        "server": "dns_direct"
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "dns_direct"
+      }
     ]
   },
   "inbounds": [
     {
-        "type": "tun",
-        "tag": "tun-in",
-        "inet4_address": "172.19.0.1/30",
-        "auto_route": true,
-        "strict_route": false,
-        "stack": "gvisor",
-        "sniff": true,
-        "sniff_override_destination": false
-      }
+      "type": "tun",
+      "tag": "tun-in",
+      "inet4_address": "172.19.0.1/30",
+      "auto_route": true,
+      "strict_route": false,
+      "stack": "gvisor",
+      "sniff": true,
+      "sniff_override_destination": false
+    }
   ],
   "outbounds": [
     {
@@ -102,6 +102,14 @@
     }
   ],
   "route": {
+    "geoip": {
+      "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip-cn.db",
+      "download_detour": "direct"
+    },
+    "geosite": {
+      "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
+      "download_detour": "direct"
+    },
     "rules": [
       {
         "protocol": "dns",
@@ -110,79 +118,79 @@
       {
         "network": "udp",
         "port": [
-            443
+          443
         ],
         "outbound": "block"
       },
       {
         "geosite": "category-ads-all",
         "domain_suffix": [
-            "log.tagtic.cn", 	
-            "wwads.cn",
-            "gzads.com",
-            "gozendata.com",
-            "gz-data.com",
-            "ads.fmdisk.com",
-            "ads.feemoo.com",
-            "googleads.g.doubleclick.net",
-            "ads.google.com",
-            "afd.l.google.com",
-            "doubleclick.com",
-            "doubleclick.net",
-            "google-analytics.com",
-            "googlesyndication.com",
-            "googletagmanager.com",
-            "googletakes.com",
-            "mobileads.google.com"
+          "log.tagtic.cn",
+          "wwads.cn",
+          "gzads.com",
+          "gozendata.com",
+          "gz-data.com",
+          "ads.fmdisk.com",
+          "ads.feemoo.com",
+          "googleads.g.doubleclick.net",
+          "ads.google.com",
+          "afd.l.google.com",
+          "doubleclick.com",
+          "doubleclick.net",
+          "google-analytics.com",
+          "googlesyndication.com",
+          "googletagmanager.com",
+          "googletakes.com",
+          "mobileads.google.com"
         ],
         "domain_keyword": [
-            "pagead",
-            "umeng",
-            "googleads"
-          ],                    
+          "pagead",
+          "umeng",
+          "googleads"
+        ],
         "outbound": "block"
       },
       {
         "ip_cidr": [
-            "91.108.56.0/22",
-            "91.108.4.0/22",
-            "91.108.8.0/22",
-            "91.108.16.0/22",
-            "91.108.12.0/22",
-            "149.154.160.0/20",
-            "91.105.192.0/23",
-            "91.108.20.0/22",
-            "185.76.151.0/24"
-          ],
-        "domain_suffix":[
-            "ampproject.org",
-            "ampproject.net",
-            "analytics.twitter.com",
-            "g.whatsapp.net",
-            "us-west-2.amazonaws.com",
-            "developer.apple.com",
-            "humblebundle.com",
-            "goo.gl",
-            "gvt1.com",
-            "youtu.be",
-            "ytimg.com",
-            "ggpht.com"
+          "91.108.56.0/22",
+          "91.108.4.0/22",
+          "91.108.8.0/22",
+          "91.108.16.0/22",
+          "91.108.12.0/22",
+          "149.154.160.0/20",
+          "91.105.192.0/23",
+          "91.108.20.0/22",
+          "185.76.151.0/24"
         ],
-        "domain_keyword":[
-            "appledaily",
-            "github",
-            "instagram",
-            "twitter",
-            "twimg",
-            "telegram",
-            "steam",
-            "googleapis.cn",
-            "v2ex",
-            "gmail",
-            "google",
-            "gstatic",
-            "youtube"
-        ],        
+        "domain_suffix": [
+          "ampproject.org",
+          "ampproject.net",
+          "analytics.twitter.com",
+          "g.whatsapp.net",
+          "us-west-2.amazonaws.com",
+          "developer.apple.com",
+          "humblebundle.com",
+          "goo.gl",
+          "gvt1.com",
+          "youtu.be",
+          "ytimg.com",
+          "ggpht.com"
+        ],
+        "domain_keyword": [
+          "appledaily",
+          "github",
+          "instagram",
+          "twitter",
+          "twimg",
+          "telegram",
+          "steam",
+          "googleapis.cn",
+          "v2ex",
+          "gmail",
+          "google",
+          "gstatic",
+          "youtube"
+        ],
         "outbound": "proxy"
       },
       {
@@ -292,14 +300,6 @@
         "outbound": "direct"
       }
     ],
-    "geoip": {
-    "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip-cn.db",
-      "download_detour": "direct"
-    },
-    "geosite": {
-    "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
-      "download_detour": "direct"
-    },
     "auto_detect_interface": true
   }
 }
