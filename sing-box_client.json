@@ -115,6 +115,77 @@
         "outbound": "block"
       },
       {
+        "geosite": "category-ads-all",
+        "domain_suffix": [
+            "log.tagtic.cn", 	
+            "wwads.cn",
+            "gzads.com",
+            "gozendata.com",
+            "gz-data.com",
+            "ads.fmdisk.com",
+            "ads.feemoo.com",
+            "googleads.g.doubleclick.net",
+            "ads.google.com",
+            "afd.l.google.com",
+            "doubleclick.com",
+            "doubleclick.net",
+            "google-analytics.com",
+            "googlesyndication.com",
+            "googletagmanager.com",
+            "googletakes.com",
+            "mobileads.google.com"
+        ],
+        "domain_keyword": [
+            "pagead",
+            "umeng",
+            "googleads"
+          ],                    
+        "outbound": "block"
+      },
+      {
+        "ip_cidr": [
+            "91.108.56.0/22",
+            "91.108.4.0/22",
+            "91.108.8.0/22",
+            "91.108.16.0/22",
+            "91.108.12.0/22",
+            "149.154.160.0/20",
+            "91.105.192.0/23",
+            "91.108.20.0/22",
+            "185.76.151.0/24"
+          ],
+        "domain_suffix":[
+            "ampproject.org",
+            "ampproject.net",
+            "analytics.twitter.com",
+            "g.whatsapp.net",
+            "us-west-2.amazonaws.com",
+            "developer.apple.com",
+            "humblebundle.com",
+            "goo.gl",
+            "gvt1.com",
+            "youtu.be",
+            "ytimg.com",
+            "ggpht.com"
+        ],
+        "domain_keyword":[
+            "appledaily",
+            "github",
+            "instagram",
+            "twitter",
+            "twimg",
+            "telegram",
+            "steam",
+            "googleapis.cn",
+            "v2ex",
+            "gmail",
+            "google",
+            "gstatic",
+            "youtube"
+        ],        
+        "outbound": "proxy"
+      },
+      {
         "geosite": "cn",
         "geoip": [
           "cn",
@@ -219,81 +290,10 @@
           "sina"
         ],
         "outbound": "direct"
-      },
-      {
-        "geosite": "category-ads-all",
-        "domain_suffix": [
-            "log.tagtic.cn", 	
-            "wwads.cn",
-            "gzads.com",
-            "gozendata.com",
-            "gz-data.com",
-            "ads.fmdisk.com",
-            "ads.feemoo.com",
-            "googleads.g.doubleclick.net",
-            "ads.google.com",
-            "afd.l.google.com",
-            "doubleclick.com",
-            "doubleclick.net",
-            "google-analytics.com",
-            "googlesyndication.com",
-            "googletagmanager.com",
-            "googletakes.com",
-            "mobileads.google.com"
-        ],
-        "domain_keyword": [
-            "pagead",
-            "umeng",
-            "googleads"
-          ],                    
-        "outbound": "block"
-      },
-      {
-        "ip_cidr": [
-            "91.108.56.0/22",
-            "91.108.4.0/22",
-            "91.108.8.0/22",
-            "91.108.16.0/22",
-            "91.108.12.0/22",
-            "149.154.160.0/20",
-            "91.105.192.0/23",
-            "91.108.20.0/22",
-            "185.76.151.0/24"
-          ],
-        "domain_suffix":[
-            "ampproject.org",
-            "ampproject.net",
-            "analytics.twitter.com",
-            "g.whatsapp.net",
-            "us-west-2.amazonaws.com",
-            "developer.apple.com",
-            "humblebundle.com",
-            "goo.gl",
-            "gvt1.com",
-            "youtu.be",
-            "ytimg.com",
-            "ggpht.com"
-        ],
-        "domain_keyword":[
-            "appledaily",
-            "github",
-            "instagram",
-            "twitter",
-            "twimg",
-            "telegram",
-            "steam",
-            "googleapis.cn",
-            "v2ex",
-            "gmail",
-            "google",
-            "gstatic",
-            "youtube"
-        ],        
-        "outbound": "proxy"
       }
     ],
     "geoip": {
-    "download_url": "https://github.com/soffchen/sing-geoip@release/geoip-cn.db",
+    "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip-cn.db",
       "download_detour": "direct"
     },
     "geosite": {
