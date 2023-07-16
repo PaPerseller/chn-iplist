@@ -421,8 +421,11 @@ IP-CIDR,2401:11a0::/32,no-resolve
 IP-CIDR,2401:11c0::/32,no-resolve
 IP-CIDR,2401:1200::/32,no-resolve
 IP-CIDR,2401:12c0::/32,no-resolve
+IP-CIDR,2401:1320::/32,no-resolve
+IP-CIDR,2401:13a0::/32,no-resolve
 IP-CIDR,2401:15c0::/32,no-resolve
 IP-CIDR,2401:18c0::/32,no-resolve
+IP-CIDR,2401:18e0::/28,no-resolve
 IP-CIDR,2401:1940::/32,no-resolve
 IP-CIDR,2401:19c0::/32,no-resolve
 IP-CIDR,2401:1a40::/32,no-resolve
