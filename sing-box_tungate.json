@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "local",
-        "address": "127.0.0.1",
+        "address": "主路由器地址",
         "strategy": "ipv4_only",
         "detour": "direct"
       }
@@ -22,7 +22,7 @@
       "mtu": 9000,
       "auto_route": true,
       "strict_route": false,
-      "stack": "system",
+      "stack": "mixed",
       "sniff": true,
       "sniff_override_destination": false
     }
