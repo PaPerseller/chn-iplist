@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "local",
-        "address": "主路由器地址",
+        "address": "local",
         "strategy": "ipv4_only",
         "detour": "direct"
       }
@@ -22,7 +22,7 @@
       "mtu": 9000,
       "auto_route": true,
       "strict_route": false,
-      "stack": "mixed",
+      "stack": "system",
       "sniff": true,
       "sniff_override_destination": false
     }
@@ -59,10 +59,6 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
     }
   ],
   "route": {
@@ -75,17 +71,6 @@
       "download_detour": "direct"
     },
     "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "network": "udp",
-        "port": [
-          443
-        ],
-        "outbound": "block"
-      },
       {
         "geosite": "category-ads-all",
         "domain_suffix": [
@@ -102,13 +87,9 @@
           "doubleclick.com",
           "doubleclick.net",
           "google-analytics.com",
-          "googlesyndication.com",
-          "googletagmanager.com",
-          "googletakes.com",
           "mobileads.google.com"
         ],
         "domain_keyword": [
-          "pagead",
           "umeng",
           "googleads"
         ],
@@ -166,6 +147,8 @@
         "domain_suffix": [
           ".cn",
           "qq.com",
+          "airdroid.com",
+          "airdroid.cn",
           "fonts.googleapis.com",
           "fonts.gstatic.com",
           "apple.com",
