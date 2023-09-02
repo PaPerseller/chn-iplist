@@ -22,7 +22,7 @@
       "mtu": 9000,
       "auto_route": true,
       "strict_route": false,
-      "stack": "system",
+      "stack": "mixed",
       "sniff": true,
       "sniff_override_destination": false
     }
@@ -49,8 +49,8 @@
           "short_id": "c24d2408508ee08f"
         }
       },
-      "packet_encoding": "xudp",
-      "tcp_multi_path": true
+      "tcp_multi_path": true,
+      "tcp_fast_open": true
     },
     {
       "type": "direct",
