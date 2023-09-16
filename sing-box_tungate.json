@@ -3,16 +3,6 @@
     "level": "info",
     "timestamp": true
   },
-  "dns": {
-    "servers": [
-      {
-        "tag": "local",
-        "address": "local",
-        "strategy": "ipv4_only",
-        "detour": "direct"
-      }
-    ]
-  },
   "inbounds": [
     {
       "type": "tun",
@@ -21,7 +11,7 @@
       "inet4_address": "172.19.0.1/30",
       "mtu": 9000,
       "auto_route": true,
-      "strict_route": false,
+      "strict_route": true,
       "stack": "system",
       "sniff": true,
       "sniff_override_destination": false
@@ -49,7 +39,6 @@
           "short_id": "c24d2408508ee08f"
         }
       },
-      "tcp_multi_path": true,
       "tcp_fast_open": true
     },
     {
@@ -119,7 +108,26 @@
           "gvt1.com",
           "youtu.be",
           "ytimg.com",
-          "ggpht.com"
+          "ggpht.com",
+          "steambroadcast.akamaized.net",
+          "steamcommunity-a.akamaihd.net",
+          "steampipe.akamaized.net",
+          "steamstore-a.akamaihd.net",
+          "steamusercontent-a.akamaihd.net",
+          "steamuserimages-a.akamaihd.net",
+          "fanatical.com",
+          "humblebundle.com",
+          "playartifact.com",
+          "steam-chat.com",
+          "steamcommunity.com",
+          "steamgames.com",
+          "steampowered.com",
+          "steamserver.net",
+          "steamstat.us",
+          "steamstatic.com",
+          "underlords.com",
+          "valvesoftware.com",
+          "v2raya.org"
         ],
         "domain_keyword": [
           "appledaily",
@@ -149,6 +157,7 @@
           "qq.com",
           "airdroid.com",
           "airdroid.cn",
+          "librespeed.cn",
           "fonts.googleapis.com",
           "fonts.gstatic.com",
           "apple.com",
@@ -211,6 +220,7 @@
           "steampowered.com.8686c.com", 
           "steamstatic.com.8686c.com", 
           "wmsjsteam.com", 
+          "xz.pphimalayanrt.com",
           "cm.steampowered.com", 
           "steamchina.com", 
           "steamcontent.com", 
