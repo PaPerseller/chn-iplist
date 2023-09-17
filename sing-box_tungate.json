@@ -1,3 +1,4 @@
+//本注释需删除，此配置适用于有上层 dns 服务器时作透明代理网关
 {
   "log": {
     "level": "info",
@@ -20,7 +21,7 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //以 reality 协议为例, 对应值请勿套用，客户端中需删除本注释
+      //本注释需删除，以 reality 协议为例, 对应值请勿套用
       "type": "vless",
       "server": "server",
       "server_port": 443,
