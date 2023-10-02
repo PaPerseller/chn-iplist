@@ -53,7 +53,7 @@
   ],
   "route": {
     "geoip": {
-      "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip-cn.db",
+      "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip.db",
       "download_detour": "direct"
     },
     "geosite": {
@@ -64,7 +64,6 @@
       {
         "geosite": "category-ads-all",
         "domain_suffix": [
-          "log.tagtic.cn",
           "wwads.cn",
           "gzads.com",
           "gozendata.com",
@@ -86,21 +85,15 @@
         "outbound": "block"
       },
       {
-        "ip_cidr": [
-          "91.108.56.0/22",
-          "91.108.4.0/22",
-          "91.108.8.0/22",
-          "91.108.16.0/22",
-          "91.108.12.0/22",
-          "149.154.160.0/20",
-          "91.105.192.0/23",
-          "91.108.20.0/22",
-          "185.76.151.0/24"
+        "geoip": [
+          "telegram"
         ],
         "domain_suffix": [
+          "github.com",
+          "github.global.ssl.fastly.net",
+          "assets-cdn.github.com",
           "ampproject.org",
           "ampproject.net",
-          "analytics.twitter.com",
           "g.whatsapp.net",
           "us-west-2.amazonaws.com",
           "developer.apple.com",
@@ -109,26 +102,7 @@
           "gvt1.com",
           "youtu.be",
           "ytimg.com",
-          "ggpht.com",
-          "steambroadcast.akamaized.net",
-          "steamcommunity-a.akamaihd.net",
-          "steampipe.akamaized.net",
-          "steamstore-a.akamaihd.net",
-          "steamusercontent-a.akamaihd.net",
-          "steamuserimages-a.akamaihd.net",
-          "fanatical.com",
-          "humblebundle.com",
-          "playartifact.com",
-          "steam-chat.com",
-          "steamcommunity.com",
-          "steamgames.com",
-          "steampowered.com",
-          "steamserver.net",
-          "steamstat.us",
-          "steamstatic.com",
-          "underlords.com",
-          "valvesoftware.com",
-          "v2raya.org"
+          "ggpht.com"
         ],
         "domain_keyword": [
           "appledaily",
@@ -137,99 +111,30 @@
           "twitter",
           "twimg",
           "telegram",
-          "steam",
-          "googleapis.cn",
           "v2ex",
           "gmail",
-          "google",
-          "gstatic",
           "youtube"
         ],
         "outbound": "proxy"
       },
       {
-        "geosite": "cn",
-        "geoip": [
-          "cn",
-          "private"
-        ],
         "domain_suffix": [
-          ".cn",
-          "qq.com",
           "airdroid.com",
           "airdroid.cn",
-          "librespeed.cn",
-          "fonts.googleapis.com",
-          "fonts.gstatic.com",
-          "apple.com",
-          "apple.comscoreresearch.com",
-          "apple-cloudkit.com",
-          "apple.co",
-          "apple.com.cn",
-          "crashlytics.com",
-          "icloud-content.com",
-          "icloud.com.cn",
-          "me.com",
-          "mzstatic.com",
-          "cdn-cn2.apple-mapkit.com",
-          "cdn-cn3.apple-mapkit.com",
-          "cdn-apple.com",
-          "cdn-cn4.apple-mapkit.com",
-          "cdn2.apple-mapkit.com",
-          "cdn1.apple-mapkit.com",
-          "cdn4.apple-mapkit.com",
-          "cdn3.apple-mapkit.com",
-          "gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net",
-          "gsp4-cn.ls.apple.com.edgekey.net",
-          "images.apple.com.akadns.net",
-          "images.apple.com.edgekey.net.globalredir.akadns.net",
-          "icloud.cdn-apple.com",
-          "aaplimg.com",
-          "is1-ssl.mzstatic.com",
-          "is1.mzstatic.com",
-          "is2-ssl.mzstatic.com",
-          "is2.mzstatic.com",
-          "is3-ssl.mzstatic.com",
-          "is3.mzstatic.com",
-          "is4-ssl.mzstatic.com",
-          "is4.mzstatic.com",
-          "is5-ssl.mzstatic.com",
-          "is5.mzstatic.com",
-          "s.mzstatic.com",
-          "akadns.net",
-          "store.apple.com.edgekey.net",
-          "store.storeimages.cdn-apple.com",
-          "swcdn.g.aaplimg.com",
-          "updates-http.cdn-apple.com.akadns.net",
-          "updates-http.cdn-apple.com",
-          "updates.cdn-apple.com",
-          "www.apple.com.edgekey.net.globalredir.akadns.net",
-          "www.apple.com.edgekey.net",
-          "cdn.mileweb.cs.steampowered.com.8686c.com", 
-          "cdn-ws.content.steamchina.com", 
-          "cdn-qc.content.steamchina.com", 
-          "cdn-ali.content.steamchina.com", 
-          "epicgames-download1-1251447533.file.myqcloud.com", 
-          "csgo.wmsj.cn", 
-          "dl.steam.clngaa.com", 
-          "dl.steam.ksyna.com", 
-          "dota2.wmsj.cn", 
-          "st.dl.bscstorage.net", 
-          "st.dl.eccdnx.com", 
-          "st.dl.pinyuncloud.com", 
-          "steampipe.steamcontent.tnkjmec.com", 
-          "steampowered.com.8686c.com", 
-          "steamstatic.com.8686c.com", 
-          "wmsjsteam.com", 
-          "xz.pphimalayanrt.com",
-          "cm.steampowered.com", 
-          "steamchina.com", 
-          "steamcontent.com", 
-          "steamusercontent.com"
+          "librespeed.cn"
         ],
         "domain_keyword": [
           "moutai",
           "sina"
+        ],
+        "geosite": [
+          "apple-cn",
+          "category-games@cn",
+          "cn"
+        ],
+        "geoip": [
+          "cn",
+          "private"
         ],
         "outbound": "direct"
       }
