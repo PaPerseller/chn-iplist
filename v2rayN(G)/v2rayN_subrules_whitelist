@@ -71,6 +71,8 @@
         "domain:fonts.googleapis.com",
         "domain:fonts.gstatic.com",
         "domain:softpedia.com",
+        "domain:airdroid.com",
+        "domain:airdroid.cn",
         "domain:ip6-localhost",
         "domain:ip6-loopback",
         "domain:local",
