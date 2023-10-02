@@ -1,6 +1,8 @@
 geosite:cn,
 domain:fonts.googleapis.com,
 domain:fonts.gstatic.com,
+domain:airdroid.com,
+domain:airdroid.cn,
 domain:softpedia.com,
 domain:ip6-localhost,
 domain:ip6-loopback,
