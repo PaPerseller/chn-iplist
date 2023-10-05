@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "tls://8.8.8.8",
+        "address": "https://8.8.8.8/dns-query",
         "address_resolver": "dns_direct",
         "strategy": "ipv4_only",
         "detour": "proxy"
