@@ -117,9 +117,6 @@
         "domain_keyword": [
           "appledaily",
           "instagram",
-          "twitter",
-          "twimg",
-          "telegram",
           "v2ex"
         ],
         "outbound": "proxy"
