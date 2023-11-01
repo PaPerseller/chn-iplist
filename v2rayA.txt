@@ -4,17 +4,17 @@ default: proxy
 
 # block
 domain(geosite:category-ads-all)->block
-domain(domain:wwads.cn, domain:gzads.com, domain:gozendata.com, domain:gz-data.com, domain:umeng)->block
+domain(umeng)->block
 
 # proxy
 ip(8.8.4.4, 8.8.8.8, 208.67.222.222, 208.67.220.220, 1.1.1.1, 1.1.1.2, 1.0.0.1, 9.9.9.9)->proxy
-ip(geoip:telegram)->proxy
+ip(geoip:telegram, geoip:twitter)->proxy
 domain(domain:bing.com, domain:v2ex.com,  domain:developer.apple.com, domain:testflight.apple.com, domain:assets-cdn.github.com)->proxy
 domain(contains: google, geosite:github, geosite:netflix, geosite:telegram, geosite:appledaily, geosite:twitter, domain:g.whatsapp.net, domain:t.me)->proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com, domain:steamcommunity.com, domain:steamgames.com, domain:steampowered.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcdn-a.akamaihd.net, domain:steamcommunity-a.akamaihd.net, domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net, domain:steam-chat.com)->proxy
 
 # direct
-domain(domain:fonts.googleapis.com, domain:fonts.gstatic.com, domain:apple.com, domain:microsoft.com, domain:dyndns.com, domain:douyucdn.cn, domain:douyucdn2.cn, domain:airdroid.com, domain:airdroid.cn, domain:bilibili.com, domain:aliyundrive.com, domain:push.apple.com, domain:identity.apple.com, domain:librespeed.cn, domain:qq.com, domain:cdn.jsdelivr.net, domain:tunnel.ddnsto.com, domain:tunnel.kooldns.cn, domain:tunnel.tocmcc.cn, domain:kooldns.cn, domain:tocmcc.cn, domain:ddnsto.com, keyword:moutai, keyword:sina, keyword:alibaba, keyword:airdroid)->direct
+domain(domain:gdmf.apple.com, domain:fonts.googleapis.com, domain:fonts.gstatic.com, domain:bilibili.com, domain:aliyundrive.com, domain:push.apple.com, domain:identity.apple.com, domain:librespeed.cn, domain:cdn.jsdelivr.net, domain:tunnel.ddnsto.com, domain:tunnel.kooldns.cn, domain:tunnel.tocmcc.cn, domain:kooldns.cn, domain:tocmcc.cn, domain:ddnsto.com, keyword:moutai, keyword:sina, keyword:alibaba, keyword:airdroid)->direct
 domain(geosite:apple-cn, geosite:cn)->direct
 domain(domain:cdn.mileweb.cs.steampowered.com.8686c.com, domain:cdn-ws.content.steamchina.com, domain:cdn-qc.content.steamchina.com, domain:cdn-ali.content.steamchina.com, domain:epicgames-download1-1251447533.file.myqcloud.com, domain:csgo.wmsj.cn, domain:dl.steam.clngaa.com, domain:dl.steam.ksyna.com, domain:dota2.wmsj.cn, domain:st.dl.bscstorage.net, domain:st.dl.eccdnx.com, domain:st.dl.pinyuncloud.com, domain:steampipe.steamcontent.tnkjmec.com, domain:steampowered.com.8686c.com, domain:steamstatic.com.8686c.com, domain:wmsjsteam.com, domain:cm.steampowered.com, domain:steamchina.com, domain:steamcontent.com, domain:steamusercontent.com)->direct
 ip(geoip:private, geoip:cn)->direct
