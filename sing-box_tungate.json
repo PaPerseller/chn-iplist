@@ -64,10 +64,6 @@
       {
         "geosite": "category-ads-all",
         "domain_suffix": [
-          "wwads.cn",
-          "gzads.com",
-          "gozendata.com",
-          "gz-data.com",
           "ads.fmdisk.com",
           "ads.feemoo.com",
           "googleads.g.doubleclick.net",
@@ -85,11 +81,17 @@
         "outbound": "block"
       },
       {
+        "ip_cidr": [
+          "1.1.1.1",
+          "1.0.0.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
         "geoip": [
-          "telegram"
+          "telegram",
+          "twitter"
         ],
         "domain_suffix": [
-          "github.com",
           "github.global.ssl.fastly.net",
           "assets-cdn.github.com",
           "ampproject.org",
@@ -102,30 +104,56 @@
           "gvt1.com",
           "youtu.be",
           "ytimg.com",
-          "ggpht.com"
+          "ggpht.com",
+          "steamcommunity-a.akamaihd.net",
+          "steamstore-a.akamaihd.net",
+          "fanatical.com",
+          "humblebundle.com",
+          "playartifact.com",
+          "steam-chat.com",
+          "steamcommunity.com",
+          "underlords.com"
         ],
         "domain_keyword": [
           "appledaily",
-          "github",
           "instagram",
           "twitter",
           "twimg",
           "telegram",
-          "v2ex",
-          "gmail",
-          "youtube"
+          "v2ex"
         ],
         "outbound": "proxy"
       },
       {
+        "ip_cidr": [
+          "2.59.182.6"         
+        ],
         "domain_suffix": [
-          "airdroid.com",
-          "airdroid.cn",
-          "librespeed.cn"
+          "gdmf.apple.com",
+          "librespeed.cn",
+          "cdn.mileweb.cs.steampowered.com.8686c.com",
+          "cdn-ws.content.steamchina.com",
+          "cdn-qc.content.steamchina.com",
+          "cdn-ali.content.steamchina.com",
+          "epicgames-download1-1251447533.file.myqcloud.com",
+          "dl.steam.clngaa.com",
+          "dl.steam.ksyna.com",
+          "st.dl.bscstorage.net",
+          "st.dl.eccdnx.com",
+          "st.dl.pinyuncloud.com",
+          "steampipe.steamcontent.tnkjmec.com",
+          "steampowered.com.8686c.com",
+          "steamstatic.com.8686c.com",
+          "wmsjsteam.com",
+          "xz.pphimalayanrt.com",
+          "cm.steampowered.com",
+          "steamcontent.com",
+          "steamusercontent.com"
         ],
         "domain_keyword": [
           "moutai",
-          "sina"
+          "sina",
+          "airdroid"
         ],
         "geosite": [
           "apple-cn",

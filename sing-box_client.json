@@ -115,19 +115,8 @@
         "outbound": "dns-out"
       },
       {
-        "network": "udp",
-        "port": [
-          443
-        ],
-        "outbound": "block"
-      },
-      {
         "geosite": "category-ads-all",
         "domain_suffix": [
-          "wwads.cn",
-          "gzads.com",
-          "gozendata.com",
-          "gz-data.com",
           "ads.fmdisk.com",
           "ads.feemoo.com",
           "googleads.g.doubleclick.net",
@@ -145,11 +134,17 @@
         "outbound": "block"
       },
       {
+        "ip_cidr": [
+          "1.1.1.1",
+          "1.0.0.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
         "geoip": [
-          "telegram"
+          "telegram",
+          "twitter"
         ],
         "domain_suffix": [
-          "github.com",
           "github.global.ssl.fastly.net",
           "assets-cdn.github.com",
           "ampproject.org",
@@ -166,26 +161,22 @@
         ],
         "domain_keyword": [
           "appledaily",
-          "github",
           "instagram",
           "twitter",
           "twimg",
           "telegram",
-          "v2ex",
-          "gmail",
-          "youtube"
+          "v2ex"
         ],
         "outbound": "proxy"
       },
       {
         "domain_suffix": [
-          "airdroid.com",
-          "airdroid.cn",
           "librespeed.cn"
         ],
         "domain_keyword": [
           "moutai",
-          "sina"
+          "sina",
+          "airdroid"
         ],
         "geosite": [
           "apple-cn",
