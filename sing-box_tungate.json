@@ -122,9 +122,6 @@
         "outbound": "proxy"
       },
       {
-        "ip_cidr": [
-          "2.59.182.6"         
-        ],
         "domain_suffix": [
           "gdmf.apple.com",
           "librespeed.cn",
