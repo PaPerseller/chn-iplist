@@ -15,6 +15,10 @@
           "domain:log.tagtic.cn",
           "domain:pgdt.ugdtimg.com",
           "domain:sdownload.stargame.com",
+          "domain:wwads.cn",
+          "domain:gzads.com",
+          "domain:gozendata.com",
+          "domain:gz-data.com",
           "googleads",
           "pagead",
           "umeng",
@@ -55,6 +59,7 @@
       {
         "outboundTag" : "proxy",
         "domain" : [
+          "geosite:github",
           "geosite:netflix",
           "geosite:telegram",
           "geosite:geolocation-!cn",
@@ -73,6 +78,7 @@
           "tdesktop.com",
           "instagram",
           "twimg",
+          "steam",
           "v2ex"
         ],
         "type" : "field"
@@ -1834,7 +1840,6 @@
           "103.95.240.0/20",
           "103.96.0.0/22",
           "103.96.8.0/22",
-          "103.96.80.0/22",
           "103.96.124.0/22",
           "103.96.136.0/22",
           "103.96.140.0/24",
@@ -2398,7 +2403,6 @@
           "103.166.84.0/23",
           "103.166.138.0/23",
           "103.166.242.0/23",
-          "103.166.246.0/23",
           "103.167.0.0/23",
           "103.167.36.0/23",
           "103.167.100.0/23",
@@ -5643,7 +5647,6 @@
           "2001:df6:5d00::/48",
           "2001:df6:6800::/48",
           "2001:df6:9e80::/48",
-          "2001:df6:9f80::/48",
           "2001:df6:df00::/48",
           "2001:df6:f400::/48",
           "2001:df7:1480::/48",
