@@ -1,13 +1,13 @@
 # chn-iplist
 
-~~数据源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)，使用 mosdns 项目 [ip 合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)~~ 
+~~前数据源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)~~ 
 
 ### 数据源 (2023-11-17 起)
-IPv4：[17mon/china_ip_list](https://github.com/17mon/china_ip_list) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip) ，使用 [0x2E/someip](https://github.com/0x2E/someip) 项目在 [PaPerseller/someip](https://github.com/PaPerseller/someip) 合并优化生成。
+IPv4：[17mon/china_ip_list](https://github.com/17mon/china_ip_list) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)
 
-IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest) 使用 mosdns 项目[合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)生成。
+IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest) 
 
-将其转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、SagerNet、Loon、RouterOS、sing-box、v2rayA 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
+使用 mosdns 项目[合并优化脚本](https://github.com/IrineSistiana/mosdns/blob/main/scripts/update_chn_ip_domain.py)生成转化为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、SagerNet、Loon、RouterOS、sing-box、v2rayA 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
 
 ## Subscribe URL:
 
