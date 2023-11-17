@@ -1,56 +1,31 @@
+def process_file(input_filename, output_filename, before_text, after_text, header=None):
+    with open(input_filename, "r") as input_file:
+        lines = input_file.readlines()
+
+    new_lines = [before_text + line.strip() + after_text + "\n" for line in lines]
+
+    if header:
+        new_lines = header + new_lines
+
+    with open(output_filename, "w") as output_file:
+        output_file.writelines(new_lines)
+
 # roscn.rsc
-with open("./chnroute-ipv4.txt", "r") as input_file:
-    lines = input_file.readlines()
-
-before_text = 'add address='
-after_text = ' list=CN'
-
-new_lines = []
-for line in lines:
-    new_line = before_text + line.strip() + after_text + "\n"
-    new_lines.append(new_line)
-
-header = ['/ip firewall address-list remove [/ip firewall address-list find list=CN]\n', '/ip firewall address-list\n','add address=192.168.0.0/16 list=CN comment=private-network\n','add address=10.0.0.0/8 list=CN comment=private-network\n']
-header.extend(new_lines)
-
-with open("./cn.rsc", "w") as output_file:
-    output_file.writelines(header) 
+header = [
+    '/ip firewall address-list remove [/ip firewall address-list find list=CN]\n', 
+    '/ip firewall address-list\n',
+    'add address=192.168.0.0/16 list=CN comment=private-network\n',
+    'add address=10.0.0.0/8 list=CN comment=private-network\n'
+]
+process_file("./chnroute-ipv4.txt", "./cn.rsc", 'add address=', ' list=CN', header)
 
 # ipv6cidr
-with open("./chnroute-ipv6.txt", "r") as input_file:
-    lines = input_file.readlines()
-
-before_text = 'IP-CIDR,'
-after_text = ',no-resolve'
-
-new_lines = []
-for line in lines:
-    new_line = before_text + line.strip() + after_text + "\n"
-    new_lines.append(new_line)
-
 header = ['# 适用于 shadowrocket 等 ipv6 规则前缀为 IP-CIDR 的应用\n']
-header.extend(new_lines)
-
-with open("./ipv6.list", "w") as output_file:
-    output_file.writelines(header)
+process_file("./chnroute-ipv6.txt", "./ipv6.list", 'IP-CIDR,', ',no-resolve', header)
 
 # ipv6cidr6
-with open("./chnroute-ipv6.txt", "r") as input_file:
-    lines = input_file.readlines()
-
-before_text = 'IP-CIDR6,'
-after_text = ',no-resolve'
-
-new_lines = []
-for line in lines:
-    new_line = before_text + line.strip() + after_text + "\n"
-    new_lines.append(new_line)
-
 header = ['# 适用于 Loon、clash 等 ipv6 规则前缀为 IP-CIDR6 的应用\n']
-header.extend(new_lines)
-
-with open("./Loon/ruleset/ipv6.list", "w") as output_file:
-    output_file.writelines(header)
+process_file("./chnroute-ipv6.txt", "./Loon/ruleset/ipv6.list", 'IP-CIDR6,', ',no-resolve', header)
 
 # acl
 a_content = '''# 默认代理
@@ -240,18 +215,12 @@ with open("./chnroute.txt", "r") as b_file:
         lines= b_file.readlines()
 
 before_text = "          \""
-after_text = "\","
+after_text = "\"," 
 
-new_lines = []
-for line in lines:
-    new_line = before_text + line.strip() + after_text + "\n"
-    new_lines.append(new_line)
+new_lines = [before_text + line.strip() + after_text for line in lines]
 
-b2_content = ''
-for line in new_lines:
-  b2_content += line
-b1_content = b2_content.rstrip()
-b_content = b1_content[:-1]
+b2_content = '\n'.join(new_lines).rstrip(',') 
+b_content = b2_content 
 
 new_content = a_content + "\n" + b_content + c_content
 
