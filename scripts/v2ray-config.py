@@ -15,10 +15,6 @@ a_content = '''  "routing" : {
           "domain:log.tagtic.cn",
           "domain:pgdt.ugdtimg.com",
           "domain:sdownload.stargame.com",
-          "domain:wwads.cn",
-          "domain:gzads.com",
-          "domain:gozendata.com",
-          "domain:gz-data.com",
           "googleads",
           "pagead",
           "umeng",
@@ -59,7 +55,6 @@ a_content = '''  "routing" : {
       {
         "outboundTag" : "proxy",
         "domain" : [
-          "geosite:github",
           "geosite:netflix",
           "geosite:telegram",
           "geosite:geolocation-!cn",
@@ -78,7 +73,6 @@ a_content = '''  "routing" : {
           "tdesktop.com",
           "instagram",
           "twimg",
-          "steam",
           "v2ex"
         ],
         "type" : "field"
