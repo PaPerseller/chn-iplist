@@ -95,7 +95,7 @@ with open("./chnroute-ipv4.txt", 'r') as d_file:
 with open('./chnroute-ipv6.txt', 'r') as e_file:
     e_content = e_file.read()
 
-merged_content = a_content + b_content
+merged_content = d_content + e_content
 
 with open('./chnroute.txt', 'w') as f_file:
     f_file.write(merged_content)
