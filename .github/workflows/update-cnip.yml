@@ -29,7 +29,7 @@ jobs:
           wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/update_chnip.py'
           python update_chnip.py
 
-      - name: generate cn iplist
+      - name: generate rules
         run: |
           wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/generate.py'
           python generate.py
