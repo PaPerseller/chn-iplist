@@ -798,6 +798,7 @@ add address=44.31.212.0/24 list=CN
 add address=44.31.216.0/24 list=CN
 add address=44.31.231.0/24 list=CN
 add address=44.31.234.0/24 list=CN
+add address=44.159.65.0/24 list=CN
 add address=44.159.73.0/24 list=CN
 add address=45.9.11.0/24 list=CN
 add address=45.12.82.0/24 list=CN
