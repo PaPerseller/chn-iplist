@@ -33,6 +33,7 @@ jobs:
         run: |
           wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/generate.py'
           python generate.py
+          rm update_chnip.py generate.py
 
       - name: Commit file
         run: |
