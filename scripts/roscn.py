@@ -1,16 +1,20 @@
-before_text = 'add address='
-after_text = ' list=CN'
+def format_cidr(file_path, output_path):
+    with open(file_path, 'r') as f:
+        cidrs = [cidr.strip() for cidr in f.readlines()]
 
-with open("./chnroute-ipv4.txt", "r") as input_file:
-    lines = input_file.readlines()
+    with open(output_path, 'w') as f:
+        f.write("/ip firewall address-list remove [/ip firewall address-list find list=CN]\n")
+        f.write("/ip firewall address-list\n")
+        f.write("add address=192.168.0.0/16 list=CN comment=private-network\n")
+        f.write("add address=10.0.0.0/8 list=CN comment=private-network\n")
+        f.write("\n:local cidrList {\n")
+        for cidr in cidrs[:-1]:
+            f.write(f'  "{cidr}";\n')
+        f.write(f'  "{cidrs[-1]}"\n')
+        f.write("}\n\n")
+        f.write(":foreach cidr in $cidrList do={\n")
+        f.write("  /ip firewall address-list add address=$cidr list=CN\n")
+        f.write("}")
 
-new_lines = []
-for line in lines:
-    new_line = before_text + line.strip() + after_text + "\n"
-    new_lines.append(new_line)
-
-header = ['/ip firewall address-list remove [/ip firewall address-list find list=CN]\n', '/ip firewall address-list\n','add address=192.168.0.0/16 list=CN comment=private-network\n','add address=10.0.0.0/8 list=CN comment=private-network\n']
-header.extend(new_lines)
-
-with open("./cn.rsc", "w") as output_file:
-    output_file.writelines(header)
+if __name__ == '__main__':
+    format_cidr('./chnroute-ipv4.txt', './cn.rsc')
