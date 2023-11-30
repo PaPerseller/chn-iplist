@@ -81,8 +81,7 @@
           "8.8.4.4"
         ],
         "rule_set": [
-          "geoip-telegram",
-          "geoip-twitter"
+          "geoip-telegram"
         ],
         "domain_suffix": [
           "github.global.ssl.fastly.net",
@@ -166,13 +165,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-telegram.srs",
-        "download_detour": "proxy"
-      },
-      {
-        "tag": "geoip-twitter",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-twitter.srs",
         "download_detour": "proxy"
       },
       {
