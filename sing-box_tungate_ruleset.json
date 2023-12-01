@@ -53,72 +53,6 @@
     }
   ],
   "route": {
-    "rule_set": [
-      {
-        "tag": "geosite-category-ads-all",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "proxy",
-        "update_interval": "10d"
-      },
-      {
-        "tag": "geoip-telegram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-telegram.srs",
-        "download_detour": "proxy",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-apple-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
-        "download_detour": "proxy",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-google-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
-        "download_detour": "proxy",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-category-games@cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
-        "download_detour": "proxy",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "proxy",
-        "update_interval": "10d"
-      },
-      {
-        "tag": "geoip-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "proxy",
-        "update_interval": "5d"
-      },
-      {
-        "tag": "geoip-private",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-private.srs",
-        "download_detour": "proxy",
-        "update_interval": "30d"
-      }
-    ],
     "rules": [
       {
         "ip_is_private": true,
@@ -220,6 +154,72 @@
           "geoip-private"
         ],
         "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "proxy",
+        "update_interval": "10d"
+      },
+      {
+        "tag": "geoip-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-telegram.srs",
+        "download_detour": "proxy",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
+        "download_detour": "proxy",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-google-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
+        "download_detour": "proxy",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-category-games@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
+        "download_detour": "proxy",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "proxy",
+        "update_interval": "10d"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "proxy",
+        "update_interval": "5d"
+      },
+      {
+        "tag": "geoip-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-private.srs",
+        "download_detour": "proxy",
+        "update_interval": "30d"
       }
     ],
     "final": "proxy",
