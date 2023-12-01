@@ -98,82 +98,6 @@
     }
   ],
   "route": {
-    "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "rule_set": "geosite-category-ads-all",
-        "domain_suffix": [
-          "ads.fmdisk.com",
-          "ads.feemoo.com",
-          "googleads.g.doubleclick.net",
-          "ads.google.com",
-          "afd.l.google.com",
-          "doubleclick.com",
-          "doubleclick.net",
-          "google-analytics.com",
-          "mobileads.google.com"
-        ],
-        "domain_keyword": [
-          "umeng",
-          "googleads"
-        ],
-        "outbound": "block"
-      },
-      {
-        "ip_cidr": [
-          "1.1.1.1",
-          "1.0.0.1",
-          "8.8.8.8",
-          "8.8.4.4"
-        ],
-        "rule_set": [
-          "geoip-telegram"
-        ],
-        "domain_suffix": [
-          "github.global.ssl.fastly.net",
-          "assets-cdn.github.com",
-          "ampproject.org",
-          "ampproject.net",
-          "g.whatsapp.net",
-          "us-west-2.amazonaws.com",
-          "developer.apple.com",
-          "humblebundle.com",
-          "goo.gl",
-          "gvt1.com",
-          "youtu.be",
-          "ytimg.com",
-          "ggpht.com"
-        ],
-        "domain_keyword": [
-          "appledaily",
-          "instagram",
-          "v2ex"
-        ],
-        "outbound": "proxy"
-      },
-      {
-        "domain_suffix": [
-          "librespeed.cn"
-        ],
-        "domain_keyword": [
-          "moutai",
-          "sina",
-          "airdroid"
-        ],
-        "rule_set": [
-          "geosite-apple-cn",
-          "geosite-google-cn",
-          "geosite-category-games@cn",
-          "geosite-cn",
-          "geoip-cn",
-          "geoip-private"
-        ],
-        "outbound": "direct"
-      }
-    ],
     "rule_set": [
       {
         "tag": "geosite-category-ads-all",
@@ -244,6 +168,86 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-private.srs",
         "download_detour": "proxy"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "domain_suffix": [
+          "ads.fmdisk.com",
+          "ads.feemoo.com",
+          "googleads.g.doubleclick.net",
+          "ads.google.com",
+          "afd.l.google.com",
+          "doubleclick.com",
+          "doubleclick.net",
+          "google-analytics.com",
+          "mobileads.google.com"
+        ],
+        "domain_keyword": [
+          "umeng",
+          "googleads"
+        ],
+        "outbound": "block"
+      },
+      {
+        "ip_cidr": [
+          "1.1.1.1",
+          "1.0.0.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "rule_set": [
+          "geoip-telegram"
+        ],
+        "domain_suffix": [
+          "github.global.ssl.fastly.net",
+          "assets-cdn.github.com",
+          "ampproject.org",
+          "ampproject.net",
+          "g.whatsapp.net",
+          "us-west-2.amazonaws.com",
+          "developer.apple.com",
+          "humblebundle.com",
+          "goo.gl",
+          "gvt1.com",
+          "youtu.be",
+          "ytimg.com",
+          "ggpht.com"
+        ],
+        "domain_keyword": [
+          "appledaily",
+          "instagram",
+          "v2ex"
+        ],
+        "outbound": "proxy"
+      },
+      {
+        "domain_suffix": [
+          "librespeed.cn"
+        ],
+        "domain_keyword": [
+          "moutai",
+          "sina",
+          "airdroid"
+        ],
+        "rule_set": [
+          "geosite-apple-cn",
+          "geosite-google-cn",
+          "geosite-category-games@cn",
+          "geosite-cn",
+          "geoip-cn",
+          "geoip-private"
+        ],
+        "outbound": "direct"
       }
     ],
     "auto_detect_interface": true
