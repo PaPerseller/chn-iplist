@@ -171,6 +171,7 @@
           "geosite-apple-cn",
           "geosite-google-cn",
           "geosite-category-games@cn",
+          "geosite-category-public-tracker",
           "geosite-cn",
           "geoip-cn",
           "geoip-private"
@@ -226,6 +227,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-category-public-tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-public-tracker.srs",
         "download_detour": "proxy"
       },
       {
