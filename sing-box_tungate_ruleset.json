@@ -22,7 +22,7 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //本注释需删除，以 reality 协议为例, 对应值请勿套用
+      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "type": "vless",
       "server": "server",
       "server_port": 443,
@@ -41,7 +41,8 @@
           "short_id": "c24d2408508ee08f"
         }
       },
-      "tcp_fast_open": true
+      "tcp_fast_open": true,
+      "tcp_multi_path": true
     },
     {
       "type": "direct",
@@ -85,7 +86,7 @@
           "8.8.4.4"
         ],
         "rule_set": [
-          "geoip-telegram"
+          "mixed-telegram"
         ],
         "domain_suffix": [
           "github.global.ssl.fastly.net",
@@ -151,8 +152,8 @@
           "geosite-category-games@cn",
           "geosite-category-public-tracker",
           "geosite-cn",
-          "geoip-cn",
-          "geoip-private"
+          "mixed-private",
+          "geoip-cn"
         ],
         "outbound": "direct"
       }
@@ -167,10 +168,10 @@
         "update_interval": "10d"
       },
       {
-        "tag": "geoip-telegram",
+        "tag": "mixed-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-telegram.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/mixed/telegram.srs",
         "download_detour": "proxy",
         "update_interval": "30d"
       },
@@ -223,10 +224,10 @@
         "update_interval": "5d"
       },
       {
-        "tag": "geoip-private",
+        "tag": "mixed-private",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-private.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/mixed/private.srs",
         "download_detour": "proxy",
         "update_interval": "30d"
       }
