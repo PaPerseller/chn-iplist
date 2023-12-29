@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@main
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@main
         with:
           python-version: '3.11'
       - name: Install dependencies
@@ -47,5 +47,5 @@ jobs:
           git add ./Loon/ruleset/ipv6.list
           git add chn.acl
           git add v2ray-config_rule.json
-          git commit -m "AutoUpdate `date +%Y-%m-%d`" -a
+          git commit -m "Update `date +%Y-%m-%d`" -a --author="${GITHUB_ACTOR} <${GITHUB_EMAIL}> github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           git push -f origin master
