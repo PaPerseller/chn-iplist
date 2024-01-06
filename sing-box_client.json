@@ -1,3 +1,4 @@
+//本注释需删除，此配置仅可用于支持 rule-set 的 sing-box v1.8.0+ 版本
 {
   "log": {
     "level": "info",
@@ -25,22 +26,18 @@
     ],
     "rules": [
       {
-        "geosite": [
-          "category-ads-all"
-        ],
+        "rule_set": "geosite-category-ads-all",
         "server": "dns_block",
         "disable_cache": true
       },
       {
-        "geosite": [
-          "geolocation-!cn"
-        ],
+        "rule_set": "geosite-geolocation-!cn",
         "server": "dns_proxy"
       },
       {
-        "geosite": [
-          "cn",
-          "private"
+        "rule_set": [
+          "geosite-cn",
+          "geosite-private"
         ],
         "server": "dns_direct"
       },
@@ -67,7 +64,7 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //以 reality 协议为例, 对应值请勿套用，客户端中需删除本注释
+      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "type": "vless",
       "server": "server",
       "server_port": 443,
@@ -85,7 +82,9 @@
           "public_key": "SUDD3lECQszxyDD9FZFcB0QpG3XzaVD8tzEH98kcEko",
           "short_id": "c24d2408508ee08f"
         }
-      }
+      },
+      "tcp_fast_open": true,
+      "tcp_multi_path": true
     },
     {
       "type": "direct",
@@ -101,21 +100,17 @@
     }
   ],
   "route": {
-    "geoip": {
-      "download_url": "https://cdn.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip.db",
-      "download_detour": "direct"
-    },
-    "geosite": {
-      "download_url": "https://cdn.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
-      "download_detour": "direct"
-    },
     "rules": [
       {
         "protocol": "dns",
         "outbound": "dns-out"
       },
       {
-        "geosite": "category-ads-all",
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
         "domain_suffix": [
           "ads.fmdisk.com",
           "ads.feemoo.com",
@@ -140,9 +135,8 @@
           "8.8.8.8",
           "8.8.4.4"
         ],
-        "geoip": [
-          "telegram",
-          "twitter"
+        "rule_set": [
+          "mixed-telegram"
         ],
         "domain_suffix": [
           "github.global.ssl.fastly.net",
@@ -175,18 +169,102 @@
           "sina",
           "airdroid"
         ],
-        "geosite": [
-          "apple-cn",
-          "category-games@cn",
-          "cn"
-        ],
-        "geoip": [
-          "cn",
-          "private"
+        "rule_set": [
+          "geosite-apple-cn",
+          "geosite-google-cn",
+          "geosite-category-games@cn",
+          "geosite-category-public-tracker",
+          "geosite-cn",
+          "mixed-private",
+          "geoip-cn"
         ],
         "outbound": "direct"
       }
     ],
+    "rule_set": [
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-private.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "mixed-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/mixed/telegram.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-google-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-category-games@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-category-public-tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-public-tracker.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "mixed-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/mixed/private.srs",
+        "download_detour": "proxy"
+      }
+    ],
     "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
   }
 }
