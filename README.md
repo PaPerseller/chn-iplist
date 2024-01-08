@@ -1,13 +1,12 @@
 # chn-iplist
 
-~~前数据源 [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)~~ 
 
-### 数据源 (2023-11-17 起)
+### 数据源
 IPv4：[17mon/china_ip_list](https://github.com/17mon/china_ip_list) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)
 
 IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest) 
 
-使用由 mosdns 项目启发的[合并优化脚本](https://github.com/PaPerseller/chn-iplist/blob/master/scripts/update_chnip.py)生成为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、SagerNet、Loon、RouterOS、sing-box、v2rayA 规则和 v2ray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
+使用由 mosdns 项目启发的[合并优化脚本](https://github.com/PaPerseller/chn-iplist/blob/master/scripts/update_chnip.py)生成为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、NekoRay/NekoBox、Loon、RouterOS、sing-box、v2rayA 规则和 v2ray/xray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
 
 ## Subscribe URL:
 
@@ -23,15 +22,11 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 
 分别将 [proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/proxy.txt)、[direct-noip](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/direct-noip.txt)、[block](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayN(G)/block.txt) 规则复制粘贴至应用内。
 
-#### Qv2ray
+#### NekoRay/NekoBox
 
-下载[no-chnip方案](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/archived/Qv2ray-noip.json)后导入。
+分别将 [domain 屏蔽规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/NekoRay/block-domain.txt)、[domain 远程规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/NekoRay/proxy-domain.txt)、[ip 远程规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/NekoRay/proxy-ip.txt)、[domain 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/NekoRay/direct-domain.txt)、[ip 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/NekoRay/direct-ip.txt)复制粘贴至应用内路由对应分类。
 
-#### SagerNet
-
-分别将 [domain 屏蔽规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/SagerNet/block-domain.txt)、[domain 远程规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/SagerNet/proxy-domain.txt)、[ip 远程规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/SagerNet/proxy-ip.txt)、[domain 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/SagerNet/direct-domain.txt)、[ip 绕过规则](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/SagerNet/direct-ip.txt)复制粘贴至应用内路由对应分类。
-
-#### v2ray 配置内嵌规则
+#### v2ray/xray 配置内嵌规则
 
 将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2ray-config_rule.json)加入配置文件 routing 对应区域。
 
@@ -43,7 +38,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 
 1. Shadowrocket 等有 ipv6 开关的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。额外提供前缀为 [IP-CIDR](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ipv6.list) 和 [IP-CIDR6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/ruleset/ipv6.list) 两种远程 ipv6 规则。
 2. Loon 配置文件为简洁配置，适用于使用自建节点。订阅规则以特殊规则为主，需搭配其他更完善的订阅规则。
-3. SagerNet 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，需将路由资源更新源设为 Loyalsoldier/v2ray-rules-dat。
+3. NekoBox 部分规则由 [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat/releases) 加强版规则特殊支持，需将路由资源更新源设为 Loyalsoldier。
 4. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
 5. 为解决 Shadowrocket 配置在线更新后覆盖掉自定义规则部分，提供一个高度精简的[自定义配置模块](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/DIY.module)。新建模块后复制本模块内容并自行增删修改后保存，不可通过 URL 添加以防模块被更新重置。此模块仅当有自定义规则需求时添加。
 6. ROS 下载 cn.rsc 推荐 [CDN 加速地址](https://cdn.jsdelivr.net/gh/PaPerseller/chn-iplist/cn.rsc)以提高下载成功率。
