@@ -6,7 +6,7 @@ IPv4：[17mon/china_ip_list](https://github.com/17mon/china_ip_list) 和 [gaoyif
 
 IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest) 
 
-使用由 mosdns 项目启发的[合并优化脚本](https://github.com/PaPerseller/chn-iplist/blob/master/scripts/update_chnip.py)生成为 txt 文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、NekoRay/NekoBox、Loon、RouterOS、sing-box、v2rayA 规则和 v2ray/xray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
+使用由 mosdns 项目启发的[合并优化脚本](https://github.com/PaPerseller/chn-iplist/blob/master/scripts/update_chnip.py)生成列表文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、Qv2ray、NekoRay/NekoBox、Loon、RouterOS、sing-box、v2rayA 规则和 v2ray/xray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
 
 ## 可订阅规则：
 
