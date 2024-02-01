@@ -499,10 +499,14 @@ IP-CIDR,2401:7340::/32,no-resolve
 IP-CIDR,2401:7360::/32,no-resolve
 IP-CIDR,2401:73a0::/32,no-resolve
 IP-CIDR,2401:7580::/32,no-resolve
+IP-CIDR,2401:7660::/32,no-resolve
 IP-CIDR,2401:7680::/32,no-resolve
 IP-CIDR,2401:7700::/32,no-resolve
 IP-CIDR,2401:7780::/32,no-resolve
+IP-CIDR,2401:77e0::/32,no-resolve
+IP-CIDR,2401:7820::/32,no-resolve
 IP-CIDR,2401:7880::/32,no-resolve
+IP-CIDR,2401:78e0::/32,no-resolve
 IP-CIDR,2401:7980::/32,no-resolve
 IP-CIDR,2401:7a00::/32,no-resolve
 IP-CIDR,2401:7a80::/32,no-resolve
