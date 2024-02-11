@@ -25,15 +25,13 @@ jobs:
           pip install netaddr requests
 
       - name: generate cn iplist
-        run: |
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/update_chnip.py'
-          python update_chnip.py
+        run:
+          python scripts/update_chnip.py
 
       - name: generate rules
         run: |
-          wget 'https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/scripts/generate.py'
-          python generate.py
-          rm update_chnip.py generate.py
+          python scripts/generate.py
+          python scripts/PAC_build.py
 
       - name: Commit file
         run: |
@@ -47,5 +45,6 @@ jobs:
           git add ./Loon/ruleset/ipv6.list
           git add chn.acl
           git add v2ray-config_rule.json
+          git add chnroute.pac
           git commit -m "Update `date +%Y-%m-%d`" -a --author="${GITHUB_ACTOR} <${GITHUB_EMAIL}> github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           git push -f origin master
