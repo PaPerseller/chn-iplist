@@ -64,12 +64,8 @@
         "domain_suffix": [
           "ads.fmdisk.com",
           "ads.feemoo.com",
-          "googleads.g.doubleclick.net",
           "ads.google.com",
           "afd.l.google.com",
-          "doubleclick.com",
-          "doubleclick.net",
-          "google-analytics.com",
           "mobileads.google.com"
         ],
         "domain_keyword": [

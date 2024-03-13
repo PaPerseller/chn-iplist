@@ -47,7 +47,6 @@ c_content = '''
 (^|\.)\w*gstatic\w*\.\w*$
 (^|\.)\w*youtube\w*\.\w*$
 (^|\.)\w*appledaily\w*\.\w*$
-(^|\.)\w*github\w*\.\w*$
 (^|\.)\w*instagram\w*\.\w*$
 (^|\.)\w*twitter\w*\.\w*$
 (^|\.)\w*twimg\w*\.\w*$
