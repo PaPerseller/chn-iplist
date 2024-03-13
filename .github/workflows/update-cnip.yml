@@ -30,8 +30,9 @@ jobs:
 
       - name: generate rules
         run: |
-          python scripts/generate.py
-          python scripts/PAC_build.py
+          for script in ./scripts/generate/*.py; do
+            python "$script" &
+          done
 
       - name: Commit file
         run: |

@@ -24,7 +24,7 @@ def fetch_and_convert(src):
 def main():
     now = datetime.utcnow()
     date = now.strftime("%Y%m%d")
-    with open("./scripts/code.js", "r") as f:
+    with open("./scripts/generate/code.js", "r") as f:
         code = f.read()
     code = code.replace("@@TIME@@", now.isoformat()[:-7])
 
