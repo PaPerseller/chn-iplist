@@ -527,6 +527,9 @@ IP-CIDR,2401:8380::/32,no-resolve
 IP-CIDR,2401:8540::/32,no-resolve
 IP-CIDR,2401:8600::/32,no-resolve
 IP-CIDR,2401:8680::/32,no-resolve
+IP-CIDR,2401:8720::/32,no-resolve
+IP-CIDR,2401:87e0::/32,no-resolve
+IP-CIDR,2401:8820::/31,no-resolve
 IP-CIDR,2401:8840::/32,no-resolve
 IP-CIDR,2401:8d00::/32,no-resolve
 IP-CIDR,2401:8f40::/32,no-resolve
