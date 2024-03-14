@@ -110,6 +110,10 @@
         "outbound": "direct"
       },
       {
+        "protocol": "quic",
+        "outbound": "block"
+      },
+      {
         "rule_set": "geosite-category-ads-all",
         "domain_suffix": [
           "ads.fmdisk.com",
