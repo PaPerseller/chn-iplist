@@ -15,7 +15,6 @@ domain:g.whatsapp.net,
 domain:us-west-2.amazonaws.com
 instagram,
 twimg,
-steam,
 v2ex,
 geoip:telegram,
 domain:steamcommunity-a.akamaihd.net,
