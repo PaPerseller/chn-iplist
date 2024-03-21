@@ -37,7 +37,9 @@
       {
         "rule_set": [
           "geosite-cn",
-          "geosite-private"
+          "geosite-private",
+          "geoip-cn",
+          "geoip-private"
         ],
         "server": "dns_direct"
       },
@@ -139,7 +141,8 @@
           "8.8.4.4"
         ],
         "rule_set": [
-          "mixed-telegram"
+          "geosite-telegram",
+          "geoip-telegram"
         ],
         "domain_suffix": [
           "github.global.ssl.fastly.net",
@@ -199,7 +202,7 @@
           "205.185.194.0/24"
         ],
         "domain_suffix": [
-          "cn",
+          ".cn",
           "gdmf.apple.com",
           "librespeed.cn",
           "steamcdn-a.akamaihd.net",
@@ -238,8 +241,9 @@
           "geosite-category-games@cn",
           "geosite-category-public-tracker",
           "geosite-cn",
-          "mixed-private",
-          "geoip-cn"
+          "geosite-private",
+          "geoip-cn",
+          "geoip-private"
         ],
         "outbound": "direct"
       }
@@ -260,13 +264,6 @@
         "download_detour": "proxy"
       },
       {
-        "tag": "geosite-private",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-private.srs",
-        "download_detour": "proxy"
-      },
-      {
         "tag": "geosite-geolocation-!cn",
         "type": "remote",
         "format": "binary",
@@ -274,10 +271,17 @@
         "download_detour": "proxy"
       },
       {
-        "tag": "mixed-telegram",
+        "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/mixed/telegram.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/telegram.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/telegram.srs",
         "download_detour": "proxy"
       },
       {
@@ -323,10 +327,17 @@
         "download_detour": "proxy"
       },
       {
-        "tag": "mixed-private",
+        "tag": "geosite-private",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/mixed/private.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/private.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/private.srs",
         "download_detour": "proxy"
       }
     ],
