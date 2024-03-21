@@ -218,14 +218,16 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/telegram.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/telegram.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geosite-apple-cn",
