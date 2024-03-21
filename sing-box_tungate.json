@@ -64,7 +64,10 @@
         "outbound": "block"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": [
+          "geosite-category-ads-all",
+          "category-httpdns"
+        ],
         "domain_suffix": [
           "ads.fmdisk.com",
           "ads.feemoo.com",
@@ -114,7 +117,8 @@
         "domain_keyword": [
           "appledaily",
           "instagram",
-          "v2ex"
+          "v2ex",
+          "github"
         ],
         "outbound": "proxy"
       },
@@ -145,6 +149,7 @@
           "205.185.194.0/24"
         ],
         "domain_suffix": [
+          "cn",
           "gdmf.apple.com",
           "librespeed.cn",
           "steamcdn-a.akamaihd.net",
@@ -172,7 +177,10 @@
         "domain_keyword": [
           "moutai",
           "sina",
-          "airdroid"
+          "airdroid",
+          "announce",
+          "torrent",
+          "tracker"
         ],
         "rule_set": [
           "geosite-apple-cn",
@@ -194,6 +202,14 @@
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
         "download_detour": "proxy",
         "update_interval": "10d"
+      },
+      {
+        "tag": "category-httpdns",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-httpdns.srs",
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "mixed-telegram",

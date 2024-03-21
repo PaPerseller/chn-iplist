@@ -100,7 +100,6 @@
         "domain:humblebundle.com",
         "domain:analytics.twitter.com",
         "domain:g.whatsapp.net",
-        "t.me",
         "tdesktop.com",
         "instagram",
         "twimg",
@@ -152,10 +151,6 @@
         "208.78.164.0/22",
         "205.185.194.0/24",
         "geoip:private",
-        "::1/128",
-        "fc00::/7",
-        "fe80::/10",
-        "fd00::/8",
         "geoip:cn"
       ]
     },
