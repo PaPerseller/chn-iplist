@@ -185,7 +185,6 @@
         ],
         "rule_set": [
           "geosite-apple-cn",
-          "geosite-google-cn",
           "geosite-category-games@cn",
           "geosite-category-public-tracker",
           "geosite-cn",
@@ -234,14 +233,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
-        "download_detour": "proxy",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-google-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
         "download_detour": "proxy",
         "update_interval": "30d"
       },
