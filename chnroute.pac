@@ -1,6 +1,6 @@
 // Author: iBug <ibug.io>
 // Source: https://github.com/iBug/pac
-// Time: 2024-04-01T02:23:01
+// Time: 2024-04-01T14:37:44
 
 var __PROXY__ = 'SOCKS5 localhost:1080'
 var proxy = __PROXY__;

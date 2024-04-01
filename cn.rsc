@@ -9,7 +9,6 @@ add address=192.0.0.0/24 list=CN comment=private-network
 add address=192.0.2.0/24 list=CN comment=private-network
 add address=192.88.99.0/24 list=CN comment=private-network
 add address=192.168.0.0/16 list=CN comment=private-network
-add address=198.18.0.0/15 list=CN comment=private-network
 add address=198.51.100.0/24 list=CN comment=private-network
 add address=203.0.113.0/24 list=CN comment=private-network
 add address=224.0.0.0/3 list=CN comment=private-network
