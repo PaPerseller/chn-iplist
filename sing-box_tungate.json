@@ -16,7 +16,7 @@
       "strict_route": true,
       "stack": "system",
       "sniff": true,
-      //本注释需删除，若在 lxc 容器中运行，需将以下值设为 true
+      //本注释需删除，若以此配置在 lxc 容器中运行，需将以下值设为 true
       "sniff_override_destination": false
     }
   ],
