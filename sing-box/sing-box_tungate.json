@@ -1,65 +1,21 @@
-//本注释需删除，此配置仅可用于支持 rule-set 的 sing-box v1.8.0+ 版本
+//本注释需删除，此配置适用于有上层 dns 服务器时作透明代理网关
 {
   "log": {
     "level": "info",
     "timestamp": true
   },
-  "dns": {
-    "servers": [
-      {
-        "tag": "dns_proxy",
-        "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns_direct",
-        "strategy": "ipv4_only",
-        "detour": "proxy"
-      },
-      {
-        "tag": "dns_direct",
-        "address": "223.5.5.5",
-        "strategy": "ipv4_only",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns_block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "rule_set": "geosite-category-ads-all",
-        "server": "dns_block",
-        "disable_cache": true
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "dns_proxy"
-      },
-      {
-        "rule_set": [
-          "geosite-cn",
-          "geosite-private",
-          "geoip-cn",
-          "geoip-private"
-        ],
-        "server": "dns_direct"
-      },
-      {
-        "outbound": [
-          "any"
-        ],
-        "server": "dns_direct"
-      }
-    ]
-  },
   "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
+      "interface_name": "tun0",
       "inet4_address": "172.19.0.1/30",
+      "mtu": 1500,
       "auto_route": true,
-      "strict_route": false,
-      "stack": "mixed",
+      "strict_route": true,
+      "stack": "system",
       "sniff": true,
+      //本注释需删除，若以此配置在 lxc 容器中运行，需将以下值设为 true
       "sniff_override_destination": false
     }
   ],
@@ -95,18 +51,10 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
     }
   ],
   "route": {
     "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
       {
         "ip_is_private": true,
         "outbound": "direct"
@@ -119,7 +67,7 @@
         "rule_set": [
           "geosite-category-ads-all",
           "category-httpdns"
-         ],
+        ],
         "domain_suffix": [
           "ads.fmdisk.com",
           "ads.feemoo.com",
@@ -253,86 +201,91 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "10d"
       },
       {
         "tag": "category-httpdns",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-httpdns.srs",
-        "download_detour": "proxy"
-      },
-      {
-        "tag": "geosite-geolocation-!cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/telegram.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/telegram.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geosite-apple-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geosite-category-games@cn",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geosite-category-public-tracker",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-public-tracker.srs",
-        "download_detour": "proxy"
-      },
+        "download_detour": "proxy",
+        "update_interval": "10d"
+      },      
       {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "10d"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "5d"
       },
       {
         "tag": "geosite-private",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/private.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       },
       {
         "tag": "geoip-private",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/private.srs",
-        "download_detour": "proxy"
+        "download_detour": "proxy",
+        "update_interval": "30d"
       }
     ],
+    "final": "proxy",
     "auto_detect_interface": true
   },
   "experimental": {
