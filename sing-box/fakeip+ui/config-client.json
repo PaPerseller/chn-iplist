@@ -1,0 +1,523 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxy-dns",
+        "address": "tls://8.8.8.8",
+        "detour": "Proxy"
+      },
+      {
+        "tag": "local-dns",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "fakeip-dns",
+        "address": "fakeip"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": [
+          "geosite-category-ads-all"
+        ],
+        "domain_suffix": [
+          "ads.fmdisk.com",
+          "ads.feemoo.com",
+          "googleads.g.doubleclick.net",
+          "ads.google.com",
+          "afd.l.google.com",
+          "mobileads.google.com"
+        ],
+        "domain_keyword": [
+          "umeng",
+          "googleads"
+        ],
+        "server": "block-dns"
+      },
+      {
+        "outbound": "any",
+        "server": "local-dns"
+      },
+      {
+        "domain_suffix": [
+          ".cn",
+          "gdmf.apple.com",
+          "librespeed.cn",
+          "steamcdn-a.akamaihd.net",
+          "cm.steampowered.com",
+          "steamserver.net",
+          "cdn.mileweb.cs.steampowered.com.8686c.com",
+          "cdn-ws.content.steamchina.com",
+          "cdn-qc.content.steamchina.com",
+          "cdn-ali.content.steamchina.com",
+          "epicgames-download1-1251447533.file.myqcloud.com",
+          "dl.steam.clngaa.com",
+          "dl.steam.ksyna.com",
+          "st.dl.bscstorage.net",
+          "st.dl.eccdnx.com",
+          "st.dl.pinyuncloud.com",
+          "steampipe.steamcontent.tnkjmec.com",
+          "steampowered.com.8686c.com",
+          "steamstatic.com.8686c.com",
+          "wmsjsteam.com",
+          "xz.pphimalayanrt.com",
+          "cm.steampowered.com",
+          "steamcontent.com",
+          "steamusercontent.com"
+        ],
+        "domain_keyword": [
+          "moutai",
+          "sina",
+          "czjky",
+          "weixin",
+          "bilibili",
+          "airdroid",
+          "announce",
+          "torrent",
+          "tracker"
+        ],
+        "server": "local-dns"
+      },
+      {
+        "rule_set": [
+          "geosite-apple-cn",
+          "geosite-biliintl",
+          "geosite-category-games@cn",
+          "geosite-category-public-tracker",
+          "geosite-cn",
+          "geosite-private",
+          "geoip-cn"
+        ],
+        "server": "local-dns"
+      },
+      {
+        "rule_set": [
+          "geosite-telegram",
+          "geosite-geolocation-!cn"
+        ],
+        "domain_suffix": [
+          "ampproject.org",
+          "ampproject.net",
+          "g.whatsapp.net",
+          "us-west-2.amazonaws.com",
+          "developer.apple.com",
+          "testflight.apple.com",
+          "humblebundle.com",
+          "goo.gl",
+          "gvt1.com",
+          "youtu.be",
+          "ytimg.com",
+          "ggpht.com",
+          "steamcommunity-a.akamaihd.net",
+          "steamstore-a.akamaihd.net",
+          "fanatical.com",
+          "humblebundle.com",
+          "playartifact.com",
+          "steam-chat.com",
+          "steamcommunity.com",
+          "underlords.com"
+        ],
+        "domain_keyword": [
+          "appledaily",
+          "instagram",
+          "twitter",
+          "twimg",
+          "v2ex"
+        ],
+        "server": "fakeip-dns"
+      },
+      {
+        "query_type": [
+          "A"
+        ],
+        "server": "fakeip-dns"
+      }
+    ],
+    "strategy": "ipv4_only",
+    "final": "local-dns",
+    "independent_cache": true,
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15"
+    }
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": false,
+      "stack": "system",
+      "sniff": true,
+      "sniff_override_destination": true
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "Proxy",
+      "outbounds": [
+        "reality-template",
+        "vision-template"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      "tag": "reality-template",
+      "server": "server",
+      "server_port": 443,
+      "type": "vless",
+      "uuid": "2d5f4b9a-0a96-42ed-aae3-b1f8854cf931",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "servername",
+        "reality": {
+          "enabled": true,
+          "public_key": "SUDD3lECQszxyDD9FZFcB0QpG3XzaVD8tzEH98kcEko",
+          "short_id": "c24d2408508ee08f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true,
+      "tcp_multi_path": true
+    },
+    {
+      //本注释需删除，以 vision 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      "tag": "vision-template",
+      "server": "server",
+      "server_port": 443,
+      "type": "vless",
+      "uuid": "2d5f4b9a-0a96-42ed-aae3-b1f8854cf931",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "servername",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "tcp_fast_open": true,
+      "tcp_multi_path": true
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
+        ],
+        "outbound": "block"
+      },
+      {
+        "protocol": "quic",
+        "outbound": "block"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "Proxy"
+      },
+      {
+        "rule_set": [
+         "geosite-category-ads-all",
+         "category-httpdns"
+        ],
+        "domain_suffix": [
+          "ads.fmdisk.com",
+          "ads.feemoo.com",
+          "googleads.g.doubleclick.net",
+          "ads.google.com",
+          "afd.l.google.com",
+          "mobileads.google.com"
+        ],
+        "domain_keyword": [
+          "umeng",
+          "googleads"
+        ],
+        "outbound": "block"
+      },
+      {
+        "ip_cidr": [
+          "1.1.1.1",
+          "1.0.0.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "rule_set": [
+          "geosite-telegram",
+          "geoip-telegram"
+        ],
+        "outbound": "Proxy"
+      },
+      {
+        "domain_suffix": [
+          "ampproject.org",
+          "ampproject.net",
+          "g.whatsapp.net",
+          "us-west-2.amazonaws.com",
+          "developer.apple.com",
+          "testflight.apple.com",
+          "humblebundle.com",
+          "goo.gl",
+          "gvt1.com",
+          "youtu.be",
+          "ytimg.com",
+          "ggpht.com",
+          "steamcommunity-a.akamaihd.net",
+          "steamstore-a.akamaihd.net",
+          "fanatical.com",
+          "humblebundle.com",
+          "playartifact.com",
+          "steam-chat.com",
+          "steamcommunity.com",
+          "underlords.com"
+        ],
+        "domain_keyword": [
+          "appledaily",
+          "instagram",
+          "twitter",
+          "twimg",
+          "v2ex"
+        ],
+        "outbound": "Proxy"
+      },
+      {
+        "ip_cidr": [
+          "45.121.184.0/24",
+          "103.10.124.0/23",
+          "103.28.54.0/24",
+          "146.66.152.0/24",
+          "146.66.155.0/24",
+          "153.254.86.0/24",
+          "155.133.224.0/22",
+          "155.133.230.0/24",
+          "155.133.232.0/23",
+          "155.133.234.0/24",
+          "155.133.236.0/22",
+          "155.133.240.0/23",
+          "155.133.244.0/23",
+          "155.133.246.0/24",
+          "155.133.248.0/21",
+          "162.254.192.0/21",
+          "185.25.182.0/23",
+          "190.217.32.0/22",
+          "192.69.96.0/22",
+          "205.196.6.0/24",
+          "208.64.200.0/22",
+          "208.78.164.0/22",
+          "205.185.194.0/24"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          ".cn",
+          "gdmf.apple.com",
+          "librespeed.cn",
+          "steamcdn-a.akamaihd.net",
+          "cm.steampowered.com",
+          "steamserver.net",
+          "cdn.mileweb.cs.steampowered.com.8686c.com",
+          "cdn-ws.content.steamchina.com",
+          "cdn-qc.content.steamchina.com",
+          "cdn-ali.content.steamchina.com",
+          "epicgames-download1-1251447533.file.myqcloud.com",
+          "dl.steam.clngaa.com",
+          "dl.steam.ksyna.com",
+          "st.dl.bscstorage.net",
+          "st.dl.eccdnx.com",
+          "st.dl.pinyuncloud.com",
+          "steampipe.steamcontent.tnkjmec.com",
+          "steampowered.com.8686c.com",
+          "steamstatic.com.8686c.com",
+          "wmsjsteam.com",
+          "xz.pphimalayanrt.com",
+          "cm.steampowered.com",
+          "steamcontent.com",
+          "steamusercontent.com"
+        ],
+        "domain_keyword": [
+          "moutai",
+          "sina",
+          "czjky",
+          "weixin",
+          "bilibili",
+          "airdroid",
+          "announce",
+          "torrent",
+          "tracker"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geosite-apple-cn",
+          "geosite-biliintl",
+          "geosite-category-games@cn",
+          "geosite-category-public-tracker",
+          "geosite-cn",
+          "geosite-private",
+          "geoip-cn"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "format": "binary",
+        "tag": "geosite-category-ads-all",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "category-httpdns",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-httpdns.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/telegram.srs",
+        "download_detour": "Proxy"
+      },{
+        "tag": "geosite-apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-biliintl",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/biliintl.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-category-games@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-category-public-tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-public-tracker.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/private.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geoip-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/telegram.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "Proxy"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "Proxy"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "default_mode": "rule"
+    }
+  }
+}
