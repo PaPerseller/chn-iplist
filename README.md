@@ -34,6 +34,9 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 
 将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayA.txt)替换入原有规则。
 
+#### sing-box 配置
+在 [sing-box 文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/sing-box)中选用配置文件下载至本地后，删除所有注释并将个人节点配置替换入相应位置。
+
 ## PS.
 
 1. Shadowrocket 等有 ipv6 开关的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。额外提供前缀为 [IP-CIDR](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ipv6.list) 和 [IP-CIDR6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/ruleset/ipv6.list) 两种远程 ipv6 规则。
