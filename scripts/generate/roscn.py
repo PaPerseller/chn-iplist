@@ -19,7 +19,7 @@ def format_cidr(file_path, output_path):
         f.write("add address=224.0.0.0/3 list=CN comment=private-network\n")
         f.write("\n:local cidrList {\n")
         for cidr in cidrs[:-1]:
-            f.write(f'  "{cidr}";\n')
+            f.write(f'  "{cidr}"\n')
         f.write(f'  "{cidrs[-1]}"\n')
         f.write("}\n\n")
         f.write(":foreach cidr in $cidrList do={\n")
