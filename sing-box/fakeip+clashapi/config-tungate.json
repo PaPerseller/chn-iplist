@@ -442,7 +442,7 @@
         "tag": "category-httpdns",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-httpdns.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-httpdns.srs",
         "download_detour": "Proxy",
         "update_interval": "30d"
       },
@@ -450,7 +450,7 @@
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/telegram.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
         "download_detour": "Proxy",
         "update_interval": "30d"
       },{
@@ -465,7 +465,7 @@
         "tag": "geosite-biliintl",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/biliintl.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/biliintl.srs",
         "download_detour": "Proxy",
         "update_interval": "30d"
       },
@@ -481,7 +481,7 @@
         "tag": "geosite-category-public-tracker",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-public-tracker.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-public-tracker.srs",
         "download_detour": "Proxy",
         "update_interval": "5d"
       },
@@ -497,7 +497,7 @@
         "tag": "geosite-private",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/private.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/private.srs",
         "download_detour": "Proxy",
         "update_interval": "30d"
       },
@@ -505,7 +505,7 @@
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/telegram.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
         "download_detour": "Proxy",
         "update_interval": "30d"
       },
