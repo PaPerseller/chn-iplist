@@ -90,7 +90,9 @@
         ],
         "rule_set": [
           "geosite-telegram",
-          "geoip-telegram"
+          "geoip-telegram",
+          "geosite-github",
+          "openai"
         ],
         "domain_suffix": [
           "github.global.ssl.fastly.net",
@@ -113,7 +115,8 @@
           "playartifact.com",
           "steam-chat.com",
           "steamcommunity.com",
-          "underlords.com"
+          "underlords.com",
+          "emby.wtf"
         ],
         "domain_keyword": [
           "appledaily",
@@ -273,6 +276,22 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/private.srs",
         "download_detour": "proxy",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/github.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+       {
+        "tag": "openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       }
     ],

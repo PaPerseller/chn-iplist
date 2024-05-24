@@ -314,7 +314,9 @@
         ],
         "rule_set": [
           "geosite-telegram",
-          "geoip-telegram"
+          "geoip-telegram",
+          "geosite-github",
+          "openai"
         ],
         "outbound": "Proxy"
       },
@@ -339,7 +341,8 @@
           "playartifact.com",
           "steam-chat.com",
           "steamcommunity.com",
-          "underlords.com"
+          "underlords.com",
+          "emby.wtf"
         ],
         "domain_keyword": [
           "appledaily",
@@ -524,6 +527,22 @@
         "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "Proxy",
         "update_interval": "10d"
+      },
+      {
+        "tag": "geosite-github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/github.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
       }
     ],
     "auto_detect_interface": true,
