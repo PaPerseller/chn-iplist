@@ -258,11 +258,15 @@
         "mode": "or",
         "rules": [
           {
-            "port": 853
+            "port": 853,
+            "network": "tcp"
           },
           {
             "network": "udp",
-            "port": 443
+            "port": [
+              443,
+              853
+            ]
           },
           {
             "protocol": "stun"
@@ -316,6 +320,7 @@
           "geosite-telegram",
           "geoip-telegram",
           "geosite-github",
+          "geosite-google-cn",
           "openai"
         ],
         "outbound": "Proxy"
@@ -541,6 +546,14 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-google-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       }
