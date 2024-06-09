@@ -35,7 +35,18 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayA.txt)替换入原有规则。
 
 #### sing-box 配置
+
 在 [sing-box 文件夹](https://github.com/PaPerseller/chn-iplist/tree/master/sing-box)中选用配置文件下载至本地后，删除所有注释并将个人节点配置替换入相应位置。
+
+#### ROS 中部署
+
+分别执行以下命令或将其保存为一个 script
+```
+/tool fetch url="https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc"
+/import file-name=cn.rsc
+/file remove [find name="cn.rsc"]
+```
+
 
 ## PS.
 
