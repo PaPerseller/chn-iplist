@@ -143,8 +143,7 @@
         "domain_keyword": [
           "appledaily",
           "instagram",
-          "v2ex",
-          "github"
+          "v2ex"
         ],
         "outbound": "proxy"
       },
@@ -177,7 +176,6 @@
         "domain_suffix": [
           ".cn",
           "gdmf.apple.com",
-          "librespeed.cn",
           "steamcdn-a.akamaihd.net",
           "cm.steampowered.com",
           "steamserver.net",
