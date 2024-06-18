@@ -315,10 +315,6 @@
         "outbound": "direct"
       },
       {
-        "protocol": "bittorrent",
-        "outbound": "direct"
-      },
-      {
         "ip_cidr": [
           "107.182.18.145",
           "45.121.184.0/24",
