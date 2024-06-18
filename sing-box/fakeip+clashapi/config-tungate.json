@@ -1,7 +1,7 @@
 //本注释需删除，此配置适用于有上层 dns 服务器时作透明代理网关
 {
   "log": {
-    "disabled": true,
+    "disabled": false,
     "level": "info",
     "timestamp": true
   },
@@ -28,9 +28,6 @@
     ],
     "rules": [
       {
-        "rule_set": [
-          "geosite-category-ads-all"
-        ],
         "domain_suffix": [
           "ads.fmdisk.com",
           "ads.feemoo.com",
@@ -46,6 +43,13 @@
         "server": "block-dns"
       },
       {
+        "rule_set": [
+          "geosite-category-ads-all",
+          "category-httpdns"
+        ],
+        "server": "block-dns"
+      },
+      {
         "outbound": "any",
         "server": "local-dns"
       },
@@ -53,7 +57,6 @@
         "domain_suffix": [
           ".cn",
           "gdmf.apple.com",
-          "librespeed.cn",
           "steamcdn-a.akamaihd.net",
           "cm.steampowered.com",
           "steamserver.net",
@@ -92,19 +95,15 @@
           "geosite-apple-cn",
           "geosite-biliintl",
           "geosite-category-games@cn",
-          "geosite-category-public-tracker",
-          "geosite-cn",
+          "geosite-geolocation-cn",
           "geosite-private",
           "geoip-cn"
         ],
         "server": "local-dns"
       },
       {
-        "rule_set": [
-          "geosite-telegram",
-          "geosite-geolocation-!cn"
-        ],
         "domain_suffix": [
+          "emby.wtf",
           "ampproject.org",
           "ampproject.net",
           "g.whatsapp.net",
@@ -129,9 +128,16 @@
         "domain_keyword": [
           "appledaily",
           "instagram",
-          "twitter",
-          "twimg",
           "v2ex"
+        ],
+        "server": "fakeip-dns"
+      },
+      {
+        "rule_set": [
+          "geosite-telegram",
+          "geosite-github",
+          "geosite-google-cn",
+          "openai"
         ],
         "server": "fakeip-dns"
       },
@@ -159,6 +165,10 @@
       "mtu": 1500,
       "auto_route": true,
       "strict_route": false,
+      "auto_redirect":true,
+      "route_exclude_address_set": [
+        "geoip-cn"
+      ],
       "stack": "system",
       "sniff": true,
       "sniff_override_destination": true
@@ -254,35 +264,6 @@
         "outbound": "dns-out"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "port": 853,
-            "network": "tcp"
-          },
-          {
-            "network": "udp",
-            "port": [
-              443,
-              853
-            ]
-          },
-          {
-            "protocol": "stun"
-          }
-        ],
-        "outbound": "block"
-      },
-      {
-        "protocol": "quic",
-        "outbound": "block"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
-      },
-      {
         "clash_mode": "Direct",
         "outbound": "direct"
       },
@@ -291,10 +272,23 @@
         "outbound": "Proxy"
       },
       {
-        "rule_set": [
-         "geosite-category-ads-all",
-         "category-httpdns"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
         ],
+        "outbound": "block"
+      },
+      {
         "domain_suffix": [
           "ads.fmdisk.com",
           "ads.feemoo.com",
@@ -310,56 +304,23 @@
         "outbound": "block"
       },
       {
-        "ip_cidr": [
-          "1.1.1.1",
-          "1.0.0.1",
-          "8.8.8.8",
-          "8.8.4.4"
-        ],
         "rule_set": [
-          "geosite-telegram",
-          "geoip-telegram",
-          "geosite-github",
-          "geosite-google-cn",
-          "openai"
+         "geosite-category-ads-all",
+         "category-httpdns"
         ],
-        "outbound": "Proxy"
+        "outbound": "block"
       },
       {
-        "domain_suffix": [
-          "ampproject.org",
-          "ampproject.net",
-          "g.whatsapp.net",
-          "us-west-2.amazonaws.com",
-          "developer.apple.com",
-          "testflight.apple.com",
-          "humblebundle.com",
-          "goo.gl",
-          "gvt1.com",
-          "youtu.be",
-          "ytimg.com",
-          "ggpht.com",
-          "steamcommunity-a.akamaihd.net",
-          "steamstore-a.akamaihd.net",
-          "fanatical.com",
-          "humblebundle.com",
-          "playartifact.com",
-          "steam-chat.com",
-          "steamcommunity.com",
-          "underlords.com",
-          "emby.wtf"
-        ],
-        "domain_keyword": [
-          "appledaily",
-          "instagram",
-          "twitter",
-          "twimg",
-          "v2ex"
-        ],
-        "outbound": "Proxy"
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "protocol": "bittorrent",
+        "outbound": "direct"
       },
       {
         "ip_cidr": [
+          "107.182.18.145",
           "45.121.184.0/24",
           "103.10.124.0/23",
           "103.28.54.0/24",
@@ -390,7 +351,7 @@
         "domain_suffix": [
           ".cn",
           "gdmf.apple.com",
-          "librespeed.cn",
+          "cdn.jsdelivr.net",
           "steamcdn-a.akamaihd.net",
           "cm.steampowered.com",
           "steamserver.net",
@@ -416,6 +377,8 @@
         "domain_keyword": [
           "moutai",
           "sina",
+          "czjky",
+          "weixin",
           "bilibili",
           "airdroid",
           "announce",
@@ -429,108 +392,157 @@
           "geosite-apple-cn",
           "geosite-biliintl",
           "geosite-category-games@cn",
-          "geosite-category-public-tracker",
-          "geosite-cn",
+          "geosite-geolocation-cn",
           "geosite-private",
           "geoip-cn"
         ],
         "outbound": "direct"
+      },
+      {
+        "ip_cidr": [
+          "1.1.1.1",
+          "1.0.0.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "outbound": "Proxy"
+      },
+      {
+        "domain_suffix": [
+          "emby.wtf",
+          "ampproject.org",
+          "ampproject.net",
+          "g.whatsapp.net",
+          "us-west-2.amazonaws.com",
+          "developer.apple.com",
+          "humblebundle.com",
+          "goo.gl",
+          "gvt1.com",
+          "youtu.be",
+          "ytimg.com",
+          "ggpht.com",
+          "steamcommunity-a.akamaihd.net",
+          "steamstore-a.akamaihd.net",
+          "fanatical.com",
+          "humblebundle.com",
+          "playartifact.com",
+          "steam-chat.com",
+          "steamcommunity.com",
+          "underlords.com"
+        ],
+        "domain_keyword": [
+          "appledaily",
+          "instagram",
+          "v2ex"
+        ],
+        "outbound": "Proxy"
+      },
+      {
+        "rule_set": [
+          "geosite-telegram",
+          "geoip-telegram",
+          "geosite-github",
+          "geosite-google-cn",
+          "openai"
+        ],
+        "outbound": "Proxy"
       }
     ],
     "rule_set": [
       {
+        "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "tag": "geosite-category-ads-all",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct",
         "update_interval": "10d"
       },
       {
         "tag": "category-httpdns",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-httpdns.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-httpdns.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       },
       {
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
-      },{
+      },
+      {
         "tag": "geosite-apple-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-google-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       },
       {
         "tag": "geosite-biliintl",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/biliintl.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/biliintl.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       },
       {
         "tag": "geosite-category-games@cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       },
       {
-        "tag": "geosite-category-public-tracker",
+        "tag": "geosite-geolocation-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-public-tracker.srs",
-        "download_detour": "Proxy",
-        "update_interval": "5d"
-      },
-      {
-        "tag": "geosite-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "direct",
         "update_interval": "10d"
       },
       {
         "tag": "geosite-private",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/private.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/private.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
+        "download_detour": "direct",
         "update_interval": "30d"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "direct",
         "update_interval": "5d"
       },
       {
         "tag": "geosite-geolocation-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-        "download_detour": "Proxy",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct",
         "update_interval": "10d"
       },
       {
@@ -546,14 +558,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
-        "download_detour": "direct",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-google-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       }
