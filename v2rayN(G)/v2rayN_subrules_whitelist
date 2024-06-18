@@ -94,7 +94,14 @@
         "domain:g.whatsapp.net",
         "domain:us-west-2.amazonaws.com",
         "keyword:v2ex",
-        "keyword:steam"
+        "domain:steamcommunity-a.akamaihd.net",
+        "domain:steamstore-a.akamaihd.net",
+        "domain:fanatical.com",
+        "domain:humblebundle.com",
+        "domain:playartifact.com",
+        "domain:steam-chat.com",
+        "domain:steamcommunity.com",
+        "domain:underlords.com"
       ]
     },
     {
