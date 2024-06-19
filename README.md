@@ -48,6 +48,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 3. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
 4. 为解决 Shadowrocket 配置在线更新后覆盖掉自定义规则部分，提供一个高度精简的[自定义配置模块](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket-DIY.module)。新建模块后复制本模块内容并自行增删修改后保存，不可通过 URL 添加以防模块被更新重置。此模块仅当有自定义规则需求时添加。
 5. ROS 下载 cn.rsc 推荐 [CDN 加速地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc)以提高下载成功率。
+6. sing-box 配置基于个人试验和使用以及他人反馈，仅建议作为参考，**不保证**在有些环境下的可用性。
 
 ## 致谢
 
