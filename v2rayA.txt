@@ -7,7 +7,9 @@ port(853) -> block
 network(udp) && port(443) -> block
 domain(domain:ads.fmdisk.com,domain:ads.feemoo.com,domain:googleads.g.doubleclick.net,domain:ads.google.com,domain:afd.l.google.com,domain:mobileads.google.com) -> block
 domain(keyword:umeng, keyword:googleads) -> block
-domain(geosite:category-ads-all, geosite:category-httpdns) -> block
+domain(geosite:category-ads-all) -> block
+# 以下一行为可选项，可能会造成问题
+# domain(geosite:category-httpdns) -> block
 
 # direct
 protocol(bittorrent)->direct
