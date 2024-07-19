@@ -6,35 +6,34 @@ default: proxy
 port(853) -> block
 network(udp) && port(443) -> block
 domain(domain:ads.fmdisk.com,domain:ads.feemoo.com,domain:googleads.g.doubleclick.net,domain:ads.google.com,domain:afd.l.google.com,domain:mobileads.google.com) -> block
-domain(keyword:umeng, keyword:googleads) -> block
+domain(umeng, googleads) -> block
 domain(geosite:category-ads-all) -> block
 # 以下一行为可选项，可能会造成问题
 # domain(geosite:category-httpdns) -> block
 
 # direct
 protocol(bittorrent)->direct
-domain(domain:gdmf.apple.com, domain:aliyundrive.com, domain:identity.apple.com, domain:cdn.jsdelivr.net) -> direct
-domain(keyword:moutai, keyword:sina, keyword:alibaba, keyword:airdroid, keyword:weixin, keyword:announce, keyword:torrent, keyword:tracker) -> direct
+ip(45.121.184.0/24, 103.10.124.0/23, 103.28.54.0/24, 146.66.152.0/24, 146.66.155.0/24, 153.254.86.0/24, 155.133.224.0/22, 155.133.230.0/24, 155.133.232.0/23, 155.133.234.0/24, 155.133.236.0/22, 155.133.240.0/23, 155.133.244.0/23, 155.133.246.0/24, 155.133.248.0/21, 162.254.192.0/21, 185.25.182.0/23, 190.217.32.0/22, 192.69.96.0/22, 205.196.6.0/24, 208.64.200.0/22, 208.78.164.0/22, 205.185.194.0/24) -> direct
+ip(geoip:cn) -> direct
+domain(domain:gdmf.apple.com, domain:alipan.com, domain:identity.apple.com, domain:cdn.jsdelivr.net) -> direct
+domain(moutai, sina, alibaba, airdroid, weixin, announce, torrent, tracker) -> direct
 domain(domain:steamcdn-a.akamaihd.net, domain:cm.steampowered.com, domain:steamserver.net, domain:cdn.mileweb.cs.steampowered.com.8686c.com, domain:steampipe.steamcontent.tnkjmec.com) -> direct
 domain(domain:cdn-ws.content.steamchina.com, domain:cdn-qc.content.steamchina.com, domain:cdn-ali.content.steamchina.com, domain:epicgames-download1-1251447533.file.myqcloud.com) -> direct
 domain(domain:dl.steam.ksyna.com, domain:st.dl.bscstorage.net, domain:st.dl.eccdnx.com, domain:st.dl.pinyuncloud.com, domain:dl.steam.clngaa.com, domain:xz.pphimalayanrt.com) -> direct
 domain(domain:steampowered.com.8686c.com, domain:steamstatic.com.8686c.com, domain:wmsjsteam.com, domain:cm.steampowered.com, domain:steamcontent.com, domain:steamusercontent.com) -> direct
 domain(geosite:private, geosite:bilibili, geosite:category-games@cn) -> direct
 domain(geosite:cn) -> direct
-# 以下一行使用 Loyalsoldier 数据库启用并注释掉上一行 geosite:cn 规则
-# domain(geosite:apple-cn, geosite:china-list) -> direct
-
-ip(45.121.184.0/24, 103.10.124.0/23, 103.28.54.0/24, 146.66.152.0/24, 146.66.155.0/24, 153.254.86.0/24, 155.133.224.0/22, 155.133.230.0/24, 155.133.232.0/23, 155.133.234.0/24, 155.133.236.0/22, 155.133.240.0/23, 155.133.244.0/23, 155.133.246.0/24, 155.133.248.0/21, 162.254.192.0/21, 185.25.182.0/23, 190.217.32.0/22, 192.69.96.0/22, 205.196.6.0/24, 208.64.200.0/22, 208.78.164.0/22, 205.185.194.0/24) -> direct
-ip(geoip:private, geoip:cn) -> direct
+# 以下一行使用 Loyalsoldier 数据库启用
+# domain(geosite:apple-cn) -> direct
 
 # proxy
 ip(8.8.4.4, 8.8.8.8, 208.67.222.222, 208.67.220.220, 1.1.1.1, 1.1.1.2, 1.0.0.1, 9.9.9.9) -> proxy
 domain(domain:developer.apple.com, domain:testflight.apple.com, domain:assets-cdn.github.com) -> proxy
 domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com) -> proxy
-doamin(keyword:ampproject, keyword:v2ex, keyword:appledaily) -> proxy
+doamin(ampproject, v2ex) -> proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com) -> proxy
 domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcommunity-a.akamaihd.net) -> proxy
 domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net, domain:steam-chat.com) -> proxy
-domain(contains: google, geosite:github, geosite:telegram, geosite:twitter, geosite:openai, geosite:instagram) -> proxy
+domain(geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:openai, geosite:instagram) -> proxy
 # 以下一行使用 Loyalsoldier 数据库启用
 # ip(geoip:telegram, geoip:twitter) -> proxy
