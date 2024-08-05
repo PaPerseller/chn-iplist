@@ -1,5 +1,5 @@
 geosite:category-ads-all,
-geosite:category-httpdns
+geosite:category-httpdns,
 domain:xcz.im,
 domain:ads.fmdisk.com,
 domain:ads.feemoo.com,
