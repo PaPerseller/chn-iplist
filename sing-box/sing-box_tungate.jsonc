@@ -1,4 +1,4 @@
-//本注释需删除，此配置适用于有上层 dns 服务器时作透明代理网关
+//此配置适用于有上层 dns 服务器时作透明代理网关
 {
   "log": {
     "level": "info",
@@ -22,7 +22,7 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      //以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "type": "vless",
       "server": "server",
       "server_port": 443,
@@ -89,8 +89,7 @@
       },
       {
         "rule_set": [
-         "geosite-category-ads-all",
-         "category-httpdns"
+         "geosite-category-ads-all"
         ],
         "outbound": "block"
       },
@@ -234,14 +233,6 @@
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
         "download_detour": "direct",
         "update_interval": "10d"
-      },
-      {
-        "tag": "category-httpdns",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-httpdns.srs",
-        "download_detour": "direct",
-        "update_interval": "30d"
       },
       {
         "tag": "geosite-telegram",

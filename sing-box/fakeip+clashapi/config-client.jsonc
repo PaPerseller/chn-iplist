@@ -186,7 +186,7 @@
       "tag": "block"
     },
     {
-      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      //以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "tag": "reality-template",
       "server": "server",
       "server_port": 443,
@@ -210,7 +210,7 @@
       "tcp_multi_path": true
     },
     {
-      //本注释需删除，以 vision 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      //以 vision 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "tag": "vision-template",
       "server": "server",
       "server_port": 443,

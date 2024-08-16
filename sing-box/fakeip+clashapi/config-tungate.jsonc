@@ -1,4 +1,4 @@
-//本注释需删除，此配置适用于有上层 dns 服务器时作透明代理网关
+//此配置适用于有上层 dns 服务器时作透明代理网关
 {
   "log": {
     "disabled": false,
@@ -44,8 +44,7 @@
       },
       {
         "rule_set": [
-          "geosite-category-ads-all",
-          "category-httpdns"
+          "geosite-category-ads-all"
         ],
         "server": "block-dns"
       },
@@ -171,7 +170,7 @@
       "sniff": true,
       "sniff_override_destination": true
     },
-    //本注释需删除，以下端口号需与上游 dns 服务器 remote 地址端口相同，以使上游远程 dns 传入 sing-box
+    //以下端口号需与上游 dns 服务器 remote 地址端口相同，以使上游远程 dns 传入 sing-box
     //上游 mosdns 配置示例：https://raw.githubusercontent.com/PaPerseller/r2s-armbian-configure/main/mosdns/config-fakeip.yaml
     {
       "type": "direct",
@@ -204,7 +203,7 @@
       "tag": "block"
     },
     {
-      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      //以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "tag": "reality-template",
       "server": "server",
       "server_port": 443,
@@ -228,7 +227,7 @@
       "tcp_multi_path": true
     },
     {
-      //本注释需删除，以 vision 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      //以 vision 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "tag": "vision-template",
       "server": "server",
       "server_port": 443,
@@ -303,8 +302,7 @@
       },
       {
         "rule_set": [
-         "geosite-category-ads-all",
-         "category-httpdns"
+         "geosite-category-ads-all"
         ],
         "outbound": "block"
       },
@@ -450,14 +448,6 @@
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
         "download_detour": "direct",
         "update_interval": "10d"
-      },
-      {
-        "tag": "category-httpdns",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-httpdns.srs",
-        "download_detour": "direct",
-        "update_interval": "30d"
       },
       {
         "tag": "geosite-telegram",

@@ -65,7 +65,7 @@
   "outbounds": [
     {
       "tag": "proxy",
-      //本注释需删除，以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
+      //以 reality 协议为例, 对应值请勿套用, tcp multi_path 需服务端同时开启方会生效
       "type": "vless",
       "server": "server",
       "server_port": 443,
