@@ -302,7 +302,7 @@
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geoip/rule-set/geoip-cn.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/cn.srs",
         "download_detour": "direct",
         "update_interval": "5d"
       },
