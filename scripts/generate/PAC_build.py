@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import datetime, UTC
 import ipaddress
 
 OUT_DIR = "./"
@@ -22,7 +22,7 @@ def fetch_and_convert(src):
 
 
 def main():
-    now = datetime.utcnow()
+    now = datetime.now(UTC)
     date = now.strftime("%Y%m%d")
     with open("./scripts/generate/code.js", "r") as f:
         code = f.read()

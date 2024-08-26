@@ -1,4 +1,4 @@
-a_content = '''# 默认代理
+a_content = r'''# 默认代理
 [proxy_all]
 
 # 直连列表
@@ -39,7 +39,7 @@ fd00::/8
 # 国内ip地址
 '''
 
-c_content = '''
+c_content = r'''
 [proxy_list]
 # 代理关键词
 (^|\.)\w*gmail\w*\.\w*$
