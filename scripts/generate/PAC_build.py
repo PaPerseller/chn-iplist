@@ -26,7 +26,7 @@ def main():
     date = now.strftime("%Y%m%d")
     with open("./scripts/generate/code.js", "r") as f:
         code = f.read()
-    code = code.replace("@@TIME@@", now.isoformat()[:-7])
+    code = code.replace("@@TIME@@", now.strftime("%Y-%m-%d"))
 
     os.makedirs(OUT_DIR, mode=0o755, exist_ok=True)
     
