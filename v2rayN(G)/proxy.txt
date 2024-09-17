@@ -12,13 +12,8 @@ domain:assets-cdn.github.com,
 domain:emby.wtf,
 domain:g.whatsapp.net,
 domain:us-west-2.amazonaws.com
-domain:ytimg.com,
 domain:ggpht.com,
 domain:humblebundle.com,
-domain:analytics.twitter.com,
-domain:g.whatsapp.net,
-domain:us-west-2.amazonaws.com
 keyword:v2ex,
-keyword:steam,
 geoip:telegram,
 geoip:twitter
