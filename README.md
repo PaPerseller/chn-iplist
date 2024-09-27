@@ -35,7 +35,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 
 分别执行以下命令或将其保存为一个 script：
 ```
-/tool fetch url="https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc"
+/tool fetch url="https://ghp.ci/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc"
 /import file-name=cn.rsc
 /file remove [find name="cn.rsc"]
 ```
