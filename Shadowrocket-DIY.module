@@ -7,9 +7,10 @@
 #ipv6 = false
 #prefer-ipv6 = false
 #always-reject-url-rewrite = false
+#stun-response-ip = 1.0.0.1
 
 [Rule]
-# Ads
+# Reject
 
 # DIRECT
 
@@ -19,7 +20,6 @@
 #FINAL,PROXY
 
 [Host]
-# 下一行规则使用需取消注释符并修改wifi名称
 #ssid:wifi名称 = server:system
 
 [URL Rewrite]
