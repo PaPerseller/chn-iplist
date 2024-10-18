@@ -34,6 +34,6 @@ domain(v2ex) -> proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com) -> proxy
 domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcommunity-a.akamaihd.net) -> proxy
 domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net, domain:steam-chat.com) -> proxy
-domain(geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-chat-!cn, geosite:instagram, geosite;amp) -> proxy
+domain(geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-chat-!cn, geosite:instagram, geosite:amp) -> proxy
 # 以下一行使用 Loyalsoldier 数据库启用
 # ip(geoip:telegram, geoip:twitter) -> proxy
