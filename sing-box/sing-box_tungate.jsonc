@@ -9,7 +9,7 @@
       "type": "tun",
       "tag": "tun-in",
       "interface_name": "tun0",
-      "inet4_address": "172.19.0.1/30",
+      "address": "172.19.0.1/30",
       "mtu": 1500,
       "auto_route": true,
       "strict_route": false,
@@ -67,29 +67,18 @@
             "port": 443
           },
           {
-            "protocol": "stun"
+            "protocol": [
+              "stun",
+              "quic"
+            ]
           }
         ],
         "outbound": "block"
       },
       {
-        "domain_suffix": [
-          "ads.fmdisk.com",
-          "ads.feemoo.com",
-          "googleads.g.doubleclick.net",
-          "ads.google.com",
-          "afd.l.google.com",
-          "mobileads.google.com"
-        ],
-        "domain_keyword": [
-          "umeng",
-          "googleads"
-        ],
-        "outbound": "block"
-      },
-      {
         "rule_set": [
-         "geosite-category-ads-all"
+          "inline-block",
+          "geosite-category-ads-all"
         ],
         "outbound": "block"
       },
@@ -98,76 +87,10 @@
         "outbound": "direct"
       },
       {
-        "ip_cidr": [
-          "45.121.184.0/24",
-          "103.10.124.0/23",
-          "103.28.54.0/24",
-          "146.66.152.0/24",
-          "146.66.155.0/24",
-          "153.254.86.0/24",
-          "155.133.224.0/22",
-          "155.133.230.0/24",
-          "155.133.232.0/23",
-          "155.133.234.0/24",
-          "155.133.236.0/22",
-          "155.133.240.0/23",
-          "155.133.244.0/23",
-          "155.133.246.0/24",
-          "155.133.248.0/21",
-          "162.254.192.0/21",
-          "185.25.182.0/23",
-          "190.217.32.0/22",
-          "192.69.96.0/22",
-          "205.196.6.0/24",
-          "208.64.200.0/22",
-          "208.78.164.0/22",
-          "205.185.194.0/24"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "domain_suffix": [
-          ".cn",
-          "gdmf.apple.com",
-          "cdn.jsdelivr.net",
-          "steamcdn-a.akamaihd.net",
-          "cm.steampowered.com",
-          "steamserver.net",
-          "cdn.mileweb.cs.steampowered.com.8686c.com",
-          "cdn-ws.content.steamchina.com",
-          "cdn-qc.content.steamchina.com",
-          "cdn-ali.content.steamchina.com",
-          "epicgames-download1-1251447533.file.myqcloud.com",
-          "dl.steam.clngaa.com",
-          "dl.steam.ksyna.com",
-          "st.dl.bscstorage.net",
-          "st.dl.eccdnx.com",
-          "st.dl.pinyuncloud.com",
-          "steampipe.steamcontent.tnkjmec.com",
-          "steampowered.com.8686c.com",
-          "steamstatic.com.8686c.com",
-          "wmsjsteam.com",
-          "xz.pphimalayanrt.com",
-          "cm.steampowered.com",
-          "steamcontent.com",
-          "steamusercontent.com"
-        ],
-        "domain_keyword": [
-          "moutai",
-          "sina",
-          "weixin",
-          "bilibili",
-          "airdroid",
-          "announce",
-          "torrent",
-          "tracker"
-        ],
-        "outbound": "direct"
-      },
-      {
         "rule_set": [
+          "inline-direct-ip",
+          "inline-direct-domain",
           "geosite-apple-cn",
-          "geosite-biliintl",
           "geosite-category-games@cn",
           "geosite-geolocation-cn",
           "geosite-private",
@@ -176,46 +99,13 @@
         "outbound": "direct"
       },
       {
-        "ip_cidr": [
-          "1.1.1.1",
-          "1.0.0.1",
-          "8.8.8.8",
-          "8.8.4.4"
-        ],
-        "outbound": "Proxy"
-      },
-      {
-        "domain_suffix": [
-          "emby.wtf",
-          "ampproject.org",
-          "ampproject.net",
-          "g.whatsapp.net",
-          "us-west-2.amazonaws.com",
-          "developer.apple.com",
-          "humblebundle.com",
-          "goo.gl",
-          "gvt1.com",
-          "youtu.be",
-          "ytimg.com",
-          "ggpht.com",
-          "steamcommunity-a.akamaihd.net",
-          "steamstore-a.akamaihd.net",
-          "fanatical.com",
-          "humblebundle.com",
-          "playartifact.com",
-          "steam-chat.com",
-          "steamcommunity.com",
-          "underlords.com"
-        ],
-        "domain_keyword": [
-          "appledaily",
-          "instagram",
-          "v2ex"
-        ],
-        "outbound": "Proxy"
+        "protocol": "bittorrent",
+        "outbound": "direct"
       },
       {
         "rule_set": [
+          "inline-proxy-ip",
+          "inline-proxy-domain",
           "geosite-telegram",
           "geoip-telegram",
           "geosite-github",
@@ -226,6 +116,194 @@
       }
     ],
     "rule_set": [
+      {
+        "tag": "inline-block",
+        "type": "inline",
+        "rules": [
+          {
+            "domain_suffix": [
+              "ads.fmdisk.com",
+              "ads.feemoo.com",
+              "googleads.g.doubleclick.net",
+              "ads.google.com",
+              "afd.l.google.com",
+              "mobileads.google.com"
+            ],
+            "domain_keyword": [
+              "umeng",
+              "googleads"
+            ]
+          }          
+        ]
+      },
+      {
+        "tag": "inline-direct-ip",
+        "type": "inline",
+        "rules": [
+          {
+            "ip_cidr": [
+              "45.121.184.0/24",
+              "103.10.124.0/23",
+              "103.28.54.0/24",
+              "146.66.152.0/24",
+              "146.66.155.0/24",
+              "153.254.86.0/24",
+              "155.133.224.0/22",
+              "155.133.230.0/24",
+              "155.133.232.0/23",
+              "155.133.234.0/24",
+              "155.133.236.0/22",
+              "155.133.240.0/23",
+              "155.133.244.0/23",
+              "155.133.246.0/24",
+              "155.133.248.0/21",
+              "162.254.192.0/21",
+              "185.25.182.0/23",
+              "190.217.32.0/22",
+              "192.69.96.0/22",
+              "205.196.6.0/24",
+              "208.64.200.0/22",
+              "208.78.164.0/22",
+              "205.185.194.0/24"
+            ]
+          }          
+        ]
+      },
+      {
+        "tag": "inline-direct-domain",
+        "type": "inline",
+        "rules": [
+          {
+            "domain_suffix": [
+              ".cn",
+              "gdmf.apple.com",
+              "cdn.jsdelivr.net",
+              "steamcdn-a.akamaihd.net",
+              "cm.steampowered.com",
+              "steamserver.net",
+              "cdn.mileweb.cs.steampowered.com.8686c.com",
+              "cdn-ws.content.steamchina.com",
+              "cdn-qc.content.steamchina.com",
+              "cdn-ali.content.steamchina.com",
+              "epicgames-download1-1251447533.file.myqcloud.com",
+              "dl.steam.clngaa.com",
+              "dl.steam.ksyna.com",
+              "st.dl.bscstorage.net",
+              "st.dl.eccdnx.com",
+              "st.dl.pinyuncloud.com",
+              "steampipe.steamcontent.tnkjmec.com",
+              "steampowered.com.8686c.com",
+              "steamstatic.com.8686c.com",
+              "wmsjsteam.com",
+              "xz.pphimalayanrt.com",
+              "cm.steampowered.com",
+              "steamcontent.com",
+              "steamusercontent.com"
+            ],
+            "domain_keyword": [
+              "moutai",
+              "sina",
+              "weixin",
+              "bilibili",
+              "airdroid",
+              "announce",
+              "torrent",
+              "tracker"
+            ]
+          }          
+        ]
+      },
+      {
+        "tag": "inline-proxy-ip",
+        "type": "inline",
+        "rules": [
+          {
+            "ip_cidr": [
+              "1.1.1.1",
+              "1.0.0.1",
+              "8.8.8.8",
+              "8.8.4.4",
+              "24.199.123.28/32",
+              "45.76.214.191/32",
+              "64.23.132.171/32",
+              "143.198.200.27/32",
+              "159.89.204.203/32"
+            ]
+          }          
+        ]
+      },
+      {
+        "tag": "inline-proxy-domain",
+        "type": "inline",
+        "rules": [
+          {
+            "domain_suffix": [
+              "emby.wtf",
+              "ampproject.org",
+              "ampproject.net",
+              "g.whatsapp.net",
+              "us-west-2.amazonaws.com",
+              "developer.apple.com",
+              "humblebundle.com",
+              "goo.gl",
+              "gvt1.com",
+              "youtu.be",
+              "ytimg.com",
+              "ggpht.com",
+              "steamcommunity-a.akamaihd.net",
+              "steamstore-a.akamaihd.net",
+              "fanatical.com",
+              "humblebundle.com",
+              "playartifact.com",
+              "steam-chat.com",
+              "steamcommunity.com",
+              "underlords.com"
+            ],
+            "domain_suffix": [
+              "algolia.net",
+              "auth0.com",
+              "cdn.cloudflare.net",
+              "challenges.cloudflare.com",
+              "chatgpt.livekit.cloud",
+              "client-api.arkoselabs.com",
+              "events.statsigapi.net",
+              "featuregates.org",
+              "host.livekit.cloud",
+              "identrust.com",
+              "intercom.io",
+              "intercomcdn.com",
+              "launchdarkly.com",
+              "oaistatic.com",
+              "oaiusercontent.com",
+              "observeit.net",
+              "openai.com",
+              "openaiapi-site.azureedge.net",
+              "openaicom.imgix.net",
+              "poe.com",
+              "segment.io",
+              "sentry.io",
+              "stripe.com",
+              "turn.livekit.cloud"
+            ],
+            "domain_keyword": [
+              "appledaily",
+              "openaicom-api",
+              "v2ex"
+            ],
+            "domain": [
+              "api.statsig.com",
+              "browser-intake-datadoghq.com",
+              "chat.openai.com.cdn.cloudflare.net",
+              "o33249.ingest.sentry.io",
+              "openai-api.arkoselabs.com",
+              "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+              "openaicomproductionae4b.blob.core.windows.net",
+              "production-openaicom-storage.azureedge.net",
+              "static.cloudflareinsights.com"
+            ]
+          }          
+        ]
+      },
       {
         "tag": "geosite-category-ads-all",
         "type": "remote",
@@ -255,14 +333,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
-        "download_detour": "direct",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-biliintl",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/biliintl.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
@@ -305,14 +375,6 @@
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/cn.srs",
         "download_detour": "direct",
         "update_interval": "5d"
-      },
-      {
-        "tag": "geosite-geolocation-!cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-        "download_detour": "direct",
-        "update_interval": "10d"
       },
       {
         "tag": "geosite-github",
