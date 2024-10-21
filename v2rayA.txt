@@ -9,7 +9,7 @@ domain(domain:ads.fmdisk.com,domain:ads.feemoo.com,domain:googleads.g.doubleclic
 domain(umeng, googleads) -> block
 domain(geosite:category-ads-all) -> block
 # 以下一行为可选项，可能会造成问题
-# domain(geosite:category-httpdns) -> block
+# domain(geosite:category-httpdns-cn) -> block
 
 # direct
 protocol(bittorrent) -> direct
