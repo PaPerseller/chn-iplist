@@ -7,6 +7,7 @@
       ]
     },
     {
+      "enabled": false,
       "remarks": "阻断udp443",
       "outboundTag": "block",
       "port": "443",
@@ -16,37 +17,66 @@
       "remarks": "ads block",
       "outboundTag": "block",
       "domain": [
-        "geosite:category-ads-all",
-        "geosite:category-httpdns",
         "domain:ads.fmdisk.com",
         "domain:ads.feemoo.com",
         "domain:ads.google.com",
         "domain:afd.l.google.com",
         "domain:mobileads.google.com",
         "googleads",
-        "umeng"
+        "umeng",
+        "geosite:category-httpdns",
+        "geosite:category-ads-all"
       ]
     },
     {
-      "remarks": "direct domain",
+      "remarks": "proxy domain",
+      "outboundTag": "proxy",
+      "domain": [
+        "geosite:google",
+        "geosite:google-cn",
+        "geosite:telegram",
+        "geosite:netflix",
+        "geosite:geolocation-!cn",
+        "geosite:github",
+        "geosite:twitter",
+        "geosite:amp",
+        "geosite:category-ai-chat-!cn",
+        "geosite:instagram",
+        "domain:assets-cdn.github.com",
+        "domain:emby.wtf",
+        "domain:g.whatsapp.net",
+        "domain:us-west-2.amazonaws.com",
+        "domain:ytimg.com",
+        "domain:ggpht.com",
+        "domain:humblebundle.com",
+        "domain:steamcommunity-a.akamaihd.net",
+        "domain:steamstore-a.akamaihd.net",
+        "domain:fanatical.com",
+        "domain:humblebundle.com",
+        "domain:playartifact.com",
+        "domain:steam-chat.com",
+        "domain:steamcommunity.com",
+        "domain:underlords.com",
+        "v2ex"
+      ]
+    },
+    {
+      "remarks": "proxy ip",
+      "outboundTag": "proxy",
+      "ip": [
+        "1.0.0.1",
+        "1.1.1.1",
+        "8.8.8.8",
+        "8.8.4.4",
+        "8.8.8.8",
+        "geoip:telegram",
+        "geoip:twitter"
+      ]
+    },
+    {
+      "remarks": "steam direct domain",
       "outboundTag": "direct",
       "domain": [
-        "geosite:cn",
-        "geosite:private",
-        "geosite:bilibili",
-        "geosite:apple-cn",
-        "geosite:sina",
-        "geosite:alibaba",
-        "domain:ip6-localhost",
-        "domain:ip6-loopback",
-        "domain:local",
-        "domain:localhost",
-        "domain:cdn.jsdelivr.net",
-        "moutai",
-        "weixin",
-        "announce",
-        "torrent",
-        "tracker",
         "domain:steamcdn-a.akamaihd.net",
         "domain:cm.steampowered.com",
         "domain:steamserver.net",
@@ -71,7 +101,30 @@
       ]
     },
     {
-      "remarks": "direct ip",
+      "remarks": "direct domain",
+      "outboundTag": "direct",
+      "domain": [
+        "geosite:private",
+        "geosite:bilibili",
+        "geosite:apple-cn",
+        "geosite:sina",
+        "geosite:alibaba",
+        "domain:ip6-localhost",
+        "domain:ip6-loopback",
+        "domain:local",
+        "domain:localhost",
+        "domain:cdn.jsdelivr.net",
+        "moutai",
+        "weixin",
+        "announce",
+        "torrent",
+        "tracker",
+        "geosite:cn",
+        "geosite:geolocation-cn"
+      ]
+    },
+    {
+      "remarks": "steam direct ip",
       "outboundTag": "direct",
       "ip": [
         "45.121.184.0/24",
@@ -96,49 +149,15 @@
         "205.196.6.0/24",
         "208.64.200.0/22",
         "208.78.164.0/22",
-        "205.185.194.0/24",
+        "205.185.194.0/24"
+      ]
+    },
+    {
+      "remarks": "direct ip",
+      "outboundTag": "direct",
+      "ip": [
         "geoip:private",
         "geoip:cn"
-      ]
-    },
-    {
-      "remarks": "proxy domain",
-      "outboundTag": "proxy",
-      "domain": [
-        "geosite:google",
-        "geosite:google-cn",
-        "geosite:telegram",
-        "geosite:netflix",
-        "geosite:geolocation-!cn",
-        "geosite:github",
-        "geosite:twitter",
-        "geosite:amp",
-        "geosite:category-ai-chat-!cn",
-        "geosite:instagram",
-        "domain:assets-cdn.github.com",
-        "domain:emby.wtf",
-        "domain:g.whatsapp.net",
-        "domain:us-west-2.amazonaws.com",
-        "domain:ytimg.com",
-        "domain:ggpht.com",
-        "domain:humblebundle.com",
-        "v2ex",
-        "domain:steamcommunity-a.akamaihd.net",
-        "domain:steamstore-a.akamaihd.net",
-        "domain:fanatical.com",
-        "domain:humblebundle.com",
-        "domain:playartifact.com",
-        "domain:steam-chat.com",
-        "domain:steamcommunity.com",
-        "domain:underlords.com"
-      ]
-    },
-    {
-      "remarks": "proxy ip",
-      "outboundTag": "proxy",
-      "ip": [
-        "geoip:telegram",
-        "geoip:twitter"
       ]
     },
     {
