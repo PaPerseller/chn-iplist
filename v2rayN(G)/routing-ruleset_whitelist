@@ -8,10 +8,18 @@
     },
     {
       "enabled": false,
-      "remarks": "阻断udp443",
+      "remarks": "udp443 block",
       "outboundTag": "block",
       "port": "443",
       "network": "udp"
+    },
+    {
+      "enabled": false,
+      "remarks": "httpdns block",
+      "outboundTag": "block",
+      "domain": [
+        "geosite:category-httpdns-cn"
+      ]
     },
     {
       "remarks": "ads block",
@@ -24,7 +32,6 @@
         "domain:mobileads.google.com",
         "googleads",
         "umeng",
-        "geosite:category-httpdns-cn",
         "geosite:category-ads-all"
       ]
     },
