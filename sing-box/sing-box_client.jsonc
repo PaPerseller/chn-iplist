@@ -305,7 +305,8 @@
               "playartifact.com",
               "steam-chat.com",
               "steamcommunity.com",
-              "underlords.com"
+              "underlords.com",
+              "v2ex.com"
             ],
             "domain_suffix": [
               "algolia.net",
@@ -335,8 +336,7 @@
             ],
             "domain_keyword": [
               "appledaily",
-              "openaicom-api",
-              "v2ex"
+              "openaicom-api"
             ],
             "domain": [
               "api.statsig.com",

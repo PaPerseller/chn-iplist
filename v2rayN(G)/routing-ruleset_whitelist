@@ -36,14 +36,25 @@
       ]
     },
     {
+      "remarks": "proxy ip",
+      "outboundTag": "proxy",
+      "ip": [
+        "1.0.0.1",
+        "1.1.1.1",
+        "8.8.8.8",
+        "8.8.4.4",
+        "8.8.8.8",
+        "geoip:telegram",
+        "geoip:twitter"
+      ]
+    },
+    {
       "remarks": "proxy domain",
       "outboundTag": "proxy",
       "domain": [
         "geosite:google",
         "geosite:google-cn",
         "geosite:telegram",
-        "geosite:netflix",
-        "geosite:geolocation-!cn",
         "geosite:github",
         "geosite:twitter",
         "geosite:amp",
@@ -55,6 +66,13 @@
         "domain:us-west-2.amazonaws.com",
         "domain:ytimg.com",
         "domain:ggpht.com",
+        "domain:v2ex.com"
+      ]
+    },
+    {
+      "remarks": "game proxy domain",
+      "outboundTag": "proxy",
+      "domain": [
         "domain:humblebundle.com",
         "domain:steamcommunity-a.akamaihd.net",
         "domain:steamstore-a.akamaihd.net",
@@ -63,21 +81,44 @@
         "domain:playartifact.com",
         "domain:steam-chat.com",
         "domain:steamcommunity.com",
-        "domain:underlords.com",
-        "v2ex"
+        "domain:underlords.com"
       ]
     },
     {
-      "remarks": "proxy ip",
-      "outboundTag": "proxy",
+      "remarks": "direct ip",
+      "outboundTag": "direct",
       "ip": [
-        "1.0.0.1",
-        "1.1.1.1",
-        "8.8.8.8",
-        "8.8.4.4",
-        "8.8.8.8",
-        "geoip:telegram",
-        "geoip:twitter"
+        "geoip:private",
+        "geoip:cn"
+      ]
+    },
+    {
+      "remarks": "steam direct ip",
+      "outboundTag": "direct",
+      "ip": [
+        "45.121.184.0/24",
+        "103.10.124.0/23",
+        "103.28.54.0/24",
+        "146.66.152.0/24",
+        "146.66.155.0/24",
+        "153.254.86.0/24",
+        "155.133.224.0/22",
+        "155.133.230.0/24",
+        "155.133.232.0/23",
+        "155.133.234.0/24",
+        "155.133.236.0/22",
+        "155.133.240.0/23",
+        "155.133.244.0/23",
+        "155.133.246.0/24",
+        "155.133.248.0/21",
+        "162.254.192.0/21",
+        "185.25.182.0/23",
+        "190.217.32.0/22",
+        "192.69.96.0/22",
+        "205.196.6.0/24",
+        "208.64.200.0/22",
+        "208.78.164.0/22",
+        "205.185.194.0/24"
       ]
     },
     {
@@ -116,10 +157,6 @@
         "geosite:apple-cn",
         "geosite:sina",
         "geosite:alibaba",
-        "domain:ip6-localhost",
-        "domain:ip6-loopback",
-        "domain:local",
-        "domain:localhost",
         "domain:cdn.jsdelivr.net",
         "moutai",
         "weixin",
@@ -128,43 +165,6 @@
         "tracker",
         "geosite:cn",
         "geosite:geolocation-cn"
-      ]
-    },
-    {
-      "remarks": "steam direct ip",
-      "outboundTag": "direct",
-      "ip": [
-        "45.121.184.0/24",
-        "103.10.124.0/23",
-        "103.28.54.0/24",
-        "146.66.152.0/24",
-        "146.66.155.0/24",
-        "153.254.86.0/24",
-        "155.133.224.0/22",
-        "155.133.230.0/24",
-        "155.133.232.0/23",
-        "155.133.234.0/24",
-        "155.133.236.0/22",
-        "155.133.240.0/23",
-        "155.133.244.0/23",
-        "155.133.246.0/24",
-        "155.133.248.0/21",
-        "162.254.192.0/21",
-        "185.25.182.0/23",
-        "190.217.32.0/22",
-        "192.69.96.0/22",
-        "205.196.6.0/24",
-        "208.64.200.0/22",
-        "208.78.164.0/22",
-        "205.185.194.0/24"
-      ]
-    },
-    {
-      "remarks": "direct ip",
-      "outboundTag": "direct",
-      "ip": [
-        "geoip:private",
-        "geoip:cn"
       ]
     },
     {

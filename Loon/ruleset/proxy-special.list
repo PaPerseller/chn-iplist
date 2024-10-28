@@ -1,6 +1,6 @@
 // special proxy
 DOMAIN-SUFFIX,developer.apple.com,PROXY,force-remote-dns
-DOMAIN-KEYWORD,v2ex,PROXY,force-remote-dns
+DOMAIN-SUFFIX,v2ex.com,PROXY,force-remote-dns
 DOMAIN-SUFFIX,emby.wtf,PROXY,force-remote-dns
 
 // steam proxy

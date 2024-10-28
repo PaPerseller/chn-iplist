@@ -46,7 +46,7 @@
           "domain:steam-chat.com",
           "domain:steamcommunity.com",
           "domain:underlords.com",
-          "v2ex"
+          "domain:v2ex.com"
         ],
         "type" : "field"
       },

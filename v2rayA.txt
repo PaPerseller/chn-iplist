@@ -29,8 +29,7 @@ ip(geoip:private, geoip:cn) -> direct
 # proxy
 ip(8.8.4.4, 8.8.8.8, 208.67.222.222, 208.67.220.220, 1.1.1.1, 1.1.1.2, 1.0.0.1, 9.9.9.9) -> proxy
 domain(domain:developer.apple.com, domain:testflight.apple.com, domain:assets-cdn.github.com) -> proxy
-domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com) -> proxy
-domain(v2ex) -> proxy
+domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com, domain:v2ex.com) -> proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com) -> proxy
 domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcommunity-a.akamaihd.net) -> proxy
 domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net, domain:steam-chat.com) -> proxy
