@@ -7,6 +7,15 @@
       ]
     },
     {
+      "remarks": "BT direct domain",
+      "outboundTag": "direct",
+      "domain": [
+        "announce",
+        "torrent",
+        "tracker"
+      ]
+    },
+    {
       "enabled": false,
       "remarks": "udp443 block",
       "outboundTag": "block",
@@ -152,16 +161,12 @@
       "outboundTag": "direct",
       "domain": [
         "geosite:private",
-        "geosite:bilibili",
         "geosite:apple-cn",
         "geosite:sina",
         "geosite:alibaba",
         "domain:cdn.jsdelivr.net",
         "moutai",
         "weixin",
-        "announce",
-        "torrent",
-        "tracker",
         "geosite:cn",
         "geosite:geolocation-cn"
       ]
