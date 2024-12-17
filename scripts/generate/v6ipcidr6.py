@@ -12,5 +12,5 @@ for line in lines:
 header = ['# 适用于 Loon、clash 等 ipv6 规则前缀为 IP-CIDR6 的应用\n']
 header.extend(new_lines)
 
-with open("./Loon/ruleset/ipv6.list", "w") as output_file:
+with open("./ruleset/ipv6-cidr6.list", "w") as output_file:
     output_file.writelines(header)

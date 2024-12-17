@@ -1,0 +1,24 @@
+// special proxy
+DOMAIN-SUFFIX,developer.apple.com,force-remote-dns
+DOMAIN-SUFFIX,v2ex.com,force-remote-dns
+DOMAIN-SUFFIX,emby.wtf,force-remote-dns
+
+// steam proxy
+DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,force-remote-dns
+DOMAIN-SUFFIX,steamstore-a.akamaihd.net,force-remote-dns
+DOMAIN-SUFFIX,steam-chat.com,force-remote-dns
+DOMAIN-SUFFIX,steamcommunity.com,force-remote-dns
+
+//Google
+DOMAIN-SUFFIX,ampproject.org,force-remote-dns
+DOMAIN-SUFFIX,ampproject.net,force-remote-dns
+DOMAIN-SUFFIX,goo.gl,force-remote-dns
+DOMAIN-SUFFIX,gvt1.com,force-remote-dns
+DOMAIN-SUFFIX,youtu.be,force-remote-dns
+DOMAIN-SUFFIX,ytimg.com,force-remote-dns
+DOMAIN-SUFFIX,ggpht.com,force-remote-dns
+DOMAIN-KEYWORD,gmail,force-remote-dns
+DOMAIN-KEYWORD,google,force-remote-dns
+DOMAIN-KEYWORD,gstatic,force-remote-dns
+DOMAIN-KEYWORD,youtube,force-remote-dns
+DOMAIN-KEYWORD,googleapis.cn,force-remote-dns

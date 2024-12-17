@@ -40,8 +40,8 @@ jobs:
           git add chnroute-ipv4.txt
           git add chnroute-ipv6.txt
           git add cn.rsc
-          git add ipv6.list
-          git add ./Loon/ruleset/ipv6.list
+          git add ./ruleset/ipv6-cidr.list
+          git add ./ruleset/ipv6-cidr6.list
           git add chn.acl
           git add v2ray-config_rule.json
           git add chnroute.pac 
