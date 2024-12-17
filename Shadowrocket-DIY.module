@@ -11,10 +11,13 @@
 
 [Rule]
 # Reject
+#RULE-SET,https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/reject-special.list,REJECT
 
 # DIRECT
+#RULE-SET,https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/direct-special.list,DIRECT
 
 # PROXY
+#RULE-SET,https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list,PROXY,force-remote-dns
 
 #GEOIP,CN,DIRECT
 #FINAL,PROXY

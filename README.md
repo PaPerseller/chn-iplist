@@ -1,7 +1,7 @@
 # chn-iplist
 
 
-### 数据源
+## 数据源
 IPv4：[17mon/china_ip_list](https://github.com/17mon/china_ip_list) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)
 
 IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest) 
@@ -15,23 +15,28 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 | [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf)  | [acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl) | chnroute [ipv4与ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [纯ipv4](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [纯ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
 | [Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf)                                                                                                                                                                                                                                                                                                                  |                                                                                             | [pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认走 socks5 localhost:1080）                                                                                                                                                                              |
 | [Loon 配置文件](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/Loon.conf)  订阅特殊规则：[direct](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/ruleset/direct-special.list) \| [proxy](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/ruleset/proxy-special.list) \| [reject](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon/ruleset/reject-special.list) |                                                                                             | [v2rayN ](https://raw.githubusercontent.com/PaPerseller/chn-iplist/refs/heads/master/v2rayN(G)/routing-ruleset_whitelist)                                                                                                                                                                                 |
+### 特殊规则集 (ruleset)
+**屏蔽**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/reject-special.list  
+**直连**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/direct-special.list  
+**代理**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list
+
 
 ## 需手动更新：
 
-#### v2rayN(G)
+### v2rayN(G)
 
 将 [规则集](https://raw.githubusercontent.com/PaPerseller/chn-iplist/refs/heads/master/v2rayN(G)/routing-ruleset_whitelist) 复制后在应用路由设置内点击“从剪贴板导入规则集”。
 
-#### v2ray/xray 配置内嵌规则
+### v2ray/xray 配置内嵌规则
 
 将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2ray-config_rule.json)加入配置文件 routing 对应区域。
 
-#### v2rayA/dae 分流规则
+### v2rayA/dae 分流规则
 
 将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayA.txt)替换入原有规则。
 
 
-#### ROS 中部署
+### ROS 中部署
 
 分别执行以下命令或将其保存为一个 script：
 ```
