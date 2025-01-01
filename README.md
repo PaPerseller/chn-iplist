@@ -40,7 +40,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 
 分别执行以下命令或将其保存为一个 script：
 ```
-/tool fetch url="https://ghp.ci/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc"
+/tool fetch url="https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc"
 /import file-name=cn.rsc
 /file remove [find name="cn.rsc"]
 ```
@@ -49,10 +49,10 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 ## PS.
 
 1. Shadowrocket、Loon  等有 ipv6 开关的，若服务器不支持 ipv6 且连接失败，请设为仅 ipv4。额外提供前缀为 [IP-CIDR](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/ipv6-cidr.list) 和 [IP-CIDR6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/ipv6-cidr6.list) 两种远程 ipv6(no-resolve) 规则。
-2. Loon 配置文件为简洁配置，适用于自建节点。订阅规则以特殊规则为主，需搭配其他更完善的订阅规则。
+2. Loon 配置文件为简洁配置，适用于自建节点。
 3. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
 4. 为避免 Shadowrocket 配置在线更新时覆盖自定义规则，提供此[精简配置模块](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket-DIY.module)；新建模块，复制内容后按需修改保存，切勿通过 URL 添加以防被重置，仅在需要自定义规则时使用。
-5. ROS 下载 cn.rsc 推荐 [CDN 加速地址](https://ghp.ci/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc)以提高下载成功率。
+5. ROS 下载 cn.rsc 推荐 [CDN 加速地址](https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc)以提高下载成功率。
 6. sing-box 配置基于个人使用及他人反馈，仅建议作为参考，且由于其常在小数点版本升级中更改配置的语法格式，本项目将减少相关更新频率，**不保证**实时可用性。
 7. v2raya 若使用 xray-core，建议参考[ v2raya 官方文档](https://v2raya.org/docs/advanced-application/custom-extra-config/) 使用生命周期钩子脚本[ python 版](https://github.com/PaPerseller/r2s-armbian-configure/blob/main/core-hook.py)或[ shell 版](https://github.com/PaPerseller/r2s-armbian-configure/blob/main/hook.sh)将 domainMatcher 值设为 hybrid，若服务器已启用 tcpMptcp，则脚本中可选启用客户端 tcpMptcp。
 
