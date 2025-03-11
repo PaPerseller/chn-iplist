@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,log.tagtic.cn
 DOMAIN-SUFFIX,gzads.com
 DOMAIN-SUFFIX,gozendata.com
 DOMAIN-SUFFIX,gz-data.com
+DOMAIN,resolve.umeng.com
 
 // google reject
 DOMAIN-SUFFIX,ads.fmdisk.com
