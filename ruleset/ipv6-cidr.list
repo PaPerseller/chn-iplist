@@ -78,6 +78,7 @@ IP-CIDR,2001:df4:c780::/48,no-resolve
 IP-CIDR,2001:df4:e140::/48,no-resolve
 IP-CIDR,2001:df5:1440::/48,no-resolve
 IP-CIDR,2001:df5:2080::/48,no-resolve
+IP-CIDR,2001:df5:2fc0::/48,no-resolve
 IP-CIDR,2001:df5:5f80::/48,no-resolve
 IP-CIDR,2001:df5:7800::/48,no-resolve
 IP-CIDR,2001:df6:100::/48,no-resolve
@@ -657,6 +658,8 @@ IP-CIDR,2401:f0e0::/32,no-resolve
 IP-CIDR,2401:f220::/32,no-resolve
 IP-CIDR,2401:f300::/32,no-resolve
 IP-CIDR,2401:f320::/32,no-resolve
+IP-CIDR,2401:f3e0::/32,no-resolve
+IP-CIDR,2401:f4a0::/32,no-resolve
 IP-CIDR,2401:f7c0::/32,no-resolve
 IP-CIDR,2401:fa80::/32,no-resolve
 IP-CIDR,2401:fb80::/32,no-resolve
@@ -1409,6 +1412,7 @@ IP-CIDR,2405:4880::/32,no-resolve
 IP-CIDR,2405:4980::/32,no-resolve
 IP-CIDR,2405:4a80::/32,no-resolve
 IP-CIDR,2405:4b80::/32,no-resolve
+IP-CIDR,2405:4d40::/32,no-resolve
 IP-CIDR,2405:4e80::/32,no-resolve
 IP-CIDR,2405:4f80::/32,no-resolve
 IP-CIDR,2405:5080::/32,no-resolve
