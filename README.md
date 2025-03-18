@@ -65,5 +65,6 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 - [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) - V2Ray 路由规则文件加强版
 - [Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
 - [iBug/pac](https://github.com/iBug/pac) - PAC scripts for proxies
+- [zhiyi7/gfw-pac](https://github.com/zhiyi7/gfw-pac) -  PAC 文件以及生成器
 - 其他部分规则来源的作者
 - AI 辅助实现的自动化更新

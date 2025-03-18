@@ -34,6 +34,16 @@ jobs:
             python "$script" &
           done
 
+      - name: generate pac file
+        run: |
+          python ./scripts/generate/pac/extract_domains.py
+          ./scripts/generate/pac/gfw-pac.py -f ./chnroute.pac \
+             -p "SOCKS5 localhost:1080; DIRECT" \
+             --proxy-domains=./scripts/generate/pac/proxy-domains.txt \
+             --direct-domains=./scripts/generate/pac/direct-domains.txt \
+             --ip-file=./chnroute-ipv4.txt
+          rm ./scripts/generate/pac/proxy-domains.txt ./scripts/generate/pac/direct-domains.txt
+
       - name: Add changed files
         run: |
           git add chnroute.txt
