@@ -130,33 +130,6 @@
       ]
     },
     {
-      "remarks": "steam direct domain",
-      "outboundTag": "direct",
-      "domain": [
-        "domain:steamcdn-a.akamaihd.net",
-        "domain:cm.steampowered.com",
-        "domain:steamserver.net",
-        "domain:cdn.mileweb.cs.steampowered.com.8686c.com",
-        "domain:cdn-ws.content.steamchina.com",
-        "domain:cdn-qc.content.steamchina.com",
-        "domain:cdn-ali.content.steamchina.com",
-        "domain:epicgames-download1-1251447533.file.myqcloud.com",
-        "domain:dl.steam.clngaa.com",
-        "domain:dl.steam.ksyna.com",
-        "domain:st.dl.bscstorage.net",
-        "domain:st.dl.eccdnx.com",
-        "domain:st.dl.pinyuncloud.com",
-        "domain:steampipe.steamcontent.tnkjmec.com",
-        "domain:steampowered.com.8686c.com",
-        "domain:steamstatic.com.8686c.com",
-        "domain:wmsjsteam.com",
-        "domain:xz.pphimalayanrt.com",
-        "domain:cm.steampowered.com",
-        "domain:steamcontent.com",
-        "domain:steamusercontent.com"
-      ]
-    },
-    {
       "remarks": "direct domain",
       "outboundTag": "direct",
       "domain": [
@@ -165,6 +138,8 @@
         "geosite:sina",
         "geosite:alibaba",
         "geosite:category-ai-cn",
+        "geosite:steam@cn",
+        "geosite:category-game-platforms-download@cn",
         "domain:cdn.jsdelivr.net",
         "moutai",
         "weixin",
