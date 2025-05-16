@@ -670,6 +670,7 @@ IP-CIDR,2401:ffc0::/32,no-resolve
 IP-CIDR,2402:440::/32,no-resolve
 IP-CIDR,2402:5c0::/32,no-resolve
 IP-CIDR,2402:840::/32,no-resolve
+IP-CIDR,2402:a60::/32,no-resolve
 IP-CIDR,2402:e00::/32,no-resolve
 IP-CIDR,2402:fc0::/32,no-resolve
 IP-CIDR,2402:1000::/32,no-resolve
