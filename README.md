@@ -36,7 +36,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 将[规则文本](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/v2rayA.txt)替换入原有规则。
 
 
-### ROS 中部署
+### RouterOS 中部署
 
 分别执行以下命令或将其保存为一个 script：
 ```
@@ -53,7 +53,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 3. 对于已支持在线更新 geoip 数据的软件，本规则不再内置 cn-ip 列表。
 4. 为避免 Shadowrocket 配置在线更新时覆盖自定义规则，提供此[精简配置模块](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket-DIY.module)；新建模块，复制内容后按需修改保存，切勿通过 URL 添加以防被重置，仅在需要自定义规则时使用。
 5. ROS 下载 cn.rsc 推荐 [CDN 加速地址](https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/cn.rsc)以提高下载成功率。
-6. sing-box 配置基于个人使用及他人反馈，仅建议作为参考，且由于其常在小数点版本升级中更改配置的语法格式，本项目将减少相关更新频率，**不保证**实时可用性。
+6. sing-box 配置基于个人使用及他人反馈，仅作为参考。由于其常在小版本升级中更改配置语法或格式，本项目将减少相关更新频率，**不保证**实时可用。并注意，sing-box 看似集成丰富，但其对部分协议的功能支持和跟进均有限，应在选其作为主力工具前仔细研究、斟酌使用。
 7. v2raya 若使用 xray-core，建议参考[ v2raya 官方文档](https://v2raya.org/docs/advanced-application/custom-extra-config/) 使用生命周期钩子脚本[ python 版](https://github.com/PaPerseller/r2s-armbian-configure/blob/main/core-hook.py)或[ shell 版](https://github.com/PaPerseller/r2s-armbian-configure/blob/main/hook.sh)将 domainMatcher 值设为 hybrid，若服务器已启用 tcpMptcp，则脚本中可选启用客户端 tcpMptcp。
 
 ## 致谢
