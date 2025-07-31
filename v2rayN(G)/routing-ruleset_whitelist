@@ -74,22 +74,30 @@
         "domain:us-west-2.amazonaws.com",
         "domain:ytimg.com",
         "domain:ggpht.com",
-        "domain:v2ex.com"
+        "domain:v2ex.com",
+        "geosite:geolocation-!cn"
       ]
     },
     {
       "remarks": "game proxy domain",
       "outboundTag": "proxy",
       "domain": [
-        "domain:humblebundle.com",
-        "domain:steamcommunity-a.akamaihd.net",
-        "domain:steamstore-a.akamaihd.net",
         "domain:fanatical.com",
         "domain:humblebundle.com",
+        "domain:underlords.com",
+        "domain:valvesoftware.com",
         "domain:playartifact.com",
         "domain:steam-chat.com",
         "domain:steamcommunity.com",
-        "domain:underlords.com"
+        "domain:steamgames.com",
+        "domain:steamstatic.com",
+        "domain:steamstat.us",
+        "domain:steambroadcast.akamaized.net",
+        "domain:steamcommunity-a.akamaihd.net",
+        "domain:steamstore-a.akamaihd.net",
+        "domain:steamusercontent-a.akamaihd.net",
+        "domain:steamuserimages-a.akamaihd.net",
+        "domain:steampipe.akamaized.net"
       ]
     },
     {
@@ -140,11 +148,15 @@
         "geosite:category-ai-cn",
         "geosite:steam@cn",
         "geosite:category-game-platforms-download@cn",
+        "geosite:category-games@cn",
         "domain:cdn.jsdelivr.net",
+        "domain:gh-proxy.com",
         "moutai",
         "weixin",
-        "geosite:cn",
-        "geosite:geolocation-cn"
+        "announce",
+        "torrent",
+        "tracker",
+        "geosite:cn"
       ]
     },
     {

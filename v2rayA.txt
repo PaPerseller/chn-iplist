@@ -14,12 +14,12 @@ domain(geosite:category-ads-all) -> block
 # direct
 protocol(bittorrent) -> direct
 ip(45.121.184.0/24, 103.10.124.0/23, 103.28.54.0/24, 146.66.152.0/24, 146.66.155.0/24, 153.254.86.0/24, 155.133.224.0/22, 155.133.230.0/24, 155.133.232.0/23, 155.133.234.0/24, 155.133.236.0/22, 155.133.240.0/23, 155.133.244.0/23, 155.133.246.0/24, 155.133.248.0/21, 162.254.192.0/21, 185.25.182.0/23, 190.217.32.0/22, 192.69.96.0/22, 205.196.6.0/24, 208.64.200.0/22, 208.78.164.0/22, 205.185.194.0/24) -> direct
-domain(moutai, weixin, wechat) -> direct
+domain(moutai, weixin) -> direct
 domain(announce, torrent, tracker) -> direct
 domain(domain:gdmf.apple.com, domain:identity.apple.com, domain:cdn.jsdelivr.net) -> direct
 domain(geosite:steam@cn, geosite:category-game-platforms-download@cn, geosite:category-games@cn) -> direct
 domain(geosite:private, geosite:bilibili, geosite:sina, geosite:alibaba, geosite:category-ai-cn) -> direct
-domain(geosite:geolocation-cn) -> direct
+domain(geosite:cn) -> direct
 ip(geoip:private, geoip:cn) -> direct
 # 以下一行使用 Loyalsoldier 数据库启用
 # domain(geosite:apple-cn) -> direct
@@ -30,7 +30,7 @@ domain(domain:developer.apple.com, domain:assets-cdn.github.com) -> proxy
 domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com, domain:v2ex.com) -> proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com) -> proxy
 domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcommunity-a.akamaihd.net) -> proxy
-domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net, domain:steam-chat.com) -> proxy
-domain(geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-!cn, geosite:instagram, geosite:amp) -> proxy
+domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net) -> proxy
+domain(geosite:google, geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-!cn, geosite:instagram, geosite:amp, geosite:geolocation-!cn) -> proxy
 # 以下一行使用 Loyalsoldier 数据库启用
 # ip(geoip:telegram, geoip:twitter) -> proxy

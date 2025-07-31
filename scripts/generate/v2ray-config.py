@@ -25,7 +25,6 @@ a_content = '''  "routing" : {
           "geosite:google-cn",
           "geosite:telegram",
           "geosite:netflix",
-          "geosite:geolocation-!cn",
           "geosite:github",
           "geosite:twitter",
           "geosite:amp",
@@ -37,23 +36,37 @@ a_content = '''  "routing" : {
           "domain:us-west-2.amazonaws.com",
           "domain:ytimg.com",
           "domain:ggpht.com",
-          "domain:humblebundle.com",
-          "domain:steamcommunity-a.akamaihd.net",
-          "domain:steamstore-a.akamaihd.net",
           "domain:fanatical.com",
           "domain:humblebundle.com",
+          "domain:underlords.com",
+          "domain:valvesoftware.com",
           "domain:playartifact.com",
           "domain:steam-chat.com",
           "domain:steamcommunity.com",
-          "domain:underlords.com",
-          "v2ex"
+          "domain:steamgames.com",
+          "domain:steamstatic.com",
+          "domain:steamstat.us",
+          "domain:steambroadcast.akamaized.net",
+          "domain:steamcommunity-a.akamaihd.net",
+          "domain:steamstore-a.akamaihd.net",
+          "domain:steamusercontent-a.akamaihd.net",
+          "domain:steamuserimages-a.akamaihd.net",
+          "domain:steampipe.akamaized.net",
+          "v2ex",
+          "geosite:geolocation-!cn"
         ],
         "type" : "field"
       },
       {
+        "outboundTag": "direct",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      },
+      {
         "outboundTag" : "direct",
         "domain" : [
-          "geosite:cn",
           "geosite:private",
           "geosite:bilibili",
           "geosite:apple-cn",
@@ -62,16 +75,20 @@ a_content = '''  "routing" : {
           "geosite:alibaba",
           "geosite:steam@cn",
           "geosite:category-game-platforms-download@cn",
+          "geosite:category-games@cn",
           "domain:ip6-localhost",
           "domain:ip6-loopback",
           "domain:local",
           "domain:localhost",
           "domain:cdn.jsdelivr.net",
+          "domain:gh-proxy.com",
+          "domain:cdn.jsdelivr.net",
           "moutai",
           "weixin",
           "announce",
           "torrent",
-          "tracker"
+          "tracker",
+          "geosite:cn"
         ],
         "type" : "field"
       },
