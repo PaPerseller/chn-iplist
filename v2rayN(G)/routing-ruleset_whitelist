@@ -1,5 +1,12 @@
 [
     {
+      "remarks": "private ip",
+      "outboundTag": "direct",
+      "ip": [
+        "geoip:private"
+      ]
+    },
+    {
       "remarks": "BT direct",
       "outboundTag": "direct",
       "protocol": [
@@ -45,37 +52,26 @@
       ]
     },
     {
-      "remarks": "proxy ip",
-      "outboundTag": "proxy",
-      "ip": [
-        "1.0.0.1",
-        "1.1.1.1",
-        "8.8.8.8",
-        "8.8.4.4",
-        "geoip:telegram",
-        "geoip:twitter"
+      "remarks": "direct domain",
+      "outboundTag": "direct",
+      "domain": [
+        "domain:cdn.jsdelivr.net",
+        "domain:gh-proxy.com",
+        "moutai",
+        "weixin"
       ]
     },
     {
       "remarks": "proxy domain",
       "outboundTag": "proxy",
       "domain": [
-        "geosite:google",
-        "geosite:google-cn",
-        "geosite:telegram",
-        "geosite:github",
-        "geosite:twitter",
-        "geosite:amp",
-        "geosite:category-ai-!cn",
-        "geosite:instagram",
         "domain:assets-cdn.github.com",
         "domain:emby.wtf",
         "domain:g.whatsapp.net",
         "domain:us-west-2.amazonaws.com",
         "domain:ytimg.com",
         "domain:ggpht.com",
-        "domain:v2ex.com",
-        "geosite:geolocation-!cn"
+        "domain:v2ex.com"
       ]
     },
     {
@@ -101,11 +97,45 @@
       ]
     },
     {
-      "remarks": "direct ip",
+      "remarks": "direct domain set",
       "outboundTag": "direct",
+      "domain": [
+        "geosite:private",
+        "geosite:apple-cn",
+        "geosite:sina",
+        "geosite:alibaba",
+        "geosite:category-ai-cn",
+        "geosite:steam@cn",
+        "geosite:category-game-platforms-download@cn",
+        "geosite:category-games@cn",
+        "geosite:cn"
+      ]
+    },
+    {
+      "remarks": "proxy domain set",
+      "outboundTag": "proxy",
+      "domain": [
+        "geosite:google",
+        "geosite:google-cn",
+        "geosite:telegram",
+        "geosite:github",
+        "geosite:twitter",
+        "geosite:amp",
+        "geosite:category-ai-!cn",
+        "geosite:instagram",
+        "geosite:geolocation-!cn"
+      ]
+    },
+    {
+      "remarks": "proxy ip",
+      "outboundTag": "proxy",
       "ip": [
-        "geoip:private",
-        "geoip:cn"
+        "1.0.0.1",
+        "1.1.1.1",
+        "8.8.8.8",
+        "8.8.4.4",
+        "geoip:telegram",
+        "geoip:twitter"
       ]
     },
     {
@@ -138,25 +168,10 @@
       ]
     },
     {
-      "remarks": "direct domain",
+      "remarks": "direct ip set",
       "outboundTag": "direct",
-      "domain": [
-        "geosite:private",
-        "geosite:apple-cn",
-        "geosite:sina",
-        "geosite:alibaba",
-        "geosite:category-ai-cn",
-        "geosite:steam@cn",
-        "geosite:category-game-platforms-download@cn",
-        "geosite:category-games@cn",
-        "domain:cdn.jsdelivr.net",
-        "domain:gh-proxy.com",
-        "moutai",
-        "weixin",
-        "announce",
-        "torrent",
-        "tracker",
-        "geosite:cn"
+      "ip": [
+        "geoip:cn"
       ]
     },
     {

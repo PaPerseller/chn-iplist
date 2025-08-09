@@ -2,6 +2,11 @@ default: proxy
 # write your own rules below
 # 若使用 Loyalsoldier 数据库及其专属规则后，启动仍报错专属规则缺失，请参考 v2raya 官方文档在启动服务中指定数据文件路径
 
+# direct
+ip(geoip:private) -> direct
+protocol(bittorrent) -> direct
+domain(announce, torrent, tracker) -> direct
+
 # block
 port(853) -> block
 #network(udp) && port(443) -> block
@@ -11,26 +16,34 @@ domain(geosite:category-ads-all) -> block
 # 以下一行为可选项，可能会造成问题
 # domain(geosite:category-httpdns-cn) -> block
 
-# direct
-protocol(bittorrent) -> direct
-ip(45.121.184.0/24, 103.10.124.0/23, 103.28.54.0/24, 146.66.152.0/24, 146.66.155.0/24, 153.254.86.0/24, 155.133.224.0/22, 155.133.230.0/24, 155.133.232.0/23, 155.133.234.0/24, 155.133.236.0/22, 155.133.240.0/23, 155.133.244.0/23, 155.133.246.0/24, 155.133.248.0/21, 162.254.192.0/21, 185.25.182.0/23, 190.217.32.0/22, 192.69.96.0/22, 205.196.6.0/24, 208.64.200.0/22, 208.78.164.0/22, 205.185.194.0/24) -> direct
-domain(moutai, weixin) -> direct
-domain(announce, torrent, tracker) -> direct
+# direct domain
 domain(domain:gdmf.apple.com, domain:identity.apple.com, domain:cdn.jsdelivr.net) -> direct
-domain(geosite:steam@cn, geosite:category-game-platforms-download@cn, geosite:category-games@cn) -> direct
-domain(geosite:private, geosite:bilibili, geosite:sina, geosite:alibaba, geosite:category-ai-cn) -> direct
-domain(geosite:cn) -> direct
-ip(geoip:private, geoip:cn) -> direct
-# 以下一行使用 Loyalsoldier 数据库启用
-# domain(geosite:apple-cn) -> direct
+domain(moutai, weixin) -> direct
 
-# proxy
-ip(8.8.4.4, 8.8.8.8, 208.67.222.222, 208.67.220.220, 1.1.1.1, 1.1.1.2, 1.0.0.1, 9.9.9.9) -> proxy
+# proxy domain
 domain(domain:developer.apple.com, domain:assets-cdn.github.com) -> proxy
 domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com, domain:v2ex.com) -> proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com) -> proxy
 domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcommunity-a.akamaihd.net) -> proxy
 domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net) -> proxy
+
+# direct domain set
+domain(geosite:private, geosite:bilibili, geosite:sina, geosite:alibaba, geosite:category-ai-cn) -> direct
+domain(geosite:steam@cn, geosite:category-game-platforms-download@cn, geosite:category-games@cn) -> direct
+domain(geosite:cn) -> direct
+# 以下一行使用 Loyalsoldier 数据库启用
+# domain(geosite:apple-cn) -> direct
+
+# proxy domain set
 domain(geosite:google, geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-!cn, geosite:instagram, geosite:amp, geosite:geolocation-!cn) -> proxy
+
+# proxy ip
+ip(8.8.4.4, 8.8.8.8, 208.67.222.222, 208.67.220.220, 1.1.1.1, 1.1.1.2, 1.0.0.1, 9.9.9.9) -> proxy
 # 以下一行使用 Loyalsoldier 数据库启用
 # ip(geoip:telegram, geoip:twitter) -> proxy
+
+# steam direct ip
+ip(45.121.184.0/24, 103.10.124.0/23, 103.28.54.0/24, 146.66.152.0/24, 146.66.155.0/24, 153.254.86.0/24, 155.133.224.0/22, 155.133.230.0/24, 155.133.232.0/23, 155.133.234.0/24, 155.133.236.0/22, 155.133.240.0/23, 155.133.244.0/23, 155.133.246.0/24, 155.133.248.0/21, 162.254.192.0/21, 185.25.182.0/23, 190.217.32.0/22, 192.69.96.0/22, 205.196.6.0/24, 208.64.200.0/22, 208.78.164.0/22, 205.185.194.0/24) -> direct
+
+# direct ip set
+ip(geoip:cn) -> direct
