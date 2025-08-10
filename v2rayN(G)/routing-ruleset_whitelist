@@ -71,8 +71,7 @@
         "domain:us-west-2.amazonaws.com",
         "domain:ytimg.com",
         "domain:ggpht.com",
-        "domain:v2ex.com",
-        "geosite:google-cn"
+        "domain:v2ex.com"
       ]
     },
     {
@@ -117,6 +116,7 @@
       "outboundTag": "proxy",
       "domain": [
         "geosite:google",
+        "geosite:google-cn",
         "geosite:telegram",
         "geosite:github",
         "geosite:twitter",
@@ -135,7 +135,8 @@
         "8.8.8.8",
         "8.8.4.4",
         "geoip:telegram",
-        "geoip:twitter"
+        "geoip:twitter",
+        "geoip:google"
       ]
     },
     {

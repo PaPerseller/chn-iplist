@@ -64,7 +64,6 @@ a_content = '''  "routing" : {
           "domain:ytimg.com",
           "domain:v2ex.com",
           "domain:ggpht.com",
-          "geosite:google-cn",
           "domain:fanatical.com",
           "domain:humblebundle.com",
           "domain:underlords.com",
@@ -104,6 +103,7 @@ a_content = '''  "routing" : {
         "outboundTag" : "proxy",
         "domain" : [
           "geosite:google",
+          "geosite:google-cn",
           "geosite:telegram",
           "geosite:netflix",
           "geosite:github",
@@ -119,7 +119,8 @@ a_content = '''  "routing" : {
         "outboundTag" : "proxy",
         "ip" : [
           "geoip:telegram",
-          "geoip:twitter"
+          "geoip:twitter",
+          "geoip:google"
         ],
         "type" : "field"
       },
