@@ -2,6 +2,17 @@ a_content = '''  "routing" : {
     "domainStrategy" : "IPIfNonMatch",
     "rules" : [
       {
+        "outboundTag" : "direct",
+        "ip" : [
+          "geoip:private",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10",
+          "fd00::/8"
+        ],
+        "type" : "field"
+      },
+      {
         "outboundTag": "direct",
         "protocol": [
           "bittorrent"
@@ -53,6 +64,7 @@ a_content = '''  "routing" : {
           "domain:ytimg.com",
           "domain:v2ex.com",
           "domain:ggpht.com",
+          "geosite:google-cn",
           "domain:fanatical.com",
           "domain:humblebundle.com",
           "domain:underlords.com",
@@ -92,7 +104,6 @@ a_content = '''  "routing" : {
         "outboundTag" : "proxy",
         "domain" : [
           "geosite:google",
-          "geosite:google-cn",
           "geosite:telegram",
           "geosite:netflix",
           "geosite:github",
@@ -115,11 +126,6 @@ a_content = '''  "routing" : {
       {
         "outboundTag" : "direct",
         "ip" : [
-          "geoip:private",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10",
-          "fd00::/8",
           "45.121.184.0/24",
           "103.10.124.0/23",
           "103.28.54.0/24",
