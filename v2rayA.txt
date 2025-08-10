@@ -22,7 +22,7 @@ domain(moutai, weixin) -> direct
 
 # proxy domain
 domain(domain:developer.apple.com, domain:assets-cdn.github.com) -> proxy
-domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com, domain:v2ex.com) -> proxy
+domain(domain:emby.wtf, domain:g.whatsapp.net, domain:us-west-2.amazonaws.com, domain:v2ex.com, geosite:google-cn) -> proxy
 domain(domain:fanatical.com, domain:humblebundle.com, domain:underlords.com, domain:valvesoftware.com, domain:playartifact.com, domain:steam-chat.com) -> proxy
 domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com, domain:steamstat.us, domain:steambroadcast.akamaized.net, domain:steamcommunity-a.akamaihd.net) -> proxy
 domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net) -> proxy
@@ -35,7 +35,7 @@ domain(geosite:cn) -> direct
 # domain(geosite:apple-cn) -> direct
 
 # proxy domain set
-domain(geosite:google, geosite:google-cn, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-!cn, geosite:instagram, geosite:amp, geosite:geolocation-!cn) -> proxy
+domain(geosite:google, geosite:github, geosite:telegram, geosite:twitter, geosite:category-ai-!cn, geosite:instagram, geosite:amp, geosite:geolocation-!cn) -> proxy
 
 # proxy ip
 ip(8.8.4.4, 8.8.8.8, 208.67.222.222, 208.67.220.220, 1.1.1.1, 1.1.1.2, 1.0.0.1, 9.9.9.9) -> proxy
