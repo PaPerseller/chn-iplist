@@ -15,10 +15,11 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 | [Shadowrocket](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Shadowrocket.conf)  | [acl (no ban ads)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chn.acl) | chnroute [ipv4与ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.txt) \| [ipv4](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv4.txt) \| [ipv6](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute-ipv6.txt) |
 | [Quantumult(X) (no chn-ip)](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Quantumult(X)_noIP.conf)                                                                                                                                                                                                                                                                                                                  |                                                                                             | [pac](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/chnroute.pac) （默认 socks5 localhost:1080）                                                                                                                                                                              |
 | [Loon](https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/Loon.conf) |                                                                                             | [v2rayN ](https://raw.githubusercontent.com/PaPerseller/chn-iplist/refs/heads/master/v2rayN(G)/routing-ruleset_whitelist)                                                                                                                                                                                 |
-### 特殊规则集 (ruleset)
-**屏蔽**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/reject-special.list  
-**直连**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/direct-special.list  
-**代理**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list
+### 特殊规则集
+**屏蔽 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/reject-special.list  
+**直连 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/direct-special.list  
+**代理 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list  
+**AI DOMAIN-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-ai.list
 
 
 ## 需手动更新：
