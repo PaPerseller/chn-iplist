@@ -55,10 +55,6 @@
     {
       "type": "direct",
       "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
     }
   ],
   "route": {
@@ -138,7 +134,7 @@
           "geosite-category-ai-!cn",
           "geosite-geolocation-!cn"
         ],
-        "outbound": "Proxy"
+        "outbound": "proxy"
       }
     ],
     "rule_set": [
