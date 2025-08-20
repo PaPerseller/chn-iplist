@@ -4,6 +4,16 @@
     "level": "info",
     "timestamp": true
   },
+  "dns": {
+    "servers": [
+      {
+        "type": "udp",
+        "tag": "local-dns",
+        "server": "127.0.0.1"
+      }
+    ],
+    "disable_cache": true
+  },
   "inbounds": [
     {
       "type": "tun",
@@ -13,10 +23,8 @@
       "mtu": 1500,
       "auto_route": true,
       "strict_route": false,
-      "auto_redirect":false,
-      "stack": "system",
-      "sniff": true,
-      "sniff_override_destination": false
+      "auto_redirect":true,
+      "stack": "system"
     }
   ],
   "outbounds": [
@@ -56,6 +64,27 @@
   "route": {
     "rules": [
       {
+        "inbound": "tun-in",
+        "action": "resolve",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "protocol": "bittorrent",
+        "outbound": "direct"
+      },
+      {
         "type": "logical",
         "mode": "or",
         "rules": [
@@ -73,33 +102,29 @@
             ]
           }
         ],
-        "outbound": "block"
+        "action": "reject"
       },
       {
         "rule_set": [
           "inline-block",
+          "category-httpdns",
           "geosite-category-ads-all"
         ],
-        "outbound": "block"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
+        "action": "reject"
       },
       {
         "rule_set": [
           "inline-direct-ip",
           "inline-direct-domain",
-          "geosite-apple-cn",
-          "geosite-category-games@cn",
-          "geosite-geolocation-cn",
           "geosite-private",
+          "geosite-apple-cn",
+          "geosite-category-ai-cn",
+          "geosite-steam@cn",
+          "geosite-category-games@cn",
+          "geosite-category-game-platforms-download@cn",
+          "geosite-cn",
           "geoip-cn"
         ],
-        "outbound": "direct"
-      },
-      {
-        "protocol": "bittorrent",
         "outbound": "direct"
       },
       {
@@ -110,7 +135,8 @@
           "geoip-telegram",
           "geosite-github",
           "geosite-google-cn",
-          "openai"
+          "geosite-category-ai-!cn",
+          "geosite-geolocation-!cn"
         ],
         "outbound": "Proxy"
       }
@@ -175,7 +201,6 @@
         "rules": [
           {
             "domain_suffix": [
-              ".cn",
               "gdmf.apple.com",
               "cdn.jsdelivr.net",
               "steamcdn-a.akamaihd.net",
@@ -204,8 +229,6 @@
               "moutai",
               "sina",
               "weixin",
-              "bilibili",
-              "airdroid",
               "announce",
               "torrent",
               "tracker"
@@ -238,57 +261,32 @@
         "rules": [
           {
             "domain_suffix": [
+              "assets-cdn.github.com",
               "emby.wtf",
-              "ampproject.org",
-              "ampproject.net",
               "g.whatsapp.net",
               "us-west-2.amazonaws.com",
-              "developer.apple.com",
-              "humblebundle.com",
-              "goo.gl",
-              "gvt1.com",
-              "youtu.be",
               "ytimg.com",
+              "v2ex.com",
               "ggpht.com",
-              "steamcommunity-a.akamaihd.net",
-              "steamstore-a.akamaihd.net",
               "fanatical.com",
               "humblebundle.com",
+              "underlords.com",
+              "valvesoftware.com",
               "playartifact.com",
               "steam-chat.com",
               "steamcommunity.com",
-              "underlords.com",
-              "v2ex.com"
-            ],
-            "domain_suffix": [
-              "algolia.net",
-              "auth0.com",
-              "cdn.cloudflare.net",
-              "challenges.cloudflare.com",
-              "chatgpt.livekit.cloud",
-              "client-api.arkoselabs.com",
-              "events.statsigapi.net",
-              "featuregates.org",
-              "host.livekit.cloud",
-              "identrust.com",
-              "intercom.io",
-              "intercomcdn.com",
-              "launchdarkly.com",
-              "oaistatic.com",
-              "oaiusercontent.com",
-              "observeit.net",
-              "openai.com",
-              "openaiapi-site.azureedge.net",
-              "openaicom.imgix.net",
-              "poe.com",
-              "segment.io",
-              "sentry.io",
-              "stripe.com",
-              "turn.livekit.cloud"
+              "steamgames.com",
+              "steamstatic.com",
+              "steamstat.us",
+              "steambroadcast.akamaized.net",
+              "steamcommunity-a.akamaihd.net",
+              "steamstore-a.akamaihd.net",
+              "steamusercontent-a.akamaihd.net",
+              "steamuserimages-a.akamaihd.net",
+              "steampipe.akamaized.net"
             ],
             "domain_keyword": [
-              "appledaily",
-              "openaicom-api"
+              "obsidian"
             ],
             "domain": [
               "api.statsig.com",
@@ -308,7 +306,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ads-all.srs",
         "download_detour": "direct",
         "update_interval": "10d"
       },
@@ -316,7 +314,7 @@
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
@@ -324,7 +322,7 @@
         "tag": "geosite-apple-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-apple-cn.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
@@ -332,7 +330,7 @@
         "tag": "geosite-google-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-google-cn.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
@@ -340,15 +338,15 @@
         "tag": "geosite-category-games@cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-games@cn.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
       {
-        "tag": "geosite-geolocation-cn",
+        "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-cn.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-cn.srs",
         "download_detour": "direct",
         "update_interval": "10d"
       },
@@ -356,7 +354,7 @@
         "tag": "geosite-private",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/private.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/private.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
@@ -364,7 +362,7 @@
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
@@ -372,7 +370,7 @@
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/cn.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/cn.srs",
         "download_detour": "direct",
         "update_interval": "5d"
       },
@@ -380,21 +378,56 @@
         "tag": "geosite-github",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/github.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/github.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       },
       {
-        "tag": "openai",
+        "tag": "geosite-category-ai-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ai-!cn.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct",
+        "update_interval": "10d"
+      },
+      {
+        "tag": "geosite-category-ai-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-ai-cn.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-steam@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-steam@cn.srs",
+        "download_detour": "direct",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-category-game-platforms-download@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/PaPerseller/sing-geosite/rule-set/geosite-category-game-platforms-download@cn.srs",
         "download_detour": "direct",
         "update_interval": "30d"
       }
     ],
     "final": "proxy",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "local-dns"
+    }
   },
   "experimental": {
     "cache_file": {
