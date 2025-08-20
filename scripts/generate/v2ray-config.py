@@ -45,7 +45,6 @@ a_content = '''  "routing" : {
           "domain:localhost",
           "domain:cdn.jsdelivr.net",
           "domain:gh-proxy.com",
-          "domain:cdn.jsdelivr.net",
           "moutai",
           "weixin",
           "announce",
