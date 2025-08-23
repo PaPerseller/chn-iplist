@@ -77,27 +77,23 @@
         "outbound": "direct"
       },
       {
+        "rule_set": [
+          "inline-direct-dns"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "inline-proxy-dns"
+        ],
+        "outbound": "proxy"
+      },
+      {
         "protocol": "bittorrent",
         "outbound": "direct"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "port": 853
-          },
-          {
-            "network": "udp",
-            "port": 443
-          },
-          {
-            "protocol": [
-              "stun",
-              "quic"
-            ]
-          }
-        ],
+        "protocol": "stun",
         "action": "reject"
       },
       {
@@ -111,7 +107,19 @@
       {
         "rule_set": [
           "inline-direct-ip",
-          "inline-direct-domain",
+          "inline-direct-domain"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "inline-proxy-ip",
+          "inline-proxy-domain"
+        ],
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
           "geosite-private",
           "geosite-apple-cn",
           "geosite-category-ai-cn",
@@ -125,8 +133,6 @@
       },
       {
         "rule_set": [
-          "inline-proxy-ip",
-          "inline-proxy-domain",
           "geosite-telegram",
           "geoip-telegram",
           "geosite-github",
@@ -159,6 +165,33 @@
         ]
       },
       {
+        "tag": "inline-direct-dns",
+        "type": "inline",
+        "rules": [
+          {
+            "ip_cidr": [
+              "114.114.114.114",
+              "114.114.115.115",
+              "223.5.5.5",
+              "223.6.6.6",
+              "119.29.29.29",
+              "180.76.76.76c",
+              "1.12.12.12",
+              "120.53.53.53",
+              "180.184.1.1",
+              "180.184.2.2"
+            ],
+            "domain_suffix": [
+              "alidns.com",
+              "doh.pub",
+              "dot.pub",
+              "doh.360.cn",
+              "dot.360.cn"
+            ]
+          }
+        ]
+      },
+      {
         "tag": "inline-direct-ip",
         "type": "inline",
         "rules": [
@@ -188,7 +221,7 @@
               "208.78.164.0/22",
               "205.185.194.0/24"
             ]
-          }          
+          }
         ]
       },
       {
@@ -233,15 +266,36 @@
         ]
       },
       {
+        "tag": "inline-proxy-dns",
+        "type": "inline",
+        "rules": [
+          {
+            "ip_cidr": [
+              "8.8.4.4",
+              "8.8.8.8",
+              "1.1.1.1",
+              "1.1.1.2",
+              "1.0.0.1",
+              "9.9.9.9",
+              "208.67.222.222",
+              "208.67.220.220",
+              "104.16.249.249",
+              "104.16.248.249",
+              "149.112.112.112"
+            ],
+            "domain_suffix": [
+              "dns.google",
+              "cloudflare-dns.com"
+            ]
+          }
+        ]
+      },
+      {
         "tag": "inline-proxy-ip",
         "type": "inline",
         "rules": [
           {
             "ip_cidr": [
-              "1.1.1.1",
-              "1.0.0.1",
-              "8.8.8.8",
-              "8.8.4.4",
               "24.199.123.28/32",
               "45.76.214.191/32",
               "64.23.132.171/32",
@@ -257,6 +311,7 @@
         "rules": [
           {
             "domain_suffix": [
+              "apple-relay.apple.com",
               "assets-cdn.github.com",
               "emby.wtf",
               "g.whatsapp.net",
