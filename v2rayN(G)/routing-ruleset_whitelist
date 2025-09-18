@@ -57,6 +57,7 @@
       "domain": [
         "domain:cdn.jsdelivr.net",
         "domain:gh-proxy.com",
+        "domain:steamserver.net",
         "moutai",
         "weixin"
       ]

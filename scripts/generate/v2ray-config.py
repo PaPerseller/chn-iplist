@@ -45,6 +45,7 @@ a_content = '''  "routing" : {
           "domain:localhost",
           "domain:cdn.jsdelivr.net",
           "domain:gh-proxy.com",
+          "domain:steamserver.net",
           "moutai",
           "weixin",
           "announce",
