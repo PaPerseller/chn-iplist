@@ -5,7 +5,6 @@ DOMAIN-KEYWORD,moutai
 DOMAIN-KEYWORD,sina
 
 // Apple direct
-DOMAIN-SUFFIX,gdmf.apple.com
 IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,63.92.224.0/19,no-resolve
 IP-CIDR,65.199.22.0/23,no-resolve

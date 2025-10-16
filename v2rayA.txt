@@ -17,7 +17,7 @@ domain(geosite:category-ads-all) -> block
 # domain(geosite:category-httpdns-cn) -> block
 
 # direct domain
-domain(domain:gdmf.apple.com, domain:identity.apple.com, domain:cdn.jsdelivr.net, domain:steamserver.net) -> direct
+domain(domain:identity.apple.com, domain:cdn.jsdelivr.net, domain:steamserver.net) -> direct
 domain(moutai, weixin) -> direct
 
 # proxy domain
