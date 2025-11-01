@@ -40,7 +40,6 @@ IP-CIDR6,2001:df1:d180::/48,no-resolve
 IP-CIDR6,2001:df1:da00::/48,no-resolve
 IP-CIDR6,2001:df1:f480::/48,no-resolve
 IP-CIDR6,2001:df1:fd80::/48,no-resolve
-IP-CIDR6,2001:df2:80::/48,no-resolve
 IP-CIDR6,2001:df2:5780::/48,no-resolve
 IP-CIDR6,2001:df2:8bc0::/48,no-resolve
 IP-CIDR6,2001:df2:a580::/48,no-resolve
@@ -703,7 +702,12 @@ IP-CIDR6,2402:3140::/32,no-resolve
 IP-CIDR6,2402:3180::/32,no-resolve
 IP-CIDR6,2402:31c0::/32,no-resolve
 IP-CIDR6,2402:3240::/32,no-resolve
+IP-CIDR6,2402:32e0::/32,no-resolve
+IP-CIDR6,2402:3320::/32,no-resolve
+IP-CIDR6,2402:33a0::/32,no-resolve
 IP-CIDR6,2402:33c0::/32,no-resolve
+IP-CIDR6,2402:33e0::/32,no-resolve
+IP-CIDR6,2402:34e0::/32,no-resolve
 IP-CIDR6,2402:39c0::/32,no-resolve
 IP-CIDR6,2402:3a40::/32,no-resolve
 IP-CIDR6,2402:3ac0::/32,no-resolve
@@ -899,7 +903,6 @@ IP-CIDR6,2403:d40::/32,no-resolve
 IP-CIDR6,2403:d80::/32,no-resolve
 IP-CIDR6,2403:e80::/32,no-resolve
 IP-CIDR6,2403:f00::/32,no-resolve
-IP-CIDR6,2403:f40::/32,no-resolve
 IP-CIDR6,2403:f80::/32,no-resolve
 IP-CIDR6,2403:fc0::/32,no-resolve
 IP-CIDR6,2403:1180::/32,no-resolve
@@ -1663,7 +1666,7 @@ IP-CIDR6,2406:5480::/32,no-resolve
 IP-CIDR6,2406:5580::/32,no-resolve
 IP-CIDR6,2406:5680::/32,no-resolve
 IP-CIDR6,2406:5780::/32,no-resolve
-IP-CIDR6,2406:5840::/32,no-resolve
+IP-CIDR6,2406:5840::/31,no-resolve
 IP-CIDR6,2406:5880::/32,no-resolve
 IP-CIDR6,2406:5940::/32,no-resolve
 IP-CIDR6,2406:5980::/32,no-resolve
