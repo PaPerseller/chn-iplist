@@ -5,6 +5,7 @@ def format_cidr(file_path, output_path):
     with open(output_path, 'w') as f:
         f.write("/ip firewall address-list remove [/ip firewall address-list find list=CN]\n")
         f.write("/ip firewall address-list\n")
+        f.write("add address=0.0.0.0/8 list=CN comment=private-network\n")
         f.write("add address=10.0.0.0/8 list=CN comment=private-network\n")
         f.write("add address=100.64.0.0/10 list=CN comment=private-network\n")
         f.write("add address=127.0.0.0/8 list=CN comment=private-network\n")
@@ -14,6 +15,7 @@ def format_cidr(file_path, output_path):
         f.write("add address=192.0.2.0/24 list=CN comment=private-network\n")
         f.write("add address=192.88.99.0/24 list=CN comment=private-network\n")
         f.write("add address=192.168.0.0/16 list=CN comment=private-network\n")
+        f.write("add address=198.18.0.0/15 list=CN comment=private-network\n")
         f.write("add address=198.51.100.0/24 list=CN comment=private-network\n")
         f.write("add address=203.0.113.0/24 list=CN comment=private-network\n")
         f.write("add address=224.0.0.0/3 list=CN comment=private-network\n")
