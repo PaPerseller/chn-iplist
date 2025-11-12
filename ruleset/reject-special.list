@@ -1,14 +1,20 @@
 // others
-.gzads.com
-.gozendata.com
-.gz-data.com
-.resolve.umeng.com
+DOMAIN-SUFFIX,gzads.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,gozendata.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,gz-data.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,resolve.umeng.com,extended-matching,pre-matching
 
 // google reject
-.ads.fmdisk.com
-.ads.feemoo.com
-.ads.google.com
-.afd.l.google.com
-.googletagmanager.com
-.googletakes.com
-.mobileads.google.com
+DOMAIN-SUFFIX,ads.fmdisk.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,ads.feemoo.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,ads.google.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,afd.l.google.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,googletagmanager.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,googletakes.com,extended-matching,pre-matching
+DOMAIN-SUFFIX,mobileads.google.com,extended-matching,pre-matching
+DOMAIN-KEYWORD,googleads,extended-matching,pre-matching
+DOMAIN-KEYWORD,-ad.sm.cn,extended-matching,pre-matching
+DOMAIN-KEYWORD,-ad.video.yximgs.com,extended-matching,pre-matching
+DOMAIN-KEYWORD,-ad.wtzw.com,extended-matching,pre-matching
+DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com,extended-matching,pre-matching
+DOMAIN-KEYWORD,-normal.zijieapi.com,extended-matching,pre-matching
