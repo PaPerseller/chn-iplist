@@ -1,24 +1,24 @@
-// special proxy
-DOMAIN-SUFFIX,developer.apple.com
-DOMAIN-SUFFIX,v2ex.com
-DOMAIN-SUFFIX,emby.wtf
+// special
+DOMAIN-SUFFIX,developer.apple.com,extended-matching
+DOMAIN-SUFFIX,v2ex.com,extended-matching
+DOMAIN-SUFFIX,emby.wtf,extended-matching
 
 // steam proxy
-DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net
-DOMAIN-SUFFIX,steamstore-a.akamaihd.net
-DOMAIN-SUFFIX,steam-chat.com
-DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,extended-matching
+DOMAIN-SUFFIX,steamstore-a.akamaihd.net,extended-matching
+DOMAIN-SUFFIX,steam-chat.com,extended-matching
+DOMAIN-SUFFIX,steamcommunity.com,extended-matching
 
-//Google
-DOMAIN-SUFFIX,ampproject.org
-DOMAIN-SUFFIX,ampproject.net
-DOMAIN-SUFFIX,goo.gl
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-KEYWORD,gmail
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,gstatic
-DOMAIN-KEYWORD,youtube
-DOMAIN-KEYWORD,googleapis.cn
+// Google
+DOMAIN-SUFFIX,ampproject.org,extended-matching
+DOMAIN-SUFFIX,ampproject.net,extended-matching
+DOMAIN-SUFFIX,goo.gl,extended-matching
+DOMAIN-SUFFIX,gvt1.com,extended-matching
+DOMAIN-SUFFIX,youtu.be,extended-matching
+DOMAIN-SUFFIX,ytimg.com,extended-matching
+DOMAIN-SUFFIX,ggpht.com,extended-matching
+DOMAIN-SUFFIX,googleapis.cn,extended-matching
+DOMAIN-KEYWORD,gmail,extended-matching
+DOMAIN-KEYWORD,google,extended-matching
+DOMAIN-KEYWORD,gstatic,extended-matching
+DOMAIN-KEYWORD,youtube,extended-matching
