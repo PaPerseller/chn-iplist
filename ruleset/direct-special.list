@@ -1,8 +1,8 @@
 // special direct
 USER-AGENT,netease*
-DOMAIN-SUFFIX,softpedia.com,extended-matching
-DOMAIN-KEYWORD,moutai,extended-matching
-DOMAIN-KEYWORD,sina,extended-matching
+DOMAIN-SUFFIX,softpedia.com
+DOMAIN-KEYWORD,moutai
+DOMAIN-KEYWORD,sina
 
 // Apple direct
 IP-CIDR,17.0.0.0/8,no-resolve
@@ -17,22 +17,22 @@ IP-CIDR,198.183.17.0/24,no-resolve
 IP-CIDR,205.180.175.0/24,no-resolve
 
 // steam direct
-DOMAIN-SUFFIX,steamserver.net,extended-matching
-DOMAIN,alibaba.cdn.steampipe.steamcontent.com,extended-matching
-DOMAIN-SUFFIX,client-update.queniuqe.com,extended-matching
-DOMAIN-SUFFIX,csgo.wmsj.cn,extended-matching
-DOMAIN-SUFFIX,dl.steam.clngaa.com,extended-matching
-DOMAIN-SUFFIX,dota2.wmsj.cn,extended-matching
-DOMAIN-SUFFIX,gstore.val.manlaxy.com,extended-matching
-DOMAIN,lv.queniujq.cn,extended-matching
-DOMAIN-SUFFIX,st.dl.bscstorage.net,extended-matching
-DOMAIN-SUFFIX,st.dl.eccdnx.com,extended-matching
-DOMAIN-SUFFIX,st.dl.pinyuncloud.com,extended-matching
-DOMAIN-SUFFIX,steamchina.com,extended-matching
-DOMAIN-SUFFIX,steampowered.com.8686c.com,extended-matching
-DOMAIN-SUFFIX,steamstatic.com.8686c.com,extended-matching
-DOMAIN-SUFFIX,wmsjsteam.com,extended-matching
-DOMAIN,xz.pphimalayanrt.com,extended-matching
+DOMAIN-SUFFIX,steamserver.net
+DOMAIN,alibaba.cdn.steampipe.steamcontent.com
+DOMAIN-SUFFIX,client-update.queniuqe.com
+DOMAIN-SUFFIX,csgo.wmsj.cn
+DOMAIN-SUFFIX,dl.steam.clngaa.com
+DOMAIN-SUFFIX,dota2.wmsj.cn
+DOMAIN-SUFFIX,gstore.val.manlaxy.com
+DOMAIN,lv.queniujq.cn
+DOMAIN-SUFFIX,st.dl.bscstorage.net
+DOMAIN-SUFFIX,st.dl.eccdnx.com
+DOMAIN-SUFFIX,st.dl.pinyuncloud.com
+DOMAIN-SUFFIX,steamchina.com
+DOMAIN-SUFFIX,steampowered.com.8686c.com
+DOMAIN-SUFFIX,steamstatic.com.8686c.com
+DOMAIN-SUFFIX,wmsjsteam.com
+DOMAIN,xz.pphimalayanrt.com
 IP-CIDR,103.28.54.0/24,no-resolve
 IP-CIDR,146.66.152.0/24,no-resolve
 IP-CIDR,146.66.155.0/24,no-resolve
@@ -56,25 +56,25 @@ IP-CIDR,208.78.164.0/22,no-resolve
 IP-CIDR,205.185.194.0/24,no-resolve
 
 // game-platforms direct
-DOMAIN,epicgames-download1-1251447533.file.myqcloud.com,extended-matching
-DOMAIN,blzdist-phx.necdn.leihuo.netease.com,extended-matching
-DOMAIN,blzdist-wow.necdn.leihuo.netease.com,extended-matching
-DOMAIN,blzdist-hs.necdn.leihuo.netease.com,extended-matching
-DOMAIN,blzdist-di.necdn.leihuo.netease.com,extended-matching
-DOMAIN,blzdist-ow.necdn.leihuo.netease.com,extended-matching
-DOMAIN,assets1.xboxlive.cn,extended-matching
-DOMAIN,assets2.xboxlive.cn,extended-matching
-DOMAIN,dl.delivery.mp.microsoft.com,extended-matching
-DOMAIN,tlu.dl.delivery.mp.microsoft.com,extended-matching
-DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn,extended-matching
-DOMAIN,dl.steam.clngaa.com,extended-matching
-DOMAIN,st.dl.eccdnx.com,extended-matching
-DOMAIN,st.dl.bscstorage.net,extended-matching
-DOMAIN,trts.baishancdnx.cn,extended-matching
-DOMAIN,st-bak.viv.wanwang.space,extended-matching
-DOMAIN,cdn-ali.content.steamchina.com,extended-matching
-DOMAIN,xz.pphimalayanrt.com,extended-matching
-DOMAIN,lv.queniujq.cn,extended-matching
-DOMAIN,alibaba.cdn.steampipe.steamcontent.com,extended-matching
-DOMAIN,cdn-ws.content.steamchina.com,extended-matching
-DOMAIN,cdn-qc.content.steamchina.com,extended-matching
+DOMAIN,epicgames-download1-1251447533.file.myqcloud.com
+DOMAIN,blzdist-phx.necdn.leihuo.netease.com
+DOMAIN,blzdist-wow.necdn.leihuo.netease.com
+DOMAIN,blzdist-hs.necdn.leihuo.netease.com
+DOMAIN,blzdist-di.necdn.leihuo.netease.com
+DOMAIN,blzdist-ow.necdn.leihuo.netease.com
+DOMAIN,assets1.xboxlive.cn
+DOMAIN,assets2.xboxlive.cn
+DOMAIN,dl.delivery.mp.microsoft.com
+DOMAIN,tlu.dl.delivery.mp.microsoft.com
+DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn
+DOMAIN,dl.steam.clngaa.com
+DOMAIN,st.dl.eccdnx.com
+DOMAIN,st.dl.bscstorage.net
+DOMAIN,trts.baishancdnx.cn
+DOMAIN,st-bak.viv.wanwang.space
+DOMAIN,cdn-ali.content.steamchina.com
+DOMAIN,xz.pphimalayanrt.com
+DOMAIN,lv.queniujq.cn
+DOMAIN,alibaba.cdn.steampipe.steamcontent.com
+DOMAIN,cdn-ws.content.steamchina.com
+DOMAIN,cdn-qc.content.steamchina.com
