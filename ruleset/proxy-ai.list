@@ -1,4 +1,5 @@
 .ai.google.dev
+.aida.googleapis.com
 .aisandbox-pa.googleapis.com
 .aistudio.google.com
 .alkalicore-pa.clients6.google.com
@@ -11,6 +12,9 @@
 .chatgpt.com
 .chatgpt.livekit.cloud
 .chutes.ai
+.cici.com
+.ciciai.com
+.ciciaicdn.com
 .claude.ai
 .claude.com
 .claudemcpclient.com
@@ -18,6 +22,8 @@
 .clipdrop.co
 .coderabbit.ai
 .coderabbit.gallery.vsassets.io
+.cohere.ai
+.cohere.com
 .copilot.microsoft.com
 .cursor-cdn.com
 .cursor.com
@@ -25,7 +31,12 @@
 .cursorapi.com
 .deepmind.com
 .deepmind.google
+.devin.ai
+.diabrowser.com
 .dify.ai
+.dola.com
+.elevenlabs.com
+.elevenlabs.io
 .gateway.ai.cloudflare.com
 .geller-pa.googleapis.com
 .gemini.google

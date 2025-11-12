@@ -1,21 +1,20 @@
 // others
-DOMAIN-SUFFIX,log.tagtic.cn
-DOMAIN-SUFFIX,gzads.com
-DOMAIN-SUFFIX,gozendata.com
-DOMAIN-SUFFIX,gz-data.com
-DOMAIN,resolve.umeng.com
+.log.tagtic.cn
+.gzads.com
+.gozendata.com
+.gz-data.com
+.resolve.umeng.com
 
 // google reject
-DOMAIN-SUFFIX,ads.fmdisk.com
-DOMAIN-SUFFIX,ads.feemoo.com
-DOMAIN-SUFFIX,googleads.g.doubleclick.net
-DOMAIN-KEYWORD,googleads
-DOMAIN-SUFFIX,ads.google.com
-DOMAIN-SUFFIX,afd.l.google.com
-DOMAIN-SUFFIX,doubleclick.com
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,google-analytics.com
-DOMAIN-SUFFIX,googlesyndication.com
-DOMAIN-SUFFIX,googletagmanager.com
-DOMAIN-SUFFIX,googletakes.com
-DOMAIN-SUFFIX,mobileads.google.com
+.ads.fmdisk.com
+.ads.feemoo.com
+.googleads.g.doubleclick.net
+.ads.google.com
+.afd.l.google.com
+.doubleclick.com
+.doubleclick.net
+.google-analytics.com
+.googlesyndication.com
+.googletagmanager.com
+.googletakes.com
+.mobileads.google.com
