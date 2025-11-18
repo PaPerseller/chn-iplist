@@ -57,9 +57,46 @@
       "domain": [
         "domain:cdn.jsdelivr.net",
         "domain:gh-proxy.com",
-        "domain:steamserver.net",
         "moutai",
         "weixin"
+      ]
+    },
+    {
+      "remarks": "game direct domain",
+      "outboundTag": "direct",
+      "domain": [
+        "domain:steamserver.net",
+        "domain:alibaba.cdn.steampipe.steamcontent.com",
+        "domain:client-update.queniuqe.com",
+        "domain:csgo.wmsj.cn",
+        "domain:dl.steam.clngaa.com",
+        "domain:dota2.wmsj.cn",
+        "domain:gstore.val.manlaxy.com",
+        "domain:lv.queniujq.cn",
+        "domain:st.dl.bscstorage.net",
+        "domain:st.dl.eccdnx.com",
+        "domain:st.dl.pinyuncloud.com",
+        "domain:steamchina.com",
+        "domain:steampowered.com.8686c.com",
+        "domain:steamstatic.com.8686c.com",
+        "domain:wmsjsteam.com",
+        "domain:xz.pphimalayanrt.com",
+        "domain:assets1.xboxlive.cn",
+        "domain:assets2.xboxlive.cn",
+        "domain:blzdist-di.necdn.leihuo.netease.com",
+        "domain:blzdist-hs.necdn.leihuo.netease.com",
+        "domain:blzdist-ow.necdn.leihuo.netease.com",
+        "domain:blzdist-phx.necdn.leihuo.netease.com",
+        "domain:blzdist-wow.necdn.leihuo.netease.com",
+        "domain:cdn-ali.content.steamchina.com",
+        "domain:cdn-qc.content.steamchina.com",
+        "domain:cdn-ws.content.steamchina.com",
+        "domain:dl.delivery.mp.microsoft.com",
+        "domain:epicgames-download1-1251447533.file.myqcloud.com",
+        "domain:st-bak.viv.wanwang.space",
+        "domain:tlu.dl.delivery.mp.microsoft.com",
+        "domain:trts.baishancdnx.cn",
+        "domain:uplaypc-s-ubisoft.cdn.ubionline.com.cn"
       ]
     },
     {

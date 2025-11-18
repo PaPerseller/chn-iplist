@@ -1,20 +1,20 @@
 // others
-DOMAIN-SUFFIX,gzads.com
-DOMAIN-SUFFIX,gozendata.com
-DOMAIN-SUFFIX,gz-data.com
-DOMAIN-SUFFIX,resolve.umeng.com
+DOMAIN-SUFFIX,gzads.com,pre-matching
+DOMAIN-SUFFIX,gozendata.com,pre-matching
+DOMAIN-SUFFIX,gz-data.com,pre-matching
+DOMAIN-SUFFIX,resolve.umeng.com,pre-matching
 
 // google reject
-DOMAIN-SUFFIX,ads.fmdisk.com
-DOMAIN-SUFFIX,ads.feemoo.com
-DOMAIN-SUFFIX,ads.google.com
-DOMAIN-SUFFIX,afd.l.google.com
-DOMAIN-SUFFIX,googletagmanager.com
-DOMAIN-SUFFIX,googletakes.com
-DOMAIN-SUFFIX,mobileads.google.com
-DOMAIN-KEYWORD,googleads
-DOMAIN-KEYWORD,-ad.sm.cn
-DOMAIN-KEYWORD,-ad.video.yximgs.com
-DOMAIN-KEYWORD,-ad.wtzw.com
-DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
-DOMAIN-KEYWORD,-normal.zijieapi.com
+DOMAIN-SUFFIX,ads.fmdisk.com,pre-matching
+DOMAIN-SUFFIX,ads.feemoo.com,pre-matching
+DOMAIN-SUFFIX,ads.google.com,pre-matching
+DOMAIN-SUFFIX,afd.l.google.com,pre-matching
+DOMAIN-SUFFIX,googletagmanager.com,pre-matching
+DOMAIN-SUFFIX,googletakes.com,pre-matching
+DOMAIN-SUFFIX,mobileads.google.com,pre-matching
+DOMAIN-KEYWORD,googleads,pre-matching
+DOMAIN-KEYWORD,-ad.sm.cn,pre-matching
+DOMAIN-KEYWORD,-ad.video.yximgs.com,pre-matching
+DOMAIN-KEYWORD,-ad.wtzw.com,pre-matching
+DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com,pre-matching
+DOMAIN-KEYWORD,-normal.zijieapi.com,pre-matching
