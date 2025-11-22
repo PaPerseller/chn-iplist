@@ -4,6 +4,13 @@ DOMAIN-SUFFIX,gozendata.com,pre-matching
 DOMAIN-SUFFIX,gz-data.com,pre-matching
 DOMAIN-SUFFIX,resolve.umeng.com,pre-matching
 
+// from AWAvenue keyword rules
+DOMAIN-KEYWORD,-ad.sm.cn,pre-matching
+DOMAIN-KEYWORD,-ad.video.yximgs.com,pre-matching
+DOMAIN-KEYWORD,-ad.wtzw.com,pre-matching
+DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com,pre-matching
+DOMAIN-KEYWORD,-normal.zijieapi.com,pre-matching
+
 // google reject
 DOMAIN-SUFFIX,ads.fmdisk.com,pre-matching
 DOMAIN-SUFFIX,ads.feemoo.com,pre-matching
@@ -13,8 +20,3 @@ DOMAIN-SUFFIX,googletagmanager.com,pre-matching
 DOMAIN-SUFFIX,googletakes.com,pre-matching
 DOMAIN-SUFFIX,mobileads.google.com,pre-matching
 DOMAIN-KEYWORD,googleads,pre-matching
-DOMAIN-KEYWORD,-ad.sm.cn,pre-matching
-DOMAIN-KEYWORD,-ad.video.yximgs.com,pre-matching
-DOMAIN-KEYWORD,-ad.wtzw.com,pre-matching
-DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com,pre-matching
-DOMAIN-KEYWORD,-normal.zijieapi.com,pre-matching
