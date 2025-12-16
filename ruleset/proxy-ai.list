@@ -24,6 +24,9 @@
 .coderabbit.gallery.vsassets.io
 .cohere.ai
 .cohere.com
+.comfy.org
+.comfyci.org
+.comfyregistry.org
 .copilot.microsoft.com
 .coze.com
 .cursor-cdn.com
@@ -36,6 +39,7 @@
 .diabrowser.com
 .dify.ai
 .dola.com
+.duck.ai
 .elevenlabs.com
 .elevenlabs.io
 .gateway.ai.cloudflare.com
@@ -45,13 +49,16 @@
 .generativeai.google
 .generativelanguage.googleapis.com
 .grok.com
+.grok.x.com
 .groq.com
 .hf.co
+.hf.space
 .host.livekit.cloud
 .huggingface.co
 .jasper.ai
 .jules.google
 .jules.google.com
+.kiro.dev
 .labs.google
 .makersuite.google.com
 .marscode.com
@@ -70,6 +77,7 @@
 .openaicomproductionae4b.blob.core.windows.net
 .openart.ai
 .openrouter.ai
+.oystermercury.top
 .perplexity.ai
 .perplexity.com
 .poe.com

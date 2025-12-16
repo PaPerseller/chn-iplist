@@ -58,6 +58,7 @@ IP-CIDR,205.185.194.0/24,no-resolve
 // game-platforms direct
 DOMAIN,assets1.xboxlive.cn
 DOMAIN,assets2.xboxlive.cn
+DOMAIN,blzdist-d3.necdn.leihuo.netease.com
 DOMAIN,blzdist-di.necdn.leihuo.netease.com
 DOMAIN,blzdist-hs.necdn.leihuo.netease.com
 DOMAIN,blzdist-ow.necdn.leihuo.netease.com
@@ -71,4 +72,5 @@ DOMAIN,epicgames-download1-1251447533.file.myqcloud.com
 DOMAIN,st-bak.viv.wanwang.space
 DOMAIN,tlu.dl.delivery.mp.microsoft.com
 DOMAIN,trts.baishancdnx.cn
+DOMAIN,ubisoftconnect.eo-edgefunctions7.com
 DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn
