@@ -17,7 +17,6 @@ IP-CIDR,2001:df0:423::/48,no-resolve
 IP-CIDR,2001:df0:9c0::/48,no-resolve
 IP-CIDR,2001:df0:1bc0::/48,no-resolve
 IP-CIDR,2001:df0:25c0::/48,no-resolve
-IP-CIDR,2001:df0:26c0::/48,no-resolve
 IP-CIDR,2001:df0:2e00::/48,no-resolve
 IP-CIDR,2001:df0:2e80::/48,no-resolve
 IP-CIDR,2001:df0:59c0::/48,no-resolve
@@ -714,6 +713,7 @@ IP-CIDR,2402:3de0::/32,no-resolve
 IP-CIDR,2402:3e00::/32,no-resolve
 IP-CIDR,2402:3ec0::/32,no-resolve
 IP-CIDR,2402:3f80::/32,no-resolve
+IP-CIDR,2402:4060::/32,no-resolve
 IP-CIDR,2402:4140::/32,no-resolve
 IP-CIDR,2402:42c0::/32,no-resolve
 IP-CIDR,2402:4340::/32,no-resolve
