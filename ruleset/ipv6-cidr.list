@@ -727,7 +727,9 @@ IP-CIDR,2402:4a80::/32,no-resolve
 IP-CIDR,2402:4ac0::/32,no-resolve
 IP-CIDR,2402:4b80::/32,no-resolve
 IP-CIDR,2402:4bc0::/32,no-resolve
+IP-CIDR,2402:4be0::/32,no-resolve
 IP-CIDR,2402:4c40::/32,no-resolve
+IP-CIDR,2402:4d60::/32,no-resolve
 IP-CIDR,2402:4d80::/32,no-resolve
 IP-CIDR,2402:4e00::/32,no-resolve
 IP-CIDR,2402:4ec0::/32,no-resolve
