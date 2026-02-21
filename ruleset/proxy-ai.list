@@ -27,6 +27,8 @@
 .clipdrop.co
 .cloudaicompanion.googleapis.com
 .cloudcode-pa.googleapis.com
+.codeium.com
+.codeiumdata.com
 .coderabbit.ai
 .coderabbit.gallery.vsassets.io
 .cohere.ai
@@ -36,6 +38,7 @@
 .comfyregistry.org
 .copilot.microsoft.com
 .coze.com
+.crixet.com
 .cursor-cdn.com
 .cursor.com
 .cursor.sh
@@ -56,6 +59,7 @@
 .gemini.google.com
 .generativeai.google
 .generativelanguage.googleapis.com
+.githubcopilot.com
 .grok.com
 .grok.x.com
 .groq.com
@@ -69,7 +73,11 @@
 .kiro.dev
 .labs.google
 .labs.google.com
+.liveperson.net
+.lpsnmedia.net
 .makersuite.google.com
+.manus.im
+.manuscdn.com
 .marscode.com
 .meta.ai
 .mistral.ai
@@ -105,4 +113,9 @@
 .trae.ai
 .turn.livekit.cloud
 .webchannel-alkalimakersuite-pa.clients6.google.com
+.windsurf.build
+.windsurf.com
 .x.ai
+.youmind.ai
+.youmind.com
+.youmind.site
