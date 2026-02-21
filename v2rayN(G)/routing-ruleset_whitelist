@@ -139,9 +139,10 @@
       "outboundTag": "direct",
       "domain": [
         "geosite:private",
-        "geosite:apple-cn",
+        "geosite:apple",
         "geosite:sina",
         "geosite:alibaba",
+        "geosite:category-cdn-cn",
         "geosite:category-ai-cn",
         "geosite:steam@cn",
         "geosite:category-game-platforms-download@cn",

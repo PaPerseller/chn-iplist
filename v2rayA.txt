@@ -41,7 +41,7 @@ domain(domain:steamcommunity.com, domain:steamgames.com, domain:steamstatic.com,
 domain(domain:steamstore-a.akamaihd.net, domain:steamusercontent-a.akamaihd.net, domain:steamuserimages-a.akamaihd.net, domain:steampipe.akamaized.net) -> proxy
 
 # direct domain set
-domain(geosite:private, geosite:bilibili, geosite:sina, geosite:alibaba, geosite:category-ai-cn) -> direct
+domain(geosite:private, geosite:bilibili, geosite:sina, geosite:alibaba, geosite:apple, geosite:category-cdn-cn, geosite:category-ai-cn) -> direct
 domain(geosite:steam@cn, geosite:category-game-platforms-download@cn, geosite:category-games@cn) -> direct
 domain(geosite:cn) -> direct
 # 以下一行使用 Loyalsoldier 数据库启用

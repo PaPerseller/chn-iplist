@@ -88,7 +88,8 @@ a_content = '''  "routing" : {
         "domain" : [
           "geosite:private",
           "geosite:bilibili",
-          "geosite:apple-cn",
+          "geosite:apple",
+          "geosite:category-cdn-cn",
           "geosite:category-ai-cn",
           "geosite:sina",
           "geosite:alibaba",
