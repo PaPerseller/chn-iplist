@@ -18,8 +18,9 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 ### 补充规则集
 **屏蔽 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/reject-special.list  
 **直连 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/direct-special.list  
-**代理 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list  
-**AI DOMAIN-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-ai.list
+**代理 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list
+
+另有更多基于 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 的规则集见 [PaPerseller/extra-ruleset](https://github.com/PaPerseller/extra-ruleset)
 
 
 ## 需手动更新：

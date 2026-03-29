@@ -16,23 +16,7 @@ IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,198.183.17.0/24,no-resolve
 IP-CIDR,205.180.175.0/24,no-resolve
 
-// steam direct
-DOMAIN-SUFFIX,steamserver.net
-DOMAIN,alibaba.cdn.steampipe.steamcontent.com
-DOMAIN-SUFFIX,client-update.queniuqe.com
-DOMAIN-SUFFIX,csgo.wmsj.cn
-DOMAIN-SUFFIX,dl.steam.clngaa.com
-DOMAIN-SUFFIX,dota2.wmsj.cn
-DOMAIN-SUFFIX,gstore.val.manlaxy.com
-DOMAIN,lv.queniujq.cn
-DOMAIN-SUFFIX,st.dl.bscstorage.net
-DOMAIN-SUFFIX,st.dl.eccdnx.com
-DOMAIN-SUFFIX,st.dl.pinyuncloud.com
-DOMAIN-SUFFIX,steamchina.com
-DOMAIN-SUFFIX,steampowered.com.8686c.com
-DOMAIN-SUFFIX,steamstatic.com.8686c.com
-DOMAIN-SUFFIX,wmsjsteam.com
-DOMAIN,xz.pphimalayanrt.com
+// steam ip direct
 IP-CIDR,103.28.54.0/24,no-resolve
 IP-CIDR,146.66.152.0/24,no-resolve
 IP-CIDR,146.66.155.0/24,no-resolve
@@ -54,23 +38,3 @@ IP-CIDR,205.196.6.0/24,no-resolve
 IP-CIDR,208.64.200.0/22,no-resolve
 IP-CIDR,208.78.164.0/22,no-resolve
 IP-CIDR,205.185.194.0/24,no-resolve
-
-// game-platforms direct
-DOMAIN,assets1.xboxlive.cn
-DOMAIN,assets2.xboxlive.cn
-DOMAIN,blzdist-d3.necdn.leihuo.netease.com
-DOMAIN,blzdist-di.necdn.leihuo.netease.com
-DOMAIN,blzdist-hs.necdn.leihuo.netease.com
-DOMAIN,blzdist-ow.necdn.leihuo.netease.com
-DOMAIN,blzdist-phx.necdn.leihuo.netease.com
-DOMAIN,blzdist-wow.necdn.leihuo.netease.com
-DOMAIN,cdn-ali.content.steamchina.com
-DOMAIN,cdn-qc.content.steamchina.com
-DOMAIN,cdn-ws.content.steamchina.com
-DOMAIN,dl.delivery.mp.microsoft.com
-DOMAIN,epicgames-download1-1251447533.file.myqcloud.com
-DOMAIN,st-bak.viv.wanwang.space
-DOMAIN,tlu.dl.delivery.mp.microsoft.com
-DOMAIN,trts.baishancdnx.cn
-DOMAIN,ubisoftconnect.eo-edgefunctions7.com
-DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn
