@@ -20,7 +20,7 @@ IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated
 **直连 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/direct-special.list  
 **代理 RULE-SET**：https://raw.githubusercontent.com/PaPerseller/chn-iplist/master/ruleset/proxy-special.list
 
-另有更多基于 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 的规则集见 [PaPerseller/extra-ruleset](https://github.com/PaPerseller/extra-ruleset)
+**[PaPerseller/extra-ruleset](https://github.com/PaPerseller/extra-ruleset)**：更多基于 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 的补充规则集
 
 
 ## 需手动更新：
