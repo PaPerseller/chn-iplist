@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-import urllib.request, urllib.error, urllib.parse
+import urllib.request, urllib.parse
 from argparse import ArgumentParser
 import ipaddress
 
