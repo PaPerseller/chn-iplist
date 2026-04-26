@@ -58,11 +58,26 @@ def save_domains(domains, output_file):
             file.write(domain + '\n')
 
 
-# === 1. 处理直连规则 (DOMAIN,xxx 格式) ===
+# === 1. 处理直连规则 ===
+
+# 1.1 DOMAIN,xxx 格式来源
 direct_sources = [
     './ruleset/direct-special.list'
 ]
 direct_domains = extract_domains(direct_sources)
+
+# 1.2 纯域名 / 以点开头的格式来源
+direct_extra_sources = [
+    'https://raw.githubusercontent.com/PaPerseller/extra-ruleset/refs/heads/main/ruleset/direct-game.list',
+    'https://raw.githubusercontent.com/PaPerseller/extra-ruleset/refs/heads/main/ruleset/direct-cdn.list'
+    # 未来如果有更多相同格式的来源，直接按格式加在下面
+]
+direct_extra_domains = extract_dot_domains(direct_extra_sources)
+
+# 将两类格式提取出的直连域名进行合并并去重
+direct_domains.update(direct_extra_domains)
+
+# 保存最终合并并排序后的 direct_domains
 save_domains(direct_domains, './scripts/generate/pac/direct-domains.txt')
 
 
