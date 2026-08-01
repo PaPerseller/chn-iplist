@@ -757,6 +757,7 @@ IP-CIDR6,2402:64c0::/32,no-resolve
 IP-CIDR6,2402:66c0::/32,no-resolve
 IP-CIDR6,2402:6740::/32,no-resolve
 IP-CIDR6,2402:67c0::/32,no-resolve
+IP-CIDR6,2402:6960::/32,no-resolve
 IP-CIDR6,2402:6a00::/32,no-resolve
 IP-CIDR6,2402:6b40::/32,no-resolve
 IP-CIDR6,2402:6bc0::/32,no-resolve
