@@ -22,7 +22,7 @@ jobs:
           check-latest: true
       - name: Install dependencies
         run:
-          pip install netaddr requests
+          pip install netaddr requests pyyaml
 
       - name: generate cn iplist
         run:
