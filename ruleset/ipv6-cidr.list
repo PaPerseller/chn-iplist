@@ -215,7 +215,6 @@ IP-CIDR,2400:71c0::/32,no-resolve
 IP-CIDR,2400:7200::/32,no-resolve
 IP-CIDR,2400:7240::/32,no-resolve
 IP-CIDR,2400:72c0::/32,no-resolve
-IP-CIDR,2400:72e0::/32,no-resolve
 IP-CIDR,2400:7340::/32,no-resolve
 IP-CIDR,2400:73c0::/32,no-resolve
 IP-CIDR,2400:73e0::/32,no-resolve
@@ -766,11 +765,14 @@ IP-CIDR,2402:6e80::/32,no-resolve
 IP-CIDR,2402:6f40::/32,no-resolve
 IP-CIDR,2402:6fc0::/32,no-resolve
 IP-CIDR,2402:7040::/32,no-resolve
+IP-CIDR,2402:7060::/32,no-resolve
 IP-CIDR,2402:7080::/32,no-resolve
+IP-CIDR,2402:70a0::/29,no-resolve
 IP-CIDR,2402:70c0::/32,no-resolve
 IP-CIDR,2402:7140::/32,no-resolve
 IP-CIDR,2402:71c0::/32,no-resolve
 IP-CIDR,2402:7240::/32,no-resolve
+IP-CIDR,2402:72a0::/32,no-resolve
 IP-CIDR,2402:72c0::/32,no-resolve
 IP-CIDR,2402:7540::/32,no-resolve
 IP-CIDR,2402:75c0::/32,no-resolve
