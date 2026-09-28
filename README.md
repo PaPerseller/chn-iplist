@@ -2,7 +2,7 @@
 
 
 ## 数据源
-IPv4：[metowolf/iplist](https://metowolf.github.io/iplist/data/special/china.txt) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)。
+IPv4：[metowolf/iplist](https://github.com/metowolf/iplist) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)。
 
 IPv6：[APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)。
 
