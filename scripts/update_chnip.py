@@ -1,12 +1,16 @@
 import argparse
 import os
+import re
 import time
 
 import netaddr
 import requests
 import yaml
 
-# 数据源均取自 china-operator-ip 项目，与下方 china.txt 的在线获取方式保持一致
+# 中国 IPv4 数据源：合并 metowolf 内地列表与 china-operator-ip 的 china.txt
+METOWOLF_CHINA_IPV4_URL = 'https://metowolf.github.io/iplist/data/special/china.txt'
+GAOYIFAN_CHINA_IPV4_URL = 'https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt'
+# 排除规则配置仍来自 china-operator-ip 项目
 OPERATORS_YAML_URL = 'https://raw.githubusercontent.com/gaoyifan/china-operator-ip/master/operators.yaml'
 # RIPEstat 公告前缀 API：用于将 exclude_asn 中的 ASN 解析为具体前缀
 RIPESTAT_PREFIX_URL = 'https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS{asn}'
@@ -25,7 +29,14 @@ def parse_and_merge_ip(url):
 
 def download_and_parse(url):
     print(f'Downloading from {url}...')
-    return [netaddr.IPNetwork(line.strip()) for line in requests.get(url).text.splitlines()]
+    if os.path.isfile(url):
+        with open(url, 'r', encoding='utf-8') as f:
+            lines = f.read().splitlines()
+    else:
+        resp = requests.get(url, timeout=60)
+        resp.raise_for_status()
+        lines = resp.text.splitlines()
+    return [netaddr.IPNetwork(line.strip()) for line in lines if line.strip() and not line.lstrip().startswith('#')]
 
 def merge_and_sort_networks(networks1, networks2):
     print('Merging and sorting networks...')
@@ -38,10 +49,11 @@ def write_to_file(networks, filename):
             f.write(str(network) + "\n")
 
 def get_exclude_asn(source):
-    """读取 china-operator-ip 的 operators.yaml 中 china 条目的 exclude_asn 列表。
+    """读取 operators.yaml 中所有 operator 的排除 ASN。
 
     source 为本地文件路径或 URL。文件获取/解析失败时直接退出，避免排除逻辑
-    静默失效；若上游移除了 exclude_asn 字段，则视为无排除并返回空列表。
+    静默失效；除各 operator 的 ``exclude_asn`` 外，googlecn 当前以
+    ``AS24424`` pattern 表示，脚本也会从该 pattern 中提取 ASN，并统一去重。
     """
     if os.path.isfile(source):
         with open(source, 'r', encoding='utf-8') as f:
@@ -52,10 +64,27 @@ def get_exclude_asn(source):
         resp.raise_for_status()
         raw = resp.text
     cfg = yaml.safe_load(raw)
-    exclude_asn = cfg['operators']['china'].get('exclude_asn', [])
-    if not exclude_asn:
-        print('WARNING> operators.china.exclude_asn 为空或缺失，本次跳过排除')
-    return [str(asn) for asn in exclude_asn]
+    operators = cfg['operators']
+    exclude_asn = []
+    for operator_name, operator_cfg in operators.items():
+        operator_exclude_asn = [str(asn) for asn in operator_cfg.get('exclude_asn', [])]
+        if operator_exclude_asn:
+            print(f'operators.{operator_name}: 纳入排除 ASN {", ".join(f"AS{asn}" for asn in operator_exclude_asn)}')
+            exclude_asn.extend(operator_exclude_asn)
+
+    # googlecn 没有 exclude_asn 字段，而是通过 pattern 标识其 ASN；
+    # 将 pattern 中的 AS<数字> 作为排除 ASN，避免硬编码 AS24424。
+    googlecn_pattern = operators.get('googlecn', {}).get('pattern', '')
+    googlecn_asn = re.findall(r'(?i)\bAS(\d+)\b', googlecn_pattern)
+    if googlecn_asn:
+        print(f'operators.googlecn: 纳入排除 ASN {", ".join(f"AS{asn}" for asn in googlecn_asn)}')
+    else:
+        print('WARNING> operators.googlecn.pattern 中未找到 ASN，本次跳过 googlecn 排除')
+
+    merged_asn = list(dict.fromkeys(exclude_asn + googlecn_asn))
+    if not merged_asn:
+        print('WARNING> 未配置任何排除 ASN，本次跳过排除')
+    return merged_asn
 
 
 def fetch_asn_ipv4_prefixes(asn):
@@ -104,9 +133,17 @@ def main():
     parser.add_argument('--operators-yaml',
                         default=os.environ.get('CHINA_OPERATOR_IP_YAML', OPERATORS_YAML_URL),
                         help='china-operator-ip operators.yaml 的本地路径或 URL')
+    parser.add_argument('--metowolf-china-ip-list',
+                        default=os.environ.get('METOWOLF_CHINA_IPV4_SOURCE', METOWOLF_CHINA_IPV4_URL),
+                        help='metowolf special/china.txt 的本地路径或 URL')
+    parser.add_argument('--gaoyifan-china-ip-list',
+                        default=os.environ.get('GAOYIFAN_CHINA_IPV4_SOURCE', GAOYIFAN_CHINA_IPV4_URL),
+                        help='gaoyifan/china.txt 的本地路径或 URL')
+    parser.add_argument('--skip-exclude', action='store_true',
+                        help='跳过 operators.yaml/RIPEstat 排除步骤，适用于仅有 ip-lists 分支文件的本地合并')
     args = parser.parse_args()
 
-    exclude_asn = get_exclude_asn(args.operators_yaml)
+    exclude_asn = [] if args.skip_exclude else get_exclude_asn(args.operators_yaml)
     excluded_v4 = build_excluded_ipv4_set(exclude_asn) if exclude_asn else netaddr.IPSet()
 
     # Parse and merge IPv6 networks
@@ -114,14 +151,13 @@ def main():
     write_to_file(ipv6_networks, './chnroute-ipv6.txt')
 
     # Download and parse IPv4 networks
-    china_ip_list = download_and_parse("https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt")
-    china_txt = download_and_parse("https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt")
+    metowolf_china = download_and_parse(args.metowolf_china_ip_list)
+    gaoyifan_china = download_and_parse(args.gaoyifan_china_ip_list)
 
     # Merge and sort IPv4 networks
-    ipv4_networks = merge_and_sort_networks(china_ip_list, china_txt)
+    ipv4_networks = merge_and_sort_networks(metowolf_china, gaoyifan_china)
 
-    # 剔除放在合并之后：既可覆盖 17mon 列表中的对应前缀，也能兜底清除
-    # china.txt 中可能存在的同类残留（若在合并前剔除则无法覆盖后者）
+    # 剔除放在合并之后，确保排除规则同时作用于两个 IPv4 数据源。
     if excluded_v4:
         before = len(ipv4_networks)
         ipv4_networks = list((netaddr.IPSet(ipv4_networks) - excluded_v4).iter_cidrs())

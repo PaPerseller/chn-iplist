@@ -2,9 +2,11 @@
 
 
 ## 数据源
-IPv4：[17mon/china_ip_list](https://github.com/17mon/china_ip_list) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)
+IPv4：[metowolf/iplist](https://metowolf.github.io/iplist/data/special/china.txt) 和 [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip)。
 
-IPv6： [ APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest) 
+IPv6：[APNIC Delegated List](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)。
+
+原数据源之一 [17mon/china_ip_list](https://github.com/17mon/china_ip_list)（IPIP）已实质上停止维护；即使偶有间隔一年以上的更新，也难以满足对时效性和精度的要求，因此弃用该数据源。生成时还会依据 `gaoyifan/china-operator-ip` 的 `operators.yaml` 排除指定 ASN 的 IPv4 前缀，包括排除该上游默认纳入列表的 `googlecn` 源 IP。
 
 使用由 mosdns 项目启发的[合并优化脚本](https://github.com/PaPerseller/chn-iplist/blob/master/scripts/update_chnip.py)生成列表文件以在路由器上使用，并以此制作 Shadowrocket、Quantumult、acl、v2rayNG、v2rayN、pac、NekoRay/NekoBox、Loon、RouterOS、v2rayA/dae 规则和 v2ray/xray 配置内嵌规则，包含 chn-ip 列表及少量广告屏蔽规则。每15天自动更新一次。
 
